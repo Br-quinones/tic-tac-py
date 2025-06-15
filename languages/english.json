@@ -1,0 +1,18 @@
+{
+
+"dialogues":{
+    "scene_1_dialogue_01": "Hey you, come here, come closer.",
+    "scene_1_dialogue_02": "I challenge you to a tic-tac-toe duel!",
+    "scene_1_dialogue_03": "Ha, just dream about trying to beat me.",
+    "scene_1_dialogue_04": "You're going to be crushed by my supreme skills.",
+    "scene_1_dialogue_05" : "Girls, please calm down."
+},
+
+"UI":{
+        "Play": "Play",
+        "Setting" : "Settings",
+        "credits" : "Credits",
+        "exit" : "exit"
+}
+
+}

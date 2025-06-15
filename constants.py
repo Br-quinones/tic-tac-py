@@ -1,0 +1,2 @@
+LANGUAGE = "ES"
+PLAYER_NAME = "jugador"

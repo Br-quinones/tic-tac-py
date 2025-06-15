@@ -109,11 +109,3 @@
 #
 #Autor
     #Br-Quiñones
-#
-#Conteo de dias (1-231)
-# 
-#Dia 1 
-    #El proyecto se retrasara por que ya teng que prepararme para mi examen de admision. 
-    #Se inicio el repositorio en GiyHub; Se cre la ficha tecnica; Se programa lo basico.
-# 
-# 
