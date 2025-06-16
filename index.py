@@ -69,7 +69,7 @@
     #Puede ser algunos conocidos
 # 
 #Costo
-    #Totalmente gratis y codigo libre.
+    #Totalmente gratis y codigo publico.
 #
 #Interfaces
 #Deve de predominar el color rojo en todas las interfaces.
