@@ -3,3 +3,6 @@ Conteo de dias (1-???)
 Dia 1 --> v0.01
     -El proyecto se retrasara por que ya tengo que prepararme para el examen de admision. 
     -Se inicio el repositorio en GitHub; Se cre la ficha tecnica; Se programa lo basico.
+Dia 2 --> v0.01
+    -El proyecto se ve prometedor logre solucionar el problema principal 
+    -Se agrego los graficos para las "X" y "O" en el tablero. 
