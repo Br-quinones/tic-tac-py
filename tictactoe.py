@@ -8,7 +8,7 @@ if __name__ == '__main__':
         time.sleep(0.01)
 
 ######### Instalar librerias y colocar constantes#############
-import os
+import os; import time
 from colorama import Fore, Style
 
 print(Style.BRIGHT ,end="")
@@ -28,6 +28,7 @@ equis_3 = Fore.BLUE + " ██  ██ " + Fore.RESET
 
 empty = Fore.BLACK + "        " + Fore.RESET 
 
+lista = []
 ########## Colocar vacio a todos ###########
 
 tic_a1 = empty
@@ -60,6 +61,7 @@ tic_i3 = empty
 
 ########### Colocar zero ##################
 
+
 def choice_coordinate():
     global tic_a1 , tic_a2 , tic_a3
     global tic_b1 , tic_b2 , tic_b3
@@ -70,42 +72,52 @@ def choice_coordinate():
     global tic_g1 , tic_g2 , tic_g3
     global tic_h1 , tic_h2 , tic_h3
     global tic_i1 , tic_i2 , tic_i3
+    global lista
     
-    coordinate = input("Elige la letra [a,b,c...i]: ")
-
-    if coordinate == "a":
+    while True:
+        coordinate = input("Elige la letra [1,2,3...9]: ")
+        if coordinate in lista:
+            print("Lugar ya elegido!")
+            time.sleep(1)
+            os.system("cls")
+            the_game()
+        else:
+            lista.append(coordinate)
+            break
+            
+    if coordinate == "1":
         tic_a1 = zero_1
         tic_a2 = zero_2
         tic_a3 = zero_3
-    elif coordinate == "b":
+    elif coordinate == "2":
         tic_b1 = zero_1
         tic_b2 = zero_2
         tic_b3 = zero_3
-    elif coordinate == "c":
+    elif coordinate == "3":
         tic_c1 = zero_1
         tic_c2 = zero_2
         tic_c3 = zero_3
-    elif coordinate == "d":
+    elif coordinate == "4":
         tic_d1 = zero_1
         tic_d2 = zero_2
         tic_d3 = zero_3
-    elif coordinate == "e":
+    elif coordinate == "5":
         tic_e1 = zero_1
         tic_e2 = zero_2
         tic_e3 = zero_3
-    elif coordinate == "f":
+    elif coordinate == "6":
         tic_f1 = zero_1
         tic_f2 = zero_2
         tic_f3 = zero_3
-    elif coordinate == "g":
+    elif coordinate == "7":
         tic_g1 = zero_1
         tic_g2 = zero_2
         tic_g3 = zero_3
-    elif coordinate == "h":
+    elif coordinate == "8":
         tic_h1 = zero_1
         tic_h2 = zero_2
         tic_h3 = zero_3
-    elif coordinate == "i":
+    elif coordinate == "9":
         tic_i1 = zero_1
         tic_i2 = zero_2
         tic_i3 = zero_3
