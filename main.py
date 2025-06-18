@@ -6,7 +6,6 @@ if __name__ == '__main__':
         keyboard.press_and_release("ctrl+plus")
         time.sleep(0.01)
 
-
 import tictactoe 
 tictactoe.the_game()
 

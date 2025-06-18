@@ -6,6 +6,9 @@ Dia 1 --> v0.01
 Dia 2 --> v0.02
     -El proyecto se ve prometedor logre solucionar el segundo problema principal 
     -Se agrego los graficos para las "X" y "O" en el tablero. 
-Dia 3 --> v0.03
+Dia 3 --> v0.03.
     -Hoy estoy pero mal de mal estoy emfermo a no mas poder con un catarro mortal
     -Se agrego la función de colocar fichas en el tablero, importante refactorizar en el futuro.
+Dia 3 --> v0.04
+    -Si ayer estaba mal entonces ahora estoy peor con este catarro del demonio
+    -Se parcheo para que en el 3 en raya no se pueda sobrecolocar fichas
