@@ -4,5 +4,8 @@ Dia 1 --> v0.01
     -El proyecto se retrasara por que ya tengo que prepararme para el examen de admision. 
     -Se inicio el repositorio en GitHub; Se cre la ficha tecnica; Se programa lo basico.
 Dia 2 --> v0.02
-    -El proyecto se ve prometedor logre solucionar el problema principal 
+    -El proyecto se ve prometedor logre solucionar el segundo problema principal 
     -Se agrego los graficos para las "X" y "O" en el tablero. 
+Dia 3 --> v0.03
+    -Hoy estoy pero mal de mal estoy emfermo a no mas poder con un catarro mortal
+    -Se agrego la función de colocar fichas en el tablero, importante refactorizar en el futuro.
