@@ -28,39 +28,31 @@ equis_3 = Fore.BLUE + " ██  ██ " + Fore.RESET
 
 empty = Fore.BLACK + "        " + Fore.RESET 
 
+empty_01 = Fore.GREEN + "   01   " + Fore.RESET
+empty_02 = Fore.GREEN + "   02   " + Fore.RESET 
+empty_03 = Fore.GREEN + "   03   " + Fore.RESET 
+empty_04 = Fore.GREEN + "   04   " + Fore.RESET 
+empty_05 = Fore.GREEN + "   05   " + Fore.RESET 
+empty_06 = Fore.GREEN + "   06   " + Fore.RESET 
+empty_07 = Fore.GREEN + "   07   " + Fore.RESET 
+empty_08 = Fore.GREEN + "   08   " + Fore.RESET 
+empty_09 = Fore.GREEN + "   09   " + Fore.RESET 
+
+listo = ["1","2","3","4","5","6","7","8","9","01","02","03","04","05","06","07","08","09"]
 lista = []
 ########## Colocar vacio a todos ###########
 
-tic_a1 = empty
-tic_a2 = empty
-tic_a3 = empty
-tic_b1 = empty
-tic_b2 = empty
-tic_b3 = empty
-tic_c1 = empty
-tic_c2 = empty
-tic_c3 = empty
-tic_d1 = empty
-tic_d2 = empty
-tic_d3 = empty
-tic_e1 = empty
-tic_e2 = empty
-tic_e3 = empty
-tic_f1 = empty
-tic_f2 = empty
-tic_f3 = empty
-tic_g1 = empty
-tic_g2 = empty
-tic_g3 = empty
-tic_h1 = empty
-tic_h2 = empty
-tic_h3 = empty
-tic_i1 = empty
-tic_i2 = empty
-tic_i3 = empty
+tic_a1 = empty ; tic_a2 = empty_01 ;tic_a3 = empty
+tic_b1 = empty ; tic_b2 = empty_02 ; tic_b3 = empty
+tic_c1 = empty ; tic_c2 = empty_03 ; tic_c3 = empty
+tic_d1 = empty ; tic_d2 = empty_04 ; tic_d3 = empty
+tic_e1 = empty ; tic_e2 = empty_05 ; tic_e3 = empty
+tic_f1 = empty ; tic_f2 = empty_06 ; tic_f3 = empty
+tic_g1 = empty ; tic_g2 = empty_07 ; tic_g3 = empty
+tic_h1 = empty ; tic_h2 = empty_08 ; tic_h3 = empty
+tic_i1 = empty ; tic_i2 = empty_09 ; tic_i3 = empty
 
 ########### Colocar zero ##################
-
 
 def choice_coordinate():
     global tic_a1 , tic_a2 , tic_a3
@@ -75,15 +67,21 @@ def choice_coordinate():
     global lista
     
     while True:
-        coordinate = input("Elige la letra [1,2,3...9]: ")
-        if coordinate in lista:
-            print("Lugar ya elegido!")
+        coordinate = input("Elige el numero 1/2/3/.../9: ")
+        if coordinate in listo:
+            if coordinate in lista:
+                print("Lugar ya elegido!")
+                time.sleep(1)
+                os.system("cls")
+                the_game()
+            else:
+                lista.append(coordinate)
+                break
+        else:
+            print("Numero no valido")
             time.sleep(1)
             os.system("cls")
             the_game()
-        else:
-            lista.append(coordinate)
-            break
             
     if coordinate == "1":
         tic_a1 = zero_1
@@ -144,7 +142,7 @@ def the_game():
         print(f"██{tic_g3}██  ██{tic_h3}██  ██{tic_i3}██".center(argumento1))
         print(f"████████████  ████████████  ████████████".center(argumento2))
         print("                                         ".center(argumento1))
-        print("_______████████████████████████████████████████████_______".center(argumento2))
+        print(Fore.GREEN + "_______████████████████████████████████████████████_______".center(argumento2) + Fore.RESET)
 
         choice_coordinate()
 

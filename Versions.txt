@@ -1,4 +1,6 @@
-Conteo de dias (1-???)
+                            Conteo de dias (1-???)
+
+Aqui colocare mi día a día personal y el avanze del proyecto
 
 Dia 1 --> v0.01
     -El proyecto se retrasara por que ya tengo que prepararme para el examen de admision. 
@@ -11,4 +13,5 @@ Dia 3 --> v0.03.
     -Se agrego la función de colocar fichas en el tablero, importante refactorizar en el futuro.
 Dia 3 --> v0.04
     -Si ayer estaba mal entonces ahora estoy peor con este catarro del demonio
-    -Se parcheo para que en el 3 en raya no se pueda sobrecolocar fichas
+    -Empeze a leerme 1984 de george orwell, aquel "fragmento" aun queda en mi mente.
+    -Se parcheo para que en el 3 en raya no se pueda sobrecolocar fichas; un poco de color.
