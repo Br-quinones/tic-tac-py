@@ -15,6 +15,7 @@ print(Style.BRIGHT ,end="")
 
 argumento1 = 145
 argumento2 = 115
+argumento3 = 57
 
 ############ Graficos ##################
 
@@ -38,113 +39,107 @@ empty_07 = Fore.GREEN + "   07   " + Fore.RESET
 empty_08 = Fore.GREEN + "   08   " + Fore.RESET 
 empty_09 = Fore.GREEN + "   09   " + Fore.RESET 
 
-listo = ["1","2","3","4","5","6","7","8","9","01","02","03","04","05","06","07","08","09"]
-lista = []
+valid_numbers = ["1","2","3","4","5","6","7","8","9","01","02","03","04","05","06","07","08","09"]
+selected_numbers = []
+
 ########## Colocar vacio a todos ###########
 
-tic_a1 = empty ; tic_a2 = empty_01 ;tic_a3 = empty
-tic_b1 = empty ; tic_b2 = empty_02 ; tic_b3 = empty
-tic_c1 = empty ; tic_c2 = empty_03 ; tic_c3 = empty
-tic_d1 = empty ; tic_d2 = empty_04 ; tic_d3 = empty
-tic_e1 = empty ; tic_e2 = empty_05 ; tic_e3 = empty
-tic_f1 = empty ; tic_f2 = empty_06 ; tic_f3 = empty
-tic_g1 = empty ; tic_g2 = empty_07 ; tic_g3 = empty
-tic_h1 = empty ; tic_h2 = empty_08 ; tic_h3 = empty
-tic_i1 = empty ; tic_i2 = empty_09 ; tic_i3 = empty
+tic_1a = empty ; tic_1b = empty_01 ; tic_1c = empty
+tic_2a = empty ; tic_2b = empty_02 ; tic_2c = empty
+tic_3a = empty ; tic_3b = empty_03 ; tic_3c = empty
+tic_4a = empty ; tic_4b = empty_04 ; tic_4c = empty
+tic_5a = empty ; tic_5b = empty_05 ; tic_5c = empty
+tic_6a = empty ; tic_6b = empty_06 ; tic_6c = empty
+tic_7a = empty ; tic_7b = empty_07 ; tic_7c = empty
+tic_8a = empty ; tic_8b = empty_08 ; tic_8c = empty
+tic_9a = empty ; tic_9b = empty_09 ; tic_9c = empty
 
 ########### Colocar zero ##################
 
 def choice_coordinate():
-    global tic_a1 , tic_a2 , tic_a3
-    global tic_b1 , tic_b2 , tic_b3
-    global tic_c1 , tic_c2 , tic_c3
-    global tic_d1 , tic_d2 , tic_d3
-    global tic_e1 , tic_e2 , tic_e3
-    global tic_f1 , tic_f2 , tic_f3
-    global tic_g1 , tic_g2 , tic_g3
-    global tic_h1 , tic_h2 , tic_h3
-    global tic_i1 , tic_i2 , tic_i3
-    global lista
+    global tic_1a , tic_1b , tic_1c
+    global tic_2a , tic_2b , tic_2c
+    global tic_3a , tic_3b , tic_3c
+    global tic_4a , tic_4b , tic_4c
+    global tic_5a , tic_5b , tic_5c
+    global tic_6a , tic_6b , tic_6c
+    global tic_7a , tic_7b , tic_7c
+    global tic_8a , tic_8b , tic_8c
+    global tic_9a , tic_9b , tic_9c
+    global selected_numbers
     
     while True:
-        coordinate = input("Elige el numero 1/2/3/.../9: ")
-        if coordinate in listo:
-            if coordinate in lista:
-                print("Lugar ya elegido!")
+        coordinate = input("".center(argumento3))
+        if coordinate in valid_numbers:
+            if coordinate in selected_numbers:
+                print("Lugar ya elegido!".center(argumento2))
                 time.sleep(1)
                 os.system("cls")
                 the_game()
             else:
-                lista.append(coordinate)
+                ## Aqui agregar la funcion de iluminacion ##
+                selected_numbers.append(coordinate)
                 break
         else:
-            print("Numero no valido")
+            print("Numero no valido".center(argumento2))
             time.sleep(1)
             os.system("cls")
             the_game()
             
     if coordinate == "1":
-        tic_a1 = zero_1
-        tic_a2 = zero_2
-        tic_a3 = zero_3
+        tic_1a = zero_1 ; tic_1b = zero_2 ; tic_1c = zero_3
     elif coordinate == "2":
-        tic_b1 = zero_1
-        tic_b2 = zero_2
-        tic_b3 = zero_3
+        tic_2a = zero_1 ; tic_2b = zero_2 ; tic_2c = zero_3
     elif coordinate == "3":
-        tic_c1 = zero_1
-        tic_c2 = zero_2
-        tic_c3 = zero_3
+        tic_3a = zero_1 ; tic_3b = zero_2 ;tic_3c = zero_3
     elif coordinate == "4":
-        tic_d1 = zero_1
-        tic_d2 = zero_2
-        tic_d3 = zero_3
+        tic_4a = zero_1 ; tic_4b = zero_2 ; tic_4c = zero_3
     elif coordinate == "5":
-        tic_e1 = zero_1
-        tic_e2 = zero_2
-        tic_e3 = zero_3
+        tic_5a = zero_1 ; tic_5b = zero_2 ; tic_5c = zero_3
     elif coordinate == "6":
-        tic_f1 = zero_1
-        tic_f2 = zero_2
-        tic_f3 = zero_3
+        tic_6a = zero_1 ; tic_6b = zero_2 ; tic_6c = zero_3
     elif coordinate == "7":
-        tic_g1 = zero_1
-        tic_g2 = zero_2
-        tic_g3 = zero_3
+        tic_7a = zero_1 ; tic_7b = zero_2 ; tic_7c = zero_3
     elif coordinate == "8":
-        tic_h1 = zero_1
-        tic_h2 = zero_2
-        tic_h3 = zero_3
+        tic_8a = zero_1 ; tic_8b = zero_2 ; tic_8c = zero_3
     elif coordinate == "9":
-        tic_i1 = zero_1
-        tic_i2 = zero_2
-        tic_i3 = zero_3
+        tic_9a = zero_1 ; tic_9b = zero_2 ; tic_9c = zero_3
 
 ############## El juego ###############
 def the_game():
     while True:
-        print("\n")
+        print(f"")
         print(f"████████████  ████████████  ████████████".center(argumento2))
-        print(f"██{tic_a1}██  ██{tic_b1}██  ██{tic_c1}██".center(argumento1))
-        print(f"██{tic_a2}██  ██{tic_b2}██  ██{tic_c2}██".center(argumento1))
-        print(f"██{tic_a3}██  ██{tic_b3}██  ██{tic_c3}██".center(argumento1))
+        print(f"██{tic_7a}██  ██{tic_8a}██  ██{tic_9a}██".center(argumento1))
+        print(f"██{tic_7b}██  ██{tic_8b}██  ██{tic_9b}██".center(argumento1))
+        print(f"██{tic_7c}██  ██{tic_8c}██  ██{tic_9c}██".center(argumento1))
         print(f"████████████  ████████████  ████████████".center(argumento2))
-        print(f"                                        ".center(argumento1))
+        print(f"")
         print(f"████████████  ████████████  ████████████".center(argumento2))
-        print(f"██{tic_d1}██  ██{tic_e1}██  ██{tic_f1}██".center(argumento1))
-        print(f"██{tic_d2}██  ██{tic_e2}██  ██{tic_f2}██".center(argumento1))
-        print(f"██{tic_d3}██  ██{tic_e3}██  ██{tic_f3}██".center(argumento1))
+        print(f"██{tic_4a}██  ██{tic_5a}██  ██{tic_6a}██".center(argumento1))
+        print(f"██{tic_4b}██  ██{tic_5b}██  ██{tic_6b}██".center(argumento1))
+        print(f"██{tic_4c}██  ██{tic_5c}██  ██{tic_6c}██".center(argumento1))
         print(f"████████████  ████████████  ████████████".center(argumento2))
-        print(f"                                        ".center(argumento1))
+        print(f"")
         print(f"████████████  ████████████  ████████████".center(argumento2))
-        print(f"██{tic_g1}██  ██{tic_h1}██  ██{tic_i1}██".center(argumento1))
-        print(f"██{tic_g2}██  ██{tic_h2}██  ██{tic_i2}██".center(argumento1))
-        print(f"██{tic_g3}██  ██{tic_h3}██  ██{tic_i3}██".center(argumento1))
+        print(f"██{tic_1a}██  ██{tic_2a}██  ██{tic_3a}██".center(argumento1))
+        print(f"██{tic_1b}██  ██{tic_2b}██  ██{tic_3b}██".center(argumento1))
+        print(f"██{tic_1c}██  ██{tic_2c}██  ██{tic_3c}██".center(argumento1))
         print(f"████████████  ████████████  ████████████".center(argumento2))
-        print("                                         ".center(argumento1))
-        print(Fore.GREEN + "_______████████████████████████████████████████████_______".center(argumento2) + Fore.RESET)
-
+        print(Fore.GREEN )
+        print("_______████████████████████████████████████████████_______".center(argumento2))
+        print(Fore.RESET)
+        print("███████    ███████    ███████    ███████    ███████    ███████    ███████    ███████    ███████".center(argumento2))
+        print("█  █  █    █ ███ █    █ ███ █    █ █ █ █    █ ███ █    █ ███ █    █ ███ █    █ ███ █    █ ███ █".center(argumento2))
+        print("█ ██  █    █   █ █    █   █ █    █ █ █ █    █ █   █    █ █   █    █   █ █    █ █ █ █    █ █ █ █".center(argumento2))
+        print("█  █  █    █ ███ █    █ ███ █    █ ███ █    █ ███ █    █ ███ █    █  █  █    █ ███ █    █ ███ █".center(argumento2))
+        print("█  █  █    █ █   █    █   █ █    █   █ █    █   █ █    █ █ █ █    █  █  █    █ █ █ █    █   █ █".center(argumento2))
+        print("█  █  █    █ ███ █    █ ███ █    █   █ █    █ ███ █    █ ███ █    █  █  █    █ ███ █    █   █ █".center(argumento2))
+        print("███████    ███████    ███████    ███████    ███████    ███████    ███████    ███████    ███████".center(argumento2))
         choice_coordinate()
 
         os.system("cls")
+
+
+##Actualizar variables y agregar botones de referencia jsjsjs
     
