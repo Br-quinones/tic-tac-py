@@ -3,15 +3,19 @@
 Aqui colocare mi día a día personal y el avanze del proyecto
 
 Dia 1 --> v0.01
-    -El proyecto se retrasara por que ya tengo que prepararme para el examen de admision. 
+    -El proyecto se retrasara por que ya tengo que prepararme para el examen de admision. #
     -Se inicio el repositorio en GitHub; Se cre la ficha tecnica; Se programa lo basico.
 Dia 2 --> v0.02
     -El proyecto se ve prometedor logre solucionar el segundo problema principal 
     -Se agrego los graficos para las "X" y "O" en el tablero. 
 Dia 3 --> v0.03.
-    -Hoy estoy pero mal de mal estoy emfermo a no mas poder con un catarro mortal
+    -Hoy estoy pero mal de mal, estoy emfermo a no mas poder con un catarro mortal.
     -Se agrego la función de colocar fichas en el tablero, importante refactorizar en el futuro.
-Dia 3 --> v0.04
+Dia 4 --> v0.04
     -Si ayer estaba mal entonces ahora estoy peor con este catarro del demonio
-    -Empeze a leerme 1984 de george orwell, aquel "fragmento" aun queda en mi mente.
-    -Se parcheo para que en el 3 en raya no se pueda sobrecolocar fichas; un poco de color.
+    -Empeze a leer 1984 de george orwell. Aquel "fragmento" aun queda en mi mente.
+    -Se parcheo para que en el turno no se pueda sobrecolocar fichas mas un poco de color.
+Día 5 --> v0.05
+    -Me estoy recuperando de aquella emfermedad que me esta azontado.
+    -Se toma una finalmente la dirección para los graficos y se empieza a trabajar arduamente.
+    -Se toma la importante tarea de refactorizar esto algun dia. Que es insostenible con el codigo actual. 
