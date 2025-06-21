@@ -18,7 +18,7 @@
         #Este no es un persnaje, pero se utilizara para representar acciones en tercera persona osea el narrador.
     #Jugador --> Azul
         #Solo es el nombre base de cada jugador, que el jugador podra cambiar cuando la historia le requiera.
-    #Mia --> Verde
+    #Agatha --> Verde
         #Jugadora de bajo nivel que te introducera en el juego con personalidad: timida y reservada.
     #Beatriz --> Magenta
         #Jugadora con nivel medio que introducera nuevas mecanicas al 3 en raya con personalidad: intelectual y elitista.
