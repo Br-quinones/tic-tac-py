@@ -18,4 +18,9 @@ Dia 4 --> v0.04
 Día 5 --> v0.05
     -Me estoy recuperando de aquella emfermedad que me esta azontado.
     -Se toma una finalmente la dirección para los graficos y se empieza a trabajar arduamente.
-    -Se toma la importante tarea de refactorizar esto algun dia. Que es insostenible con el codigo actual. 
+    -Se toma la importante tarea de refactorizar esto algun dia. Que es insostenible con el codigo actual.
+Día 6 --> v0.06
+    -Intentar grabar ese audio, pero no se envio por la pronunciacion y la descordinasión. 
+    -Volver a jugar una partidita de rimwolrd+.
+    -Se intenta agrega la I.A enemiga sin exito devido a la calidad grafica que deseo.
+    -cambios menores en la visualizacion

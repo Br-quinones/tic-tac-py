@@ -1,15 +1,8 @@
-#Pantalla completa y zoom
-if __name__ == '__main__':
-    import time; import keyboard 
-
-    keyboard.press_and_release("f11")
-    for _ in range(8):
-        keyboard.press_and_release("ctrl+plus")
-        time.sleep(0.01)
-
 ######### Instalar librerias y colocar constantes#############
 import os; import time
 from colorama import Fore, Style
+import msvcrt; import keyboard
+import random
 
 print(Style.BRIGHT ,end="")
 
@@ -19,13 +12,13 @@ argumento3 = 57
 
 ############ Graficos ##################
 
-zero_1 = Fore.RED + "  ████  " + Fore.RESET
-zero_2 = Fore.RED + " ██  ██ " + Fore.RESET 
-zero_3 = Fore.RED + "  ████  " + Fore.RESET
+zero_1 = Fore.BLUE + "  ████  " + Fore.RESET
+zero_2 = Fore.BLUE + " ██  ██ " + Fore.RESET 
+zero_3 = Fore.BLUE + "  ████  " + Fore.RESET
 
-equis_1 = Fore.BLUE + " ██  ██ " + Fore.RESET
-equis_2 = Fore.BLUE + "   ██   " + Fore.RESET
-equis_3 = Fore.BLUE + " ██  ██ " + Fore.RESET
+equis_1 = Fore.RED + " ██  ██ " + Fore.RESET
+equis_2 = Fore.RED + "   ██   " + Fore.RESET
+equis_3 = Fore.RED + " ██  ██ " + Fore.RESET
 
 empty = Fore.BLACK + "        " + Fore.RESET 
 
@@ -56,7 +49,7 @@ tic_9a = empty ; tic_9b = empty_09 ; tic_9c = empty
 
 ########### Colocar zero ##################
 
-def choice_coordinate():
+def choice_key():
     global tic_1a , tic_1b , tic_1c
     global tic_2a , tic_2b , tic_2c
     global tic_3a , tic_3b , tic_3c
@@ -69,16 +62,17 @@ def choice_coordinate():
     global selected_numbers
     
     while True:
-        coordinate = input("".center(argumento3))
-        if coordinate in valid_numbers:
-            if coordinate in selected_numbers:
+        msvcrt.getch()
+        key = keyboard.read_key()
+        if key in valid_numbers:
+            if key in selected_numbers:
                 print("Lugar ya elegido!".center(argumento2))
                 time.sleep(1)
                 os.system("cls")
                 the_game()
             else:
                 ## Aqui agregar la funcion de iluminacion ##
-                selected_numbers.append(coordinate)
+                selected_numbers.append(key)
                 break
         else:
             print("Numero no valido".center(argumento2))
@@ -86,28 +80,47 @@ def choice_coordinate():
             os.system("cls")
             the_game()
             
-    if coordinate == "1":
+    if key == "1":
         tic_1a = zero_1 ; tic_1b = zero_2 ; tic_1c = zero_3
-    elif coordinate == "2":
+    elif key == "2":
         tic_2a = zero_1 ; tic_2b = zero_2 ; tic_2c = zero_3
-    elif coordinate == "3":
+    elif key == "3":
         tic_3a = zero_1 ; tic_3b = zero_2 ;tic_3c = zero_3
-    elif coordinate == "4":
+    elif key == "4":
         tic_4a = zero_1 ; tic_4b = zero_2 ; tic_4c = zero_3
-    elif coordinate == "5":
+    elif key == "5":
         tic_5a = zero_1 ; tic_5b = zero_2 ; tic_5c = zero_3
-    elif coordinate == "6":
+    elif key == "6":
         tic_6a = zero_1 ; tic_6b = zero_2 ; tic_6c = zero_3
-    elif coordinate == "7":
+    elif key == "7":
         tic_7a = zero_1 ; tic_7b = zero_2 ; tic_7c = zero_3
-    elif coordinate == "8":
+    elif key == "8":
         tic_8a = zero_1 ; tic_8b = zero_2 ; tic_8c = zero_3
-    elif coordinate == "9":
+    elif key == "9":
         tic_9a = zero_1 ; tic_9b = zero_2 ; tic_9c = zero_3
+
+########## Colocar equis #################
+def choice_key_ai():
+    global tic_1a , tic_1b , tic_1c
+    global tic_2a , tic_2b , tic_2c
+
+
+    random_number = str(random.randint(1,2))
+    
+    if random_number == "1":
+        tic_1a = equis_1 ; tic_1b = equis_2 ; tic_1c = equis_3
+    elif random_number == "2":
+        tic_2a = equis_1 ;  tic_2b = equis_2 ; tic_2c = equis_3
+
+    the_game()
+
+
+    
 
 ############## El juego ###############
 def the_game():
     while True:
+        os.system("cls")
         print(f"")
         print(f"████████████  ████████████  ████████████".center(argumento2))
         print(f"██{tic_7a}██  ██{tic_8a}██  ██{tic_9a}██".center(argumento1))
@@ -126,19 +139,24 @@ def the_game():
         print(f"██{tic_1b}██  ██{tic_2b}██  ██{tic_3b}██".center(argumento1))
         print(f"██{tic_1c}██  ██{tic_2c}██  ██{tic_3c}██".center(argumento1))
         print(f"████████████  ████████████  ████████████".center(argumento2))
-        print(Fore.GREEN )
+        print(Fore.GREEN)
         print("_______████████████████████████████████████████████_______".center(argumento2))
-        print(Fore.RESET)
-        print("███████    ███████    ███████    ███████    ███████    ███████    ███████    ███████    ███████".center(argumento2))
-        print("█  █  █    █ ███ █    █ ███ █    █ █ █ █    █ ███ █    █ ███ █    █ ███ █    █ ███ █    █ ███ █".center(argumento2))
-        print("█ ██  █    █   █ █    █   █ █    █ █ █ █    █ █   █    █ █   █    █   █ █    █ █ █ █    █ █ █ █".center(argumento2))
-        print("█  █  █    █ ███ █    █ ███ █    █ ███ █    █ ███ █    █ ███ █    █  █  █    █ ███ █    █ ███ █".center(argumento2))
-        print("█  █  █    █ █   █    █   █ █    █   █ █    █   █ █    █ █ █ █    █  █  █    █ █ █ █    █   █ █".center(argumento2))
-        print("█  █  █    █ ███ █    █ ███ █    █   █ █    █ ███ █    █ ███ █    █  █  █    █ ███ █    █   █ █".center(argumento2))
-        print("███████    ███████    ███████    ███████    ███████    ███████    ███████    ███████    ███████".center(argumento2))
-        choice_coordinate()
+        print("")
+        print(" TECLA     TECLA     TECLA     TECLA     TECLA     TECLA     TECLA     TECLA     TECLA ".center(argumento2))
+        print(Fore.RESET,end="")
+        print("███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████".center(argumento2))
+        print("█  █  █   █ ███ █   █ ███ █   █ █ █ █   █ ███ █   █ ███ █   █ ███ █   █ ███ █   █ ███ █".center(argumento2))
+        print("█ ██  █   █   █ █   █   █ █   █ █ █ █   █ █   █   █ █   █   █   █ █   █ █ █ █   █ █ █ █".center(argumento2))
+        print("█  █  █   █ ███ █   █ ███ █   █ ███ █   █ ███ █   █ ███ █   █  █  █   █ ███ █   █ ███ █".center(argumento2))
+        print("█  █  █   █ █   █   █   █ █   █   █ █   █   █ █   █ █ █ █   █  █  █   █ █ █ █   █   █ █".center(argumento2))
+        print("█  █  █   █ ███ █   █ ███ █   █   █ █   █ ███ █   █ ███ █   █  █  █   █ ███ █   █   █ █".center(argumento2))
+        print("███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████".center(argumento2))
+        
+        choice_key()
+        choice_key_ai()
 
         os.system("cls")
+        
 
 
 ##Actualizar variables y agregar botones de referencia jsjsjs
