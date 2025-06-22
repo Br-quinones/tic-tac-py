@@ -25,5 +25,6 @@ Día 6 --> v0.06
     -Se intenta agrega la I.A enemiga sin exito devido a la calidad grafica que deseo.
     -cambios menores en la visualizacion.
 Dia 7 --> v0.07
+    -dia perdido a nivel personal aunque quien sabe si remonto al final del día
     -Se agrego la I.A enemiga con exito en el aspecto grafico y empezando en el aspecto tecnico
-    -Se empezo a refactorizar el codigo poco a poco
+    -Se empezo a refactorizar el codigo poco a poco y pequeñas mejoras en el aspecto grafico
