@@ -10,7 +10,7 @@ def deletreo(word):
     for letter in word:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        time.sleep(0.03)
+        time.sleep(0.02)
     print("\n")
     msvcrt.getch()
 
@@ -34,3 +34,5 @@ def chapter_01():
     message.agatha("Oh tan solo estaba leyendo un buen libro que encontre")
     message.beatriz("Hey si dejamos de perder nuestro tiempo con libros y entrenamos")
     message.agatha("Si mejor, dejare esto a un lado por un momento")
+    message.victoria("Agatha te explico como funciona juego")
+    message.beatriz("Panplinas el juego es tan facil, vamos de frente a la acción.")
