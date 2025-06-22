@@ -29,10 +29,11 @@ class message:
 
 
 def chapter_01():
-    message.agatha("En un lugar de la mancha de cuyo nombre no quiero recordar no ha mucho tiempo")
+    message.agatha("En un lugar de la mancha de cuyo nombre no quisiera recordar no ha mucho tiempo.")
     message.victoria("¿Pero que estas hablando mujer?")
-    message.agatha("Oh tan solo estaba leyendo un buen libro que encontre")
-    message.beatriz("Hey si dejamos de perder nuestro tiempo con libros y entrenamos")
-    message.agatha("Si mejor, dejare esto a un lado por un momento")
-    message.victoria("Agatha te explico como funciona juego")
+    message.agatha("Oh tan solo estaba leyendo un libro que encontre.")
+    message.beatriz("Hey dejan de perder el tiempo con libros y entrenamos.")
+    message.agatha("Si mejor, dejare esto a un lado por un momento.")
+    message.victoria("Bueno Agatha, te explico como funciona el juego...")
     message.beatriz("Panplinas el juego es tan facil, vamos de frente a la acción.")
+    message.beatriz("Ademas la mejor forma de aprender es mediante la paliza.")

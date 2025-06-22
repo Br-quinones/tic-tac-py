@@ -49,8 +49,6 @@ tic_9a = empty ; tic_9b = empty_09 ; tic_9c = empty
 valid_numbers = ["1","2","3","4","5","6","7","8","9","01","02","03","04","05","06","07","08","09"]
 selected_numbers = []
 
-############# Funciones de apoyo ###############
-
 ############## Union de graficos ###############
 def graphic_tictactoe():
     os.system("cls")
@@ -138,7 +136,7 @@ def machine_turn():
     global tic_9a , tic_9b , tic_9c
     global selected_numbers
 
-    print("Maquina pensando...".center(115))
+    print(Fore.GREEN +  "\n" + "Enemigo pensando...".center(115) + Fore.RESET)
     time.sleep(1) 
 
     while True:
@@ -166,6 +164,7 @@ def machine_turn():
     elif random_number == "9":
         tic_9a = equis_1 ; tic_9b = equis_2 ; tic_9c = equis_3
 
+##########3 Aqui el juego ############
 def the_game():
     while True:
         graphic_tictactoe()
