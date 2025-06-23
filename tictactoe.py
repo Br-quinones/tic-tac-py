@@ -2,7 +2,7 @@
 import os; import time
 from colorama import Fore, Style
 import msvcrt; import keyboard
-import random
+import random; import sys
 
 print(Style.BRIGHT ,end="")
 
@@ -43,6 +43,18 @@ tic_6a = empty ; tic_6b = empty_06 ; tic_6c = empty
 tic_7a = empty ; tic_7b = empty_07 ; tic_7c = empty
 tic_8a = empty ; tic_8b = empty_08 ; tic_8c = empty
 tic_9a = empty ; tic_9b = empty_09 ; tic_9c = empty
+
+##################### Para comprobar ##################
+
+cell_1 = "none"
+cell_2 = "none"
+cell_3 = "none"
+cell_4 = "none"
+cell_5 = "none"
+cell_6 = "none"
+cell_7 = "none"
+cell_8 = "none"
+cell_9 = "none"
 
 ############ listas ######################### 
 
@@ -94,8 +106,15 @@ def Human_turn():
     global tic_7a , tic_7b , tic_7c
     global tic_8a , tic_8b , tic_8c
     global tic_9a , tic_9b , tic_9c
+
+    global cell_1 , cell_2 , cell_3
+    global cell_4 , cell_5 , cell_6
+    global cell_7 , cell_8 , cell_9
+
     global selected_numbers
     
+    comprobation()
+
     while True:
         msvcrt.getch()
         key = keyboard.read_key()
@@ -105,23 +124,23 @@ def Human_turn():
             print("Numero no valido".center(115))
     
     if key == "1":
-        tic_1a = zero_1 ; tic_1b = zero_2 ; tic_1c = zero_3
+        tic_1a = zero_1 ; tic_1b = zero_2 ; tic_1c = zero_3 ; cell_1 = "zero"
     elif key == "2":
-        tic_2a = zero_1 ; tic_2b = zero_2 ; tic_2c = zero_3
+        tic_2a = zero_1 ; tic_2b = zero_2 ; tic_2c = zero_3 ; cell_2 = "zero"
     elif key == "3":
-        tic_3a = zero_1 ; tic_3b = zero_2 ;tic_3c = zero_3
+        tic_3a = zero_1 ; tic_3b = zero_2 ; tic_3c = zero_3 ; cell_3 = "zero"
     elif key == "4":
-        tic_4a = zero_1 ; tic_4b = zero_2 ; tic_4c = zero_3
+        tic_4a = zero_1 ; tic_4b = zero_2 ; tic_4c = zero_3 ; cell_4 = "zero"
     elif key == "5":
-        tic_5a = zero_1 ; tic_5b = zero_2 ; tic_5c = zero_3
+        tic_5a = zero_1 ; tic_5b = zero_2 ; tic_5c = zero_3 ; cell_5 = "zero"
     elif key == "6":
-        tic_6a = zero_1 ; tic_6b = zero_2 ; tic_6c = zero_3
+        tic_6a = zero_1 ; tic_6b = zero_2 ; tic_6c = zero_3 ; cell_6 = "zero"
     elif key == "7":
-        tic_7a = zero_1 ; tic_7b = zero_2 ; tic_7c = zero_3
+        tic_7a = zero_1 ; tic_7b = zero_2 ; tic_7c = zero_3 ; cell_7 = "zero"
     elif key == "8":
-        tic_8a = zero_1 ; tic_8b = zero_2 ; tic_8c = zero_3
+        tic_8a = zero_1 ; tic_8b = zero_2 ; tic_8c = zero_3 ; cell_8 = "zero"
     elif key == "9":
-        tic_9a = zero_1 ; tic_9b = zero_2 ; tic_9c = zero_3
+        tic_9a = zero_1 ; tic_9b = zero_2 ; tic_9c = zero_3 ; cell_9 = "zero"
 
 ########## Colocar equis #################
 def machine_turn():
@@ -134,7 +153,14 @@ def machine_turn():
     global tic_7a , tic_7b , tic_7c
     global tic_8a , tic_8b , tic_8c
     global tic_9a , tic_9b , tic_9c
+
+    global cell_1 , cell_2 , cell_3
+    global cell_4 , cell_5 , cell_6
+    global cell_7 , cell_8 , cell_9
+
     global selected_numbers
+
+    comprobation()
 
     print(Fore.GREEN +  "\n" + "Enemigo pensando...".center(115) + Fore.RESET)
     time.sleep(1) 
@@ -146,23 +172,72 @@ def machine_turn():
             break
     
     if random_number == "1":
-        tic_1a = equis_1 ; tic_1b = equis_2 ; tic_1c = equis_3
+        tic_1a = equis_1 ; tic_1b = equis_2 ; tic_1c = equis_3 ; cell_1 = "equis"
     elif random_number == "2":
-        tic_2a = equis_1 ; tic_2b = equis_2 ; tic_2c = equis_3
+        tic_2a = equis_1 ; tic_2b = equis_2 ; tic_2c = equis_3 ; cell_2 = "equis"
     elif random_number == "3":
-        tic_3a = equis_1 ; tic_3b = equis_2 ;tic_3c = equis_3
+        tic_3a = equis_1 ; tic_3b = equis_2 ; tic_3c = equis_3 ; cell_3 = "equis" 
     elif random_number == "4":
-        tic_4a = equis_1 ; tic_4b = equis_2 ; tic_4c = equis_3
+        tic_4a = equis_1 ; tic_4b = equis_2 ; tic_4c = equis_3 ; cell_4 = "equis" 
     elif random_number == "5":
-        tic_5a = equis_1 ; tic_5b = equis_2 ; tic_5c = equis_3
+        tic_5a = equis_1 ; tic_5b = equis_2 ; tic_5c = equis_3 ; cell_5 = "equis"
     elif random_number == "6":
-        tic_6a = equis_1 ; tic_6b = equis_2 ; tic_6c = equis_3
+        tic_6a = equis_1 ; tic_6b = equis_2 ; tic_6c = equis_3 ; cell_6 = "equis"
     elif random_number == "7":
-        tic_7a = equis_1 ; tic_7b = equis_2 ; tic_7c = equis_3
+        tic_7a = equis_1 ; tic_7b = equis_2 ; tic_7c = equis_3 ; cell_7 = "equis"
     elif random_number == "8":
-        tic_8a = equis_1 ; tic_8b = equis_2 ; tic_8c = equis_3
+        tic_8a = equis_1 ; tic_8b = equis_2 ; tic_8c = equis_3 ; cell_8 = "equis"
     elif random_number == "9":
-        tic_9a = equis_1 ; tic_9b = equis_2 ; tic_9c = equis_3
+        tic_9a = equis_1 ; tic_9b = equis_2 ; tic_9c = equis_3 ; cell_9 = "equis"
+
+########## comprobacion ###########
+def comprobation():
+
+    def end_game(name):
+        os.system("cls")
+        print(f"Gano el {name}".center(115)) 
+        time.sleep(5)
+        sys.exit()
+
+    #Horizontal X
+    if cell_1 == "equis" and cell_2 == "equis" and cell_3 == "equis":
+        end_game("enemigo")
+    elif cell_4 == "equis" and cell_5 == "equis" and cell_6 == "equis":
+        end_game("enemigo")
+    elif cell_7 == "equis" and cell_8 == "equis" and cell_9 == "equis":
+        end_game("enemigo")
+    #Vertical X
+    elif cell_1 == "equis" and cell_4 == "equis" and cell_7 == "equis":
+        end_game("enemigo")
+    elif cell_2 == "equis" and cell_5 == "equis" and cell_8 == "equis":
+        end_game("enemigo")
+    elif cell_3 == "equis" and cell_6 == "equis" and cell_9 == "equis":
+        end_game("enemigo")
+    #Diagonal X
+    elif cell_1 == "equis" and cell_5 == "equis" and cell_9 == "equis":
+        end_game("enemigo")
+    elif cell_3 == "equis" and cell_5 == "equis" and cell_7 == "equis":
+        end_game("enemigo")
+    
+    #Horizontal O
+    elif cell_1 == "zero" and cell_2 == "zero" and cell_3 == "zero":
+        end_game("jugador")
+    elif cell_4 == "zero" and cell_5 == "zero" and cell_6 == "zero":
+        end_game("jugador")
+    elif cell_7 == "zero" and cell_8 == "zero" and cell_9 == "zero":
+        end_game("jugador")
+    #Vertical O
+    elif cell_1 == "zero" and cell_4 == "zero" and cell_7 == "zero":
+        end_game("jugador")
+    elif cell_2 == "zero" and cell_5 == "zero" and cell_8 == "zero":
+        end_game("jugador")
+    elif cell_3 == "zero" and cell_6 == "zero" and cell_9 == "zero":
+        end_game("jugador")
+    #Diagonal O
+    elif cell_1 == "zero" and cell_5 == "zero" and cell_9 == "zero":
+        end_game("jugador")
+    elif cell_3 == "zero" and cell_5 == "zero" and cell_7 == "zero":
+        end_game("jugador")
 
 ##########3 Aqui el juego ############
 def the_game():

@@ -28,3 +28,7 @@ Dia 7 --> v0.07
     -dia perdido a nivel personal aunque quien sabe si remonto al final del día
     -Se agrego la I.A enemiga con exito en el aspecto grafico y empezando en el aspecto tecnico
     -Se empezo a refactorizar el codigo poco a poco y pequeñas mejoras en el aspecto grafico
+Dia 8 --> v0.08
+    -Jugando el nostalgico y hermoso age of history 2 multiplayer
+    -Se agrega la parte tecnica del juego del 3 en raya, esta version es el modo facil
+    -Se termina la parte tecnica y empezamos con el arte
