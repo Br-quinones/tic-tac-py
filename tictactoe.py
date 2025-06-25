@@ -195,6 +195,10 @@ def comprobation():
 
     def end_game(name):
         os.system("cls")
+        graphic_tictactoe()
+        print(Fore.GREEN + "\n" + "Finalizando partida...".center(115) + Fore.RESET)
+        time.sleep(2)
+        os.system("cls")
         print(f"Gano el {name}".center(115)) 
         time.sleep(5)
         sys.exit()
