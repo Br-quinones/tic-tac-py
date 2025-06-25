@@ -7,7 +7,7 @@ if __name__ == '__main__':
         time.sleep(0.01)
 
 import tictactoe ; import dialogue
-dialogue.chapter_01()
+# dialogue.chapter_01()
 tictactoe.the_game()
 
 
