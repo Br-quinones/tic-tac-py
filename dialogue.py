@@ -17,21 +17,28 @@ def deletreo(word):
 
 class message:
     def agatha(text):
-        art.agatha_art()
+        art.agatha_ascci()
         print(Fore.GREEN + "Agatha: " + Fore.RESET ,end="")
         deletreo(text)
 
     def beatrice(text):
-        art.beatrice_art()
+        art.beatrice_ascci()
         print(Fore.MAGENTA + "Beatriz: " + Fore.RESET ,end="")
         deletreo(text)
 
     def victoria(text):
-        art.victoria_art()
+        art.victoria_ascci()
         print(Fore.YELLOW + "Victoria: " + Fore.RESET ,end="")
         deletreo(text)
 
+    def director(text):
+        art.directo_ascci()
+        print(Fore.RED + "Director: " + Fore.RESET ,end="")
+        deletreo(text)
+
 def chapter_01():
+    message.director("Alumno este juego solo funciona con el teclado")
+    message.director("Presione enter para pasar en dialogo y dialogo y el pass numero para jugar el 3 en raya")
     message.agatha("En los reinos de antaño, donde la niebla danzaba entre los robles milenarios...")
     message.victoria("¿Agatha, qué fantasías recitas ahora?")
     message.agatha("Oh, solo me inspiro en un tomo antiguo que encontré, Victoria.")

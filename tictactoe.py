@@ -243,10 +243,12 @@ def comprobation():
     elif cell_3 == "zero" and cell_5 == "zero" and cell_7 == "zero":
         end_game("jugador")
 
-##########3 Aqui el juego ############
-def the_game():
+########## Aqui el juego nivel to' facil############
+def the_game_easy():
     while True:
         graphic_tictactoe()
         Human_turn()
         graphic_tictactoe()
         machine_turn()
+
+################## nivel medio 

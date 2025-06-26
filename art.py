@@ -1,7 +1,7 @@
 from colorama import Fore
 
-def man_normal():
-    print(Fore.BLUE)
+def directo_ascci():
+    print(Fore.RED)
     print(" ████████████ ".center(115))
     print(" ██        ██ ".center(115))
     print(" █  █    █  █ ".center(115))
@@ -20,7 +20,7 @@ def man_normal():
     print(Fore.RESET)
 
 #Graficos para la mujer
-def agatha_art():
+def agatha_ascci():
     print(Fore.GREEN)
     print("██████████████".center(115))
     print("███        ███".center(115))
@@ -39,7 +39,7 @@ def agatha_art():
     print("_______████████████████████████████████████████████_______".center(115))
     print(Fore.RESET)
 
-def beatrice_art():
+def beatrice_ascci():
     print(Fore.MAGENTA)
     print("██████████████".center(115))
     print("███        ███".center(115))
@@ -58,7 +58,7 @@ def beatrice_art():
     print("_______████████████████████████████████████████████_______".center(115))
     print(Fore.RESET)
 
-def victoria_art():
+def victoria_ascci():
     print(Fore.YELLOW)
     print("██████████████".center(115))
     print("███        ███".center(115))
