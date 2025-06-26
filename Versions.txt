@@ -39,6 +39,6 @@ Dia 10 --> v0.10
     -Dia normal con algo de sueño
     -Solucion de bugs con el "comprobation()" y mejoras
     -Cambio de historia para definir su rumbo
-Dia 11 -->0.11
+Dia 11 --> v0.11
     -Dia matandome la cabeza con el juego "Age of history 2" 
     -Cambios en los dialogos y nombre de las funciones
