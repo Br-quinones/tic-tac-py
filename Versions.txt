@@ -42,3 +42,10 @@ Dia 10 --> v0.10
 Dia 11 --> v0.11
     -Dia matandome la cabeza con el juego "Age of history 2" 
     -Cambios en los dialogos y nombre de las funciones
+Dia 12 --> v0.12
+    -Sin cambios 
+Dia 13 --> v0.13
+    -Sin cambios
+Dia 14 --> v0.14
+    -Se refactoriza el codigo bastante!
+    -Se agrega el enemigo dificuldad media
