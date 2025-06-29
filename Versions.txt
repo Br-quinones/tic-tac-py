@@ -49,3 +49,4 @@ Dia 13 --> v0.13
 Dia 14 --> v0.14
     -Se refactoriza el codigo bastante!
     -Se agrega el enemigo dificuldad media
+    -Se agrego el empate

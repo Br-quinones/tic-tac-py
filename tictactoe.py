@@ -58,7 +58,7 @@ cell_9 = "none"
 
 ############ listas ######################### 
 
-valid_numbers = ["1","2","3","4","5","6","7","8","9","01","02","03","04","05","06","07","08","09"]
+valid_numbers = ["1","2","3","4","5","6","7","8","9"]
 selected_numbers = []
 
 ######## activar casilla con X o O #######
@@ -229,12 +229,25 @@ def machine_turn_medio():
         active_cell("equis_5")
     elif cell_9 == "zero" and cell_3 == "zero" and "6" not in selected_numbers:
         active_cell("equis_6")
+    #Formacion equis medio
+    elif cell_1 == "zero" and cell_9 == "zero" and "5" not in selected_numbers:
+        active_cell("equis_5")
+    elif cell_7 == "zero" and cell_3 == "zero" and "5" not in selected_numbers:
+        active_cell("equis_5")
+    #Fomracion equis extremos
+    elif cell_7 == "zero" and cell_5 == "zero" and "3" not in selected_numbers:
+        active_cell("equis_3")
+    elif cell_9 == "zero" and cell_5 == "zero" and "1" not in selected_numbers:
+        active_cell("equis_1")
+    elif cell_3 == "zero" and cell_5 == "zero" and "7" not in selected_numbers:
+        active_cell("equis_7")
+    elif cell_1 == "zero" and cell_5 == "zero" and "9" not in selected_numbers:
+        active_cell("equis_9")
     else:
         machine_turn_easy()
 
 ########## comprobacion ###########
 def comprobation():
-
     def end_game(name):
         os.system("cls")
         graphic_tictactoe()
@@ -284,6 +297,9 @@ def comprobation():
         end_game("jugador")
     elif cell_3 == "zero" and cell_5 == "zero" and cell_7 == "zero":
         end_game("jugador")
+    #Tablero lleno
+    elif set(valid_numbers) == set(selected_numbers):
+        end_game("Empate")
 
 ########## Aqui el juego nivel to' facil############
 def the_game():
