@@ -50,3 +50,7 @@ Dia 14 --> v0.14
     -Se refactoriza el codigo bastante!
     -Se agrega el enemigo dificuldad media
     -Se agrego el empate
+Dia 15 --> v0.15
+    -Se minirefactorizo algunos detalles
+    -Se simplica el codigo 
+    -Se añade el enemigo dificuldad dificil
