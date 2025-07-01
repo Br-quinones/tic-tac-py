@@ -1,26 +1,23 @@
-######### Instalar librerias y colocar constantes#############
+########## Instalar librerias ##########
 import os; import time
 from colorama import Fore, Style
 import msvcrt; import keyboard
 import random; import sys
 
+########## Colocar Brillo ##########
 print(Style.BRIGHT ,end="")
 
 ############ Graficos ##################
-
 #Zero
 zero_1 = Fore.BLUE + "  ████  " + Fore.RESET
 zero_2 = Fore.BLUE + " ██  ██ " + Fore.RESET 
 zero_3 = Fore.BLUE + "  ████  " + Fore.RESET
-
 #Equis
 equis_1 = Fore.RED + " ██  ██ " + Fore.RESET
 equis_2 = Fore.RED + "   ██   " + Fore.RESET
 equis_3 = Fore.RED + " ██  ██ " + Fore.RESET
-
 #Vacios
 empty = Fore.BLACK + "        " + Fore.RESET 
-
 #Vacios con numero
 empty_01 = Fore.GREEN + "   01   " + Fore.RESET
 empty_02 = Fore.GREEN + "   02   " + Fore.RESET 
@@ -32,8 +29,7 @@ empty_07 = Fore.GREEN + "   07   " + Fore.RESET
 empty_08 = Fore.GREEN + "   08   " + Fore.RESET 
 empty_09 = Fore.GREEN + "   09   " + Fore.RESET 
 
-########## Colocar vacio a todos ###########
-
+########## Colocar vacio a todo ##########
 tic_1a = empty ; tic_1b = empty_01 ; tic_1c = empty
 tic_2a = empty ; tic_2b = empty_02 ; tic_2c = empty
 tic_3a = empty ; tic_3b = empty_03 ; tic_3c = empty
@@ -44,8 +40,7 @@ tic_7a = empty ; tic_7b = empty_07 ; tic_7c = empty
 tic_8a = empty ; tic_8b = empty_08 ; tic_8c = empty
 tic_9a = empty ; tic_9b = empty_09 ; tic_9c = empty
 
-##################### Para comprobar ##################
-
+########## Crear celdas ##########
 cell_1 = "none"
 cell_2 = "none"
 cell_3 = "none"
@@ -56,12 +51,12 @@ cell_7 = "none"
 cell_8 = "none"
 cell_9 = "none"
 
-############ listas ######################### 
+########## Crear listas ########## 
 
 valid_numbers = ["1","2","3","4","5","6","7","8","9"]
 selected_numbers = []
 
-######## activar casilla con X o O #######
+########## Activar casillas X y O ##########
 def active_cell(argumento):
     global tic_1a , tic_1b , tic_1c
     global tic_2a , tic_2b , tic_2c
@@ -123,7 +118,7 @@ def active_cell(argumento):
     else:
         print("Error al colocar el argumento")
 
-############## Union de graficos ###############
+########## Creacion de graficos ##########
 def graphic_tictactoe():
     os.system("cls")
     print(f"")
@@ -157,7 +152,7 @@ def graphic_tictactoe():
     print("█  █  █   █ ███ █   █ ███ █   █   █ █   █ ███ █   █ ███ █   █  █  █   █ ███ █   █   █ █".center(115))
     print("███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████".center(115))
 
-########### Colocar zero ##################
+########## Elección del Jugador ##########
 def Human_turn():
     comprobation()
 
@@ -170,7 +165,7 @@ def Human_turn():
         else:
             print("Numero no valido".center(115))
 
-########## Enemigo nivel facil #################
+########## Enemigo nivel facil ##########
 def machine_turn_easy():
     while True:
         random_number = str(random.randint(1,9))
@@ -178,56 +173,56 @@ def machine_turn_easy():
             active_cell(f"equis_{random_number}")
             break
 
-########## Enemigo nivel medio ################# 
-def machine_turn_medio():
-    #Parte izquierda
+########## Enemigo nivel medio ########## 
+def machine_turn_medium():
+    #Defensa izquierda
     if cell_1 == "zero" and cell_2 == "zero" and "3" not in selected_numbers:
         active_cell("equis_3")
     elif cell_4 == "zero" and cell_5 == "zero" and "6" not in selected_numbers:
         active_cell("equis_6")
     elif cell_7 == "zero" and cell_8 == "zero" and "9" not in selected_numbers:
         active_cell("equis_9")
-    #Parte derecha
+    #Defensa derecha
     elif cell_8 == "zero" and cell_9 == "zero" and "7" not in selected_numbers:
         active_cell("equis_7")
     elif cell_5 == "zero" and cell_6 == "zero" and "4" not in selected_numbers:
         active_cell("equis_4")
     elif cell_2 == "zero" and cell_3 == "zero" and "1" not in selected_numbers:
         active_cell("equis_1")
-    #Parte inferior
+    #Defensa inferior
     elif cell_1 == "zero" and cell_4 == "zero" and "7" not in selected_numbers:
         active_cell("equis_7")
     elif cell_2 == "zero" and cell_5 == "zero" and "8" not in selected_numbers:
         active_cell("equis_8")
     elif cell_3 == "zero" and cell_6 == "zero" and "9" not in selected_numbers:
         active_cell("equis_9")
-    #Parte superior
+    #Defensa superior
     elif cell_7 == "zero" and cell_4 == "zero" and "1" not in selected_numbers:
         active_cell("equis_1")
     elif cell_8 == "zero" and cell_5 == "zero" and "2" not in selected_numbers:
         active_cell("equis_2")
     elif cell_9 == "zero" and cell_6 == "zero" and "3" not in selected_numbers:
         active_cell("equis_3")
-    #Formacion derecha y izquierda
+    #Defensa derecha e izquierda
     elif cell_7 == "zero" and cell_9 == "zero" and "8" not in selected_numbers:
         active_cell("equis_8")
     elif cell_4 == "zero" and cell_6 == "zero" and "5" not in selected_numbers:
         active_cell("equis_5")
     elif cell_1 == "zero" and cell_3 == "zero" and "2" not in selected_numbers:
         active_cell("equis_2")
-    #Formacion superior y inferior
+    #Defensa superior e inferior
     elif cell_7 == "zero" and cell_1 == "zero" and "4" not in selected_numbers:
         active_cell("equis_4")
     elif cell_8 == "zero" and cell_2 == "zero" and "5" not in selected_numbers:
         active_cell("equis_5")
     elif cell_9 == "zero" and cell_3 == "zero" and "6" not in selected_numbers:
         active_cell("equis_6")
-    #Formacion equis medio
+    #Defensa central medio
     elif cell_1 == "zero" and cell_9 == "zero" and "5" not in selected_numbers:
         active_cell("equis_5")
     elif cell_7 == "zero" and cell_3 == "zero" and "5" not in selected_numbers:
         active_cell("equis_5")
-    #Fomracion equis extremos
+    #Defensa central extremos
     elif cell_7 == "zero" and cell_5 == "zero" and "3" not in selected_numbers:
         active_cell("equis_3")
     elif cell_9 == "zero" and cell_5 == "zero" and "1" not in selected_numbers:
@@ -239,56 +234,56 @@ def machine_turn_medio():
     else:
         machine_turn_easy()
 
-########## Enemigo nivel dificil #############
+########## Enemigo nivel dificil ##########
 def machine_turn_hard():
-    # Ataque izquierdo
+    #Ataque izquierdo
     if cell_1 == "equis" and cell_2 == "equis" and "3" not in selected_numbers:
         active_cell("equis_3")
     elif cell_4 == "equis" and cell_5 == "equis" and "6" not in selected_numbers:
         active_cell("equis_6")
     elif cell_7 == "equis" and cell_8 == "equis" and "9" not in selected_numbers:
         active_cell("equis_9")
-    # Ataque derecho
+    #Ataque derecho
     elif cell_8 == "equis" and cell_9 == "equis" and "7" not in selected_numbers:
         active_cell("equis_7")
     elif cell_5 == "equis" and cell_6 == "equis" and "4" not in selected_numbers:
         active_cell("equis_4")
     elif cell_2 == "equis" and cell_3 == "equis" and "1" not in selected_numbers:
         active_cell("equis_1")
-    #Parte inferior
+    #Ataque inferior
     elif cell_1 == "equis" and cell_4 == "equis" and "7" not in selected_numbers:
         active_cell("equis_7")
     elif cell_2 == "equis" and cell_5 == "equis" and "8" not in selected_numbers:
         active_cell("equis_8")
     elif cell_3 == "equis" and cell_6 == "equis" and "9" not in selected_numbers:
         active_cell("equis_9")
-    #Parte superior
+    #Ataque superior
     elif cell_7 == "equis" and cell_4 == "equis" and "1" not in selected_numbers:
         active_cell("equis_1")
     elif cell_8 == "equis" and cell_5 == "equis" and "2" not in selected_numbers:
         active_cell("equis_2")
     elif cell_9 == "equis" and cell_6 == "equis" and "3" not in selected_numbers:
         active_cell("equis_3")
-    #Formacion derecha y izquierda
+    #Ataque derecho e izquierdo
     elif cell_7 == "equis" and cell_9 == "equis" and "8" not in selected_numbers:
         active_cell("equis_8")
     elif cell_4 == "equis" and cell_6 == "equis" and "5" not in selected_numbers:
         active_cell("equis_5")
     elif cell_1 == "equis" and cell_3 == "equis" and "2" not in selected_numbers:
         active_cell("equis_2")
-    #Formacion superior y inferior
+    #Ataque superior e inferior
     elif cell_7 == "equis" and cell_1 == "equis" and "4" not in selected_numbers:
         active_cell("equis_4")
     elif cell_8 == "equis" and cell_2 == "equis" and "5" not in selected_numbers:
         active_cell("equis_5")
     elif cell_9 == "equis" and cell_3 == "equis" and "6" not in selected_numbers:
         active_cell("equis_6")
-    #Formacion equis medio
+    #Ataque central medio
     elif cell_1 == "equis" and cell_9 == "equis" and "5" not in selected_numbers:
         active_cell("equis_5")
     elif cell_7 == "equis" and cell_3 == "equis" and "5" not in selected_numbers:
         active_cell("equis_5")
-    #Fomracion equis extremos
+    #Ataque central extremos
     elif cell_7 == "equis" and cell_5 == "equis" and "3" not in selected_numbers:
         active_cell("equis_3")
     elif cell_9 == "equis" and cell_5 == "equis" and "1" not in selected_numbers:
@@ -298,9 +293,143 @@ def machine_turn_hard():
     elif cell_1 == "equis" and cell_5 == "equis" and "9" not in selected_numbers:
         active_cell("equis_9")
     else:
-        machine_turn_medio()
+        machine_turn_medium()
 
-########## comprobacion ###########
+########## Enemigo nivel super dificil ##########
+def machine_turn_expert():
+    #Ataque izquierdo
+    if cell_1 == "equis" and cell_2 == "equis" and "3" not in selected_numbers:
+        active_cell("equis_3")
+    elif cell_4 == "equis" and cell_5 == "equis" and "6" not in selected_numbers:
+        active_cell("equis_6")
+    elif cell_7 == "equis" and cell_8 == "equis" and "9" not in selected_numbers:
+        active_cell("equis_9")
+    #Ataque derecho
+    elif cell_8 == "equis" and cell_9 == "equis" and "7" not in selected_numbers:
+        active_cell("equis_7")
+    elif cell_5 == "equis" and cell_6 == "equis" and "4" not in selected_numbers:
+        active_cell("equis_4")
+    elif cell_2 == "equis" and cell_3 == "equis" and "1" not in selected_numbers:
+        active_cell("equis_1")
+    #Ataque inferior
+    elif cell_1 == "equis" and cell_4 == "equis" and "7" not in selected_numbers:
+        active_cell("equis_7")
+    elif cell_2 == "equis" and cell_5 == "equis" and "8" not in selected_numbers:
+        active_cell("equis_8")
+    elif cell_3 == "equis" and cell_6 == "equis" and "9" not in selected_numbers:
+        active_cell("equis_9")
+    #Ataque superior
+    elif cell_7 == "equis" and cell_4 == "equis" and "1" not in selected_numbers:
+        active_cell("equis_1")
+    elif cell_8 == "equis" and cell_5 == "equis" and "2" not in selected_numbers:
+        active_cell("equis_2")
+    elif cell_9 == "equis" and cell_6 == "equis" and "3" not in selected_numbers:
+        active_cell("equis_3")
+    #Ataque derecho e izquierdo
+    elif cell_7 == "equis" and cell_9 == "equis" and "8" not in selected_numbers:
+        active_cell("equis_8")
+    elif cell_4 == "equis" and cell_6 == "equis" and "5" not in selected_numbers:
+        active_cell("equis_5")
+    elif cell_1 == "equis" and cell_3 == "equis" and "2" not in selected_numbers:
+        active_cell("equis_2")
+    #Ataque superior e inferior
+    elif cell_7 == "equis" and cell_1 == "equis" and "4" not in selected_numbers:
+        active_cell("equis_4")
+    elif cell_8 == "equis" and cell_2 == "equis" and "5" not in selected_numbers:
+        active_cell("equis_5")
+    elif cell_9 == "equis" and cell_3 == "equis" and "6" not in selected_numbers:
+        active_cell("equis_6")
+    #Ataque central medio
+    elif cell_1 == "equis" and cell_9 == "equis" and "5" not in selected_numbers:
+        active_cell("equis_5")
+    elif cell_7 == "equis" and cell_3 == "equis" and "5" not in selected_numbers:
+        active_cell("equis_5")
+    #Ataque central extremos
+    elif cell_7 == "equis" and cell_5 == "equis" and "3" not in selected_numbers:
+        active_cell("equis_3")
+    elif cell_9 == "equis" and cell_5 == "equis" and "1" not in selected_numbers:
+        active_cell("equis_1")
+    elif cell_3 == "equis" and cell_5 == "equis" and "7" not in selected_numbers:
+        active_cell("equis_7")
+    elif cell_1 == "equis" and cell_5 == "equis" and "9" not in selected_numbers:
+        active_cell("equis_9")
+        #Defensa izquierda
+    elif cell_1 == "zero" and cell_2 == "zero" and "3" not in selected_numbers:
+        active_cell("equis_3")
+    elif cell_4 == "zero" and cell_5 == "zero" and "6" not in selected_numbers:
+        active_cell("equis_6")
+    elif cell_7 == "zero" and cell_8 == "zero" and "9" not in selected_numbers:
+        active_cell("equis_9")
+    #Defensa derecha
+    elif cell_8 == "zero" and cell_9 == "zero" and "7" not in selected_numbers:
+        active_cell("equis_7")
+    elif cell_5 == "zero" and cell_6 == "zero" and "4" not in selected_numbers:
+        active_cell("equis_4")
+    elif cell_2 == "zero" and cell_3 == "zero" and "1" not in selected_numbers:
+        active_cell("equis_1")
+    #Defensa inferior
+    elif cell_1 == "zero" and cell_4 == "zero" and "7" not in selected_numbers:
+        active_cell("equis_7")
+    elif cell_2 == "zero" and cell_5 == "zero" and "8" not in selected_numbers:
+        active_cell("equis_8")
+    elif cell_3 == "zero" and cell_6 == "zero" and "9" not in selected_numbers:
+        active_cell("equis_9")
+    #Defensa superior
+    elif cell_7 == "zero" and cell_4 == "zero" and "1" not in selected_numbers:
+        active_cell("equis_1")
+    elif cell_8 == "zero" and cell_5 == "zero" and "2" not in selected_numbers:
+        active_cell("equis_2")
+    elif cell_9 == "zero" and cell_6 == "zero" and "3" not in selected_numbers:
+        active_cell("equis_3")
+    #Defensa derecha e izquierda
+    elif cell_7 == "zero" and cell_9 == "zero" and "8" not in selected_numbers:
+        active_cell("equis_8")
+    elif cell_4 == "zero" and cell_6 == "zero" and "5" not in selected_numbers:
+        active_cell("equis_5")
+    elif cell_1 == "zero" and cell_3 == "zero" and "2" not in selected_numbers:
+        active_cell("equis_2")
+    #Defensa superior e inferior
+    elif cell_7 == "zero" and cell_1 == "zero" and "4" not in selected_numbers:
+        active_cell("equis_4")
+    elif cell_8 == "zero" and cell_2 == "zero" and "5" not in selected_numbers:
+        active_cell("equis_5")
+    elif cell_9 == "zero" and cell_3 == "zero" and "6" not in selected_numbers:
+        active_cell("equis_6")
+    #Defensa central medio
+    elif cell_1 == "zero" and cell_9 == "zero" and "5" not in selected_numbers:
+        active_cell("equis_5")
+    elif cell_7 == "zero" and cell_3 == "zero" and "5" not in selected_numbers:
+        active_cell("equis_5")
+    #Defensa central extremos
+    elif cell_7 == "zero" and cell_5 == "zero" and "3" not in selected_numbers:
+        active_cell("equis_3")
+    elif cell_9 == "zero" and cell_5 == "zero" and "1" not in selected_numbers:
+        active_cell("equis_1")
+    elif cell_3 == "zero" and cell_5 == "zero" and "7" not in selected_numbers:
+        active_cell("equis_7")
+    elif cell_1 == "zero" and cell_5 == "zero" and "9" not in selected_numbers:
+        active_cell("equis_9")
+    #Ganar centro
+    elif "5" not in selected_numbers:
+        active_cell("equis_5")
+    #Formacion con centro capturado
+    elif cell_5 == "equis":
+        while True:
+            random_number = str(random.randint(1,9))
+            if random_number in ["2","4","6","8"] and random_number not in selected_numbers:
+                active_cell(f"equis_{random_number}")
+                break
+    #Formacion con centro no capturado
+    elif cell_5 == "zero":
+        while True:
+            random_number = str(random.randint(1,9))
+            if random_number in ["1","3","7","9"] and random_number not in selected_numbers:
+                active_cell(f"equis_{random_number}")
+                break
+    else:
+        machine_turn_easy()
+
+########## Comprobacion de victoria ##########
 def comprobation():
     def end_game(name):
         print(Fore.GREEN +  "\n" + "Finalizando partida...".center(115) + Fore.RESET)
@@ -356,28 +485,31 @@ def comprobation():
     elif set(valid_numbers) == set(selected_numbers):
         end_game("Empate")
 
-############## Enemigos ################
-def machine_turn(argumento):
+########## Dificuldad del enemigo ##########
+def machine_turn(difficulty):
     global machine_turn_easy
-    global machine_turn_medio
+    global machine_turn_medium
     global machine_turn_hard
+    global machine_turn_expert
 
     comprobation()
 
     print(Fore.GREEN +  "\n" + "Procesando partida...".center(115) + Fore.RESET)
     time.sleep(1)
 
-    if argumento == "easy":
+    if difficulty == "easy":
         return machine_turn_easy()
-    elif argumento == "medium":
-        return machine_turn_medio()
-    elif argumento == "hard":
+    elif difficulty == "medium":
+        return machine_turn_medium()
+    elif difficulty == "hard":
         return machine_turn_hard()
+    elif difficulty == "expert":
+        return machine_turn_expert()
     
-########## Aqui el juego nivel to' facil############
-def the_game():
+########## El juego ##########
+def the_game(difficulty):
     while True:
         graphic_tictactoe()
         Human_turn()
         graphic_tictactoe()
-        machine_turn("hard")
+        machine_turn(difficulty)

@@ -109,3 +109,14 @@
 #
 #Autor
     #Br-Quiñones
+
+import random
+
+while True:
+    random_number = (random.randint(1,10))
+    if random_number in [6,7]:
+        pass
+    else:        
+        break
+
+print(random_number)
