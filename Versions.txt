@@ -1,9 +1,9 @@
-                                Conteo de dias (1-???)
+                                    Conteo de dias (1-???)
 
 Aqui colocare mi día a día personal y el avanze del proyecto
 
 Dia 1 --> v0.01
-    -El proyecto se retrasara por que ya tengo que prepararme para el examen de admision. #
+    #Se elimino algo de aquI, pero el creador recuerda
     -Se inicio el repositorio en GitHub; Se cre la ficha tecnica; Se programa lo basico.
 Dia 2 --> v0.02
     -El proyecto se ve prometedor logre solucionar el segundo problema principal 
@@ -54,3 +54,6 @@ Dia 15 --> v0.15
     -Se minirefactorizo algunos detalles
     -Se simplica el codigo 
     -Se añade el enemigo dificuldad dificil
+Dia 16 --> v0.16
+    -Cansado mentalmente por ayer
+    -Se añade el enemigo dificuldad experto

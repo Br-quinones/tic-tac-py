@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
 import tictactoe ; import dialogue
 # dialogue.chapter_01()
-tictactoe.the_game()
+tictactoe.the_game("expert")
 
 
 
