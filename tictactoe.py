@@ -416,14 +416,20 @@ def machine_turn_expert():
     elif cell_5 == "equis":
         while True:
             random_number = str(random.randint(1,9))
-            if random_number in ["2","4","6","8"] and random_number not in selected_numbers:
+            if "2" in selected_numbers and "4" in selected_numbers and "6" in selected_numbers and "8" in selected_numbers:
+                machine_turn_easy()
+                break
+            elif random_number in ["2","4","6","8"] and random_number not in selected_numbers:
                 active_cell(f"equis_{random_number}")
                 break
     #Formacion con centro no capturado
     elif cell_5 == "zero":
         while True:
             random_number = str(random.randint(1,9))
-            if random_number in ["1","3","7","9"] and random_number not in selected_numbers:
+            if "1" in selected_numbers and "3" in selected_numbers and "7" in selected_numbers and "9" in selected_numbers:
+                machine_turn_easy()
+                break
+            elif random_number in ["1","3","7","9"] and random_number not in selected_numbers:
                 active_cell(f"equis_{random_number}")
                 break
     else:
@@ -507,9 +513,9 @@ def machine_turn(difficulty):
         return machine_turn_expert()
     
 ########## El juego ##########
-def the_game(difficulty):
+def the_game():
     while True:
         graphic_tictactoe()
         Human_turn()
         graphic_tictactoe()
-        machine_turn(difficulty)
+        machine_turn("expert")
