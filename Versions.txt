@@ -57,3 +57,16 @@ Dia 15 --> v0.15
 Dia 16 --> v0.16
     -Cansado mentalmente por ayer
     -Se añade el enemigo dificuldad experto
+Dia 17 --> v0.17
+    -Se me olvido subir la version a GitHub. ya ni modo
+    -Se agrego arte del menu
+Dia 18 --> v0.18
+    -Sin cambios
+Dia 19 --> v0.19
+    -Sin cambios
+Dia 20 --> v0.20
+    -Sin cambios
+Dia 21 --> v0.21
+    -Sin cambios
+Dia 22 --> v0.22
+    -Se añadio la beta del menu, ahora es funcional
