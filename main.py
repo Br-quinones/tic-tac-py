@@ -7,9 +7,10 @@ if __name__ == '__main__':
     for _ in range(8):
         keyboard.press_and_release("ctrl+plus")
         time.sleep(0.01)
-    
+
     import menu
     menu.main_menu()
+
 
 
 
