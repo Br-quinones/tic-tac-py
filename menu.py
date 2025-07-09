@@ -1,5 +1,12 @@
 import msvcrt ; import keyboard ; import tictactoe ; import os ; import sys ; import time
-import languages as l
+
+########## Idioma #########
+
+import variable
+if variable.main_language == "spanish":
+    import languages.es as l
+elif variable.main_language == "english":
+    import languages.en as l
 
 def main_menu():
     print(f"                                                                                      ".center(115))
@@ -55,17 +62,25 @@ def choice_for_play():
     tictactoe.the_game()
 
 def choice_for_language():
+    global l 
+    global variable
+
     os.system("cls")
+
     print("\n"*10)
     print("Seleccione su idioma: ".center(115))
     print(" 1. Español".center(115))
     print(" 2. English".center(115))
+
     msvcrt.getch()
     number_of_language = keyboard.read_key()
     if number_of_language == "1":
-        l.main_language = "es"
+        variable.main_language = "spanish"
+        from languages import es as l
     elif number_of_language == "2":
-        l.main_language = "en"
+        variable.main_language = "english"
+        from languages import en as l
+    
     os.system("cls")
     main_menu()
 
