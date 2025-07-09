@@ -72,3 +72,7 @@ Dia 22 --> v0.22
     -Se añadio la beta del menu, ahora es funcional
 Dia 23 --> v0.23
     -Un infierno total el tema de agregar idiomas, se empezo a intentar hoy
+Dia 24 --> 0.24
+    -Sin cambios
+Dia 25 --> 0.25
+    -Dios el infierno de agregar idiomas solo aumenta y aumenta
