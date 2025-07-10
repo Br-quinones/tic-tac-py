@@ -76,3 +76,5 @@ Dia 24 --> v0.24
     -Sin cambios
 Dia 25 --> v0.25
     -Dios el infierno de agregar idiomas solo aumenta y aumenta
+Dia 26 ---> v0.26
+    -Se logra implemetar ingles y español al 98% y japones aun esta en beta
