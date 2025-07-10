@@ -7,6 +7,8 @@ if variable.main_language == "spanish":
     import languages.es as l
 elif variable.main_language == "english":
     import languages.en as l
+elif variable.main_language == "japanese":
+    import languages.ja as l
 
 def main_menu():
     print(f"                                                                                      ".center(115))
@@ -68,9 +70,10 @@ def choice_for_language():
     os.system("cls")
 
     print("\n"*10)
-    print("Seleccione su idioma: ".center(115))
-    print(" 1. Español".center(115))
-    print(" 2. English".center(115))
+    print(l.choice_language.center(115))
+    print(f"[1]{l.spanish}".center(115))
+    print(f"[2]{l.english}".center(115))
+    print(f"[3]{l.japanese}".center(115))
 
     msvcrt.getch()
     number_of_language = keyboard.read_key()
@@ -80,16 +83,20 @@ def choice_for_language():
     elif number_of_language == "2":
         variable.main_language = "english"
         from languages import en as l
+    elif number_of_language == "3":
+        variable.main_language == "japanese"
+        from languages import ja as l
     
     os.system("cls")
     main_menu()
 
 def choice_for_credits():
     os.system("cls")
+
     print("\n"*10)
-    print("Author: Br_Quinones".center(115))
-    print("Support: Chat GPT".center(115))
-    print("Traductor: Gemeni".center(115))
+    print(l.author.center(115))
+    print(l.traductor.center(115))
+
     msvcrt.getch()
     os.system("cls")
     main_menu()
@@ -97,7 +104,7 @@ def choice_for_credits():
 def choice_for_exit():
     os.system("cls")
     print("\n"*10)
-    print("Saliendo...".center(115))
+    print(l.exiting.center(115))
     time.sleep(0.2)
     sys.exit()
 

@@ -16,6 +16,8 @@ def idioma():
         import languages.es as l
     elif variable.main_language == "english":
         import languages.en as l
+    elif variable.main_language == "japanese":
+        import languages.ja as l
 
 ############ Graficos ##################
 #Zero
@@ -447,13 +449,20 @@ def machine_turn_expert():
 
 ########## Comprobacion de victoria ##########
 def comprobation():
-    def end_game(name):
-        print(Fore.GREEN +  "\n" + "Finalizando partida...".center(115) + Fore.RESET)
+    def end_game(winner):
+        print(Fore.GREEN +  "\n" + l.ending_game.center(115) + Fore.RESET)
         time.sleep(1.5)
         os.system("cls")
         print("\n"*12)
-        print(f"Gano el {name}".center(115))
-        print("\n"+"Presione cualquier tecla para salir".center(115))
+
+        if winner == "jugador":
+            print(f"{l.win_the}{l.player}".center(115))
+        elif winner == "enemigo":
+            print(f"{l.win_the}{l.enemy}".center(115))
+        elif winner == "empate":
+            print(f"{l.win_the}{l.draw}".center(115))
+
+        print("\n"+l.input_for_exit.center(115))
         time.sleep(1)
         msvcrt.getch()
         sys.exit()
@@ -499,7 +508,7 @@ def comprobation():
         end_game("jugador")
     #Tablero lleno
     elif set(valid_numbers) == set(selected_numbers):
-        end_game("Empate")
+        end_game("empate")
 
 ########## Dificuldad del enemigo ##########
 def machine_turn(difficulty):
@@ -510,7 +519,7 @@ def machine_turn(difficulty):
 
     comprobation()
 
-    print(Fore.GREEN +  "\n" + "Procesando partida...".center(115) + Fore.RESET)
+    print(Fore.GREEN +  "\n" + l.processing_game.center(115) + Fore.RESET)
     time.sleep(1)
 
     if difficulty == "easy":
