@@ -78,3 +78,7 @@ Dia 25 --> v0.25
     -Dios el infierno de agregar idiomas solo aumenta y aumenta
 Dia 26 ---> v0.26
     -Se logra implemetar ingles y español al 98% y japones aun esta en beta
+Dia 27 --> v0.27
+    -Se añade el idioma español, ingles y japones 100% al menu
+    -Se comienza a trabajar en la traducción del tictactoe
+    -Se planea terminar con la traducción hasta donde esta el juego y luego refactorizar para poder añadir mas cosas

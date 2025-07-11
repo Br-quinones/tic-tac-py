@@ -7,18 +7,6 @@ import random; import sys
 ########## Colocar Brillo ##########
 print(Style.BRIGHT ,end="")
 
-########## Idioma ###########
-import languages.es as l
-def idioma():
-    import variable
-    global l
-    if variable.main_language == "spanish":
-        import languages.es as l
-    elif variable.main_language == "english":
-        import languages.en as l
-    elif variable.main_language == "japanese":
-        import languages.ja as l
-
 ############ Graficos ##################
 #Zero
 zero_1 = Fore.BLUE + "  ████  " + Fore.RESET
@@ -154,7 +142,6 @@ def graphic_tictactoe():
     print(f"\n" + Fore.GREEN)
     print(f"_______████████████████████████████████████████████_______".center(115))
     print(f"")
-    print(f" {l.key}     {l.key}     {l.key}     {l.key}     {l.key}     {l.key}     {l.key}     {l.key}     {l.key} ".center(115))
     print(Fore.RESET,end="")
     print("███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████".center(115))
     print("█  █  █   █ ███ █   █ ███ █   █ █ █ █   █ ███ █   █ ███ █   █ ███ █   █ ███ █   █ ███ █".center(115))
@@ -533,7 +520,14 @@ def machine_turn(difficulty):
     
 ########## El juego ##########
 def the_game():
-    idioma()
+    global l
+    import variable
+    if variable.main_language == "spanish":
+        import languages.es as l
+    elif variable.main_language == "english":
+        import languages.en as l
+    elif variable.main_language == "japanese":
+        import languages.ja as l
     while True:
         graphic_tictactoe()
         Human_turn()
