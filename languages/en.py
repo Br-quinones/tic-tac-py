@@ -9,15 +9,16 @@ choice_language = "Selec her language: "
 spanish = "Spanish"
 english = "English"
 japanese = "Japanese"
-
 #Creditos
 author = "Author: Brayan Quinones"
 traductor = "Traductor: Gemeni & Chat GPT"
 #Salir
 exiting = "Leaving..."
 
+#Error no tecla
+invalid_key_error = "Invalid key error"
+
 ############## Tic-Tac-Toe ##############
-key = " Key "
 #Procesos
 ending_game = "Ending game..."
 processing_game= "Processing game..."

@@ -1,7 +1,6 @@
 import msvcrt ; import keyboard ; import tictactoe ; import os ; import sys ; import time
 
-########## Idioma #########
-
+########## Cambiar idioma dependiendo del usuario #########
 import variable
 if variable.main_language == "spanish":
     import languages.es as l
@@ -21,7 +20,7 @@ def main_menu():
     print(f"   ╚═╝   ╚═╝ ╚═════╝               ╚═╝   ╚═╝  ╚═╝ ╚═════╝            ╚═╝        ╚═╝   ".center(115))
     print(f"                                                                                      ".center(115))
     print(f"                                                                                      ".center(115))
-    print(f"     [1]{l.play}       [2]{l.languages}       [3]{l.credits}       [4]{l.exit}        ".center(115))
+    print(f"                [1]{l.play}                [2]{l.languages}                [3]{l.credits}                [4]{l.exit}                ")#Ajuste idiomatico
     print(f"                                                                                      ".center(115))
     print(f"                                                                                      ".center(115))
     print(f"                                                                                      ".center(115))
@@ -70,10 +69,10 @@ def choice_for_language():
     os.system("cls")
 
     print("\n"*10)
-    print(l.choice_language.center(115))
-    print(f"[1]{l.spanish}".center(115))
-    print(f"[2]{l.english}".center(115))
-    print(f"[3]{l.japanese}".center(115))
+
+    print(" "*50 , f"[1]{l.spanish}" , "\n")
+    print(" "*50 , f"[2]{l.english}" , "\n")
+    print(" "*50 , f"[3]{l.japanese}" , "\n")
 
     msvcrt.getch()
     number_of_language = keyboard.read_key()
@@ -84,7 +83,7 @@ def choice_for_language():
         variable.main_language = "english"
         from languages import en as l
     elif number_of_language == "3":
-        variable.main_language == "japanese"
+        variable.main_language = "japanese"
         from languages import ja as l
     
     os.system("cls")
@@ -94,8 +93,8 @@ def choice_for_credits():
     os.system("cls")
 
     print("\n"*10)
-    print(l.author.center(115))
-    print(l.traductor.center(115))
+    print(" "*45 , l.author)
+    print(" "*45 , l.traductor)
 
     msvcrt.getch()
     os.system("cls")
@@ -104,12 +103,14 @@ def choice_for_credits():
 def choice_for_exit():
     os.system("cls")
     print("\n"*10)
-    print(l.exiting.center(115))
+
+    print(" "*50 , l.exiting)
+
     time.sleep(0.2)
     sys.exit()
 
 def error_no_choice():
-    print("Error caracter no valido".center(115))
+    print(" "*45 , l.invalid_key_error)
     time.sleep(0.25)
     os.system("cls")
     main_menu()

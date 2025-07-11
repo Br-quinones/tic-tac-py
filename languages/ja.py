@@ -18,8 +18,10 @@ traductor = "翻訳者: Gemeni & Chat GPT"
 #Salir
 exiting = "終了しています..."
 
+#Error no tecla
+invalid_key_error = "無効なキーエラー"
+
 ############## Tic-Tac-Toe ##############
-key = "キー"
 
 #Procesos
 ending_game = "ゲームを終了しています..."

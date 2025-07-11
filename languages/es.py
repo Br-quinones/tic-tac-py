@@ -18,8 +18,10 @@ traductor = "Traductor: Gemeni & Chat GPT"
 #Salir
 exiting = "Saliendo..."
 
+#Error no tecla
+invalid_key_error = "Error tecla no valida"
+
 ############## Tic-Tac-Toe ##############
-key = "Tecla"
 
 #Procesos
 ending_game = "Finalizando partida..."
