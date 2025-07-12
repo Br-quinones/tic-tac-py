@@ -27,6 +27,9 @@ invalid_key_error = "Error tecla no valida"
 ending_game = "Finalizando partida..."
 processing_game= "Procesando partida..."
 
+#Idicaciones para jugar
+instructions_for_playing = "Utilice su teclado para jugar"
+
 #Resultado para el ganador
 win_the = "El ganador es el "
 player = "Jugador"
