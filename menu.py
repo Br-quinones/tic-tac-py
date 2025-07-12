@@ -1,13 +1,8 @@
 import msvcrt ; import keyboard ; import tictactoe ; import os ; import sys ; import time
 
-########## Cambiar idioma dependiendo del usuario #########
-import variable
-if variable.main_language == "spanish":
-    import languages.es as l
-elif variable.main_language == "english":
-    import languages.en as l
-elif variable.main_language == "japanese":
-    import languages.ja as l
+########## Idioma #############
+import variable; global l
+l = variable.traductor_of_the_game()
 
 def main_menu():
     print(f"                                                                                      ".center(115))

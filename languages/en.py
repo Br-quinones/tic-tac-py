@@ -22,9 +22,13 @@ invalid_key_error = "Invalid key error"
 #Procesos
 ending_game = "Ending game..."
 processing_game= "Processing game..."
+#Indicaciones para jugar
+instructions_for_playing = "Use your keyboard to play"
 #Resultado para el ganador
 win_the = "The winner is the "
 player = "Player"
 enemy = "Enemy"
 draw = "Draw"
 input_for_exit = "Press any key to exit"
+
+#Error tecla incorrecta

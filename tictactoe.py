@@ -139,8 +139,9 @@ def graphic_tictactoe():
     print(f"██{tic_1b}██  ██{tic_2b}██  ██{tic_3b}██".center(145))
     print(f"██{tic_1c}██  ██{tic_2c}██  ██{tic_3c}██".center(145))
     print(f"████████████  ████████████  ████████████".center(115))
-    print(f"\n" + Fore.GREEN)
+    print(f"{Fore.GREEN}")
     print(f"_______████████████████████████████████████████████_______".center(115))
+    print(f"{l.instructions_for_playing}".center(115))
     print(f"")
     print(Fore.RESET,end="")
     print("███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████".center(115))
@@ -161,6 +162,10 @@ def Human_turn():
         if key in valid_numbers and key not in selected_numbers:
             active_cell(f"zero_{key}")
             break
+        elif key == "esc":
+            os.system("cls")
+            import menu 
+            menu.main_menu()
         else:
             print("Numero no valido".center(115))
 
@@ -520,14 +525,8 @@ def machine_turn(difficulty):
     
 ########## El juego ##########
 def the_game():
-    global l
-    import variable
-    if variable.main_language == "spanish":
-        import languages.es as l
-    elif variable.main_language == "english":
-        import languages.en as l
-    elif variable.main_language == "japanese":
-        import languages.ja as l
+    import variable; global l
+    l = variable.traductor_of_the_game()
     while True:
         graphic_tictactoe()
         Human_turn()

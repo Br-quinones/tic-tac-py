@@ -20,12 +20,10 @@ Día 5 --> v0.05
     -Se toma una finalmente la dirección para los graficos y se empieza a trabajar arduamente.
     -Se toma la importante tarea de refactorizar esto algun dia. Que es insostenible con el codigo actual.
 Día 6 --> v0.06
-    -Intentar grabar ese audio, pero no se envio por la pronunciacion y la descordinasión. 
-    -Volver a jugar una partidita de rimwolrd+.
+    -Volver a jugar una partidita de rimwolrd.
     -Se intenta agrega la I.A enemiga sin exito devido a la calidad grafica que deseo.
     -cambios menores en la visualizacion.
 Dia 7 --> v0.07
-    -dia perdido a nivel personal aunque quien sabe si remonto al final del día
     -Se agrego la I.A enemiga con exito en el aspecto grafico y empezando en el aspecto tecnico
     -Se empezo a refactorizar el codigo poco a poco y pequeñas mejoras en el aspecto grafico
 Dia 8 --> v0.08
@@ -33,10 +31,9 @@ Dia 8 --> v0.08
     -Se agrega la parte tecnica del juego del 3 en raya, esta version es el modo facil
     -Se termina la parte tecnica y empezamos con el arte
 Dia 9 --> v0.09 
-    -Dia normal algo feliz por la noticia de ayer
     -Se empieza agregar el arte ASCII y la historia para los personajes 
 Dia 10 --> v0.10
-    -Dia normal con algo de sueño
+    -Dia normal con algo de mucho sueño
     -Solucion de bugs con el "comprobation()" y mejoras
     -Cambio de historia para definir su rumbo
 Dia 11 --> v0.11
@@ -55,7 +52,6 @@ Dia 15 --> v0.15
     -Se simplica el codigo 
     -Se añade el enemigo dificuldad dificil
 Dia 16 --> v0.16
-    -Cansado mentalmente por ayer
     -Se añade el enemigo dificuldad experto
 Dia 17 --> v0.17
     -Se me olvido subir la version a GitHub. ya ni modo
@@ -82,3 +78,8 @@ Dia 27 --> v0.27
     -Se añade el idioma español, ingles y japones 100% al menu
     -Se comienza a trabajar en la traducción del tictactoe
     -Se planea terminar con la traducción hasta donde esta el juego y luego refactorizar para poder añadir mas cosas
+Dia 28 --> v0.28 
+    -Se termina de añadir el sistema de idiomas
+    -Desde ahora solo se actualizara el español y a finalez del juego se traducira todo.
+    -Se cambia de japones nativo a japones romaji.
+    -Se añadio el "esc" para el 3 en raya.
