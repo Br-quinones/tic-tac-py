@@ -1,38 +1,35 @@
 ############ Main menu ###########
 #Menu 
-play = "purei"
-languages = "gengo"
-credits = "kurejitto"
-exit = "shūryō"
-
+play = "Purei"
+languages = "Gengo"
+credits = "Kurejitto"
+exit = "Shuryo"
 #idiomas
-choice_language = "gengo o erabi kudasai: "
-spanish = "supeingo"
-english = "eigo"
-japanese = "nihongo"
-
+choice_language = "Gengo o erande kudasai: "
+spanish = "Supeingo"
+english = "Eigo"
+japanese = "Nihongo"
 #Creditos
-author = "sakusha: Brayan Quiñones"
-traductor = "honyakusha: Gemeni & Chat GPT"
-
+author = "Sakusha: Brayan Quiñones"
+traductor = "Honyaku: Gemeni & Chat GPT"
 #Salir
-exiting = "shūryō shiteimasu..."
+exiting = "Shuryo-chu..."
 
 #Error no tecla
-invalid_key_error = "mukō kī erā"
+invalid_key_error = "Mujun ki erā"
 
 ############## Tic-Tac-Toe ##############
-
 #Procesos
-ending_game = "shiai o shūryō chū..."
-processing_game= "shiai o shori chū..."
-
+ending_game = "Gemu o shuryo-chu..."
+processing_game = "Gemu o shori-chu..."
 #Idicaciones para jugar
-instructions_for_playing = "kībōdo de purei shite kudasai"
-
+instructions_for_playing = "Kibōdo o tsukatte asobi kudasai"
 #Resultado para el ganador
-win_the = "katsu mono wa "
-player = "pureiyā"
-enemy = "teki"
-draw = "hikiwake"
-input_for_exit = "nanika kī o oshite shūryō shite kudasai"
+win_the = "Katsu no wa "
+player = "Pureiyā"
+enemy = "Teki"
+draw = "Hikiwake"
+input_for_exit = "Deru tame ni dono ki demo oshite kudasai"
+
+#Error tecla incorrecta
+invalid_number = "Mujun na bango"

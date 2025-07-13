@@ -121,7 +121,7 @@ def active_cell(argumento):
 ########## Creacion de graficos ##########
 def graphic_tictactoe():
     os.system("cls")
-    print(f"")
+    print(Fore.GREEN + "[ESC]" + Fore.RESET)
     print(f"████████████  ████████████  ████████████".center(115))
     print(f"██{tic_7a}██  ██{tic_8a}██  ██{tic_9a}██".center(145))
     print(f"██{tic_7b}██  ██{tic_8b}██  ██{tic_9b}██".center(145))
@@ -167,7 +167,7 @@ def Human_turn():
             import menu 
             menu.main_menu()
         else:
-            print("Numero no valido".center(115))
+            print(Fore.RED + "\n" + l.invalid_number.center(115) +Fore.RESET)
 
 ########## Enemigo nivel facil ##########
 def machine_turn_easy():
@@ -525,8 +525,8 @@ def machine_turn(difficulty):
     
 ########## El juego ##########
 def the_game():
-    import variable; global l
-    l = variable.traductor_of_the_game()
+    import traductor; global l
+    l = traductor.traductor_of_the_game()
     while True:
         graphic_tictactoe()
         Human_turn()

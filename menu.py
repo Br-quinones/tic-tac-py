@@ -1,8 +1,8 @@
 import msvcrt ; import keyboard ; import tictactoe ; import os ; import sys ; import time
 
 ########## Idioma #############
-import variable; global l
-l = variable.traductor_of_the_game()
+import traductor; global l
+l = traductor.traductor_of_the_game()
 
 def main_menu():
     print(f"                                                                                      ".center(115))
@@ -59,27 +59,39 @@ def choice_for_play():
 
 def choice_for_language():
     global l 
-    global variable
+    global traductor
 
     os.system("cls")
 
-    print("\n"*10)
+    print("\n"*5)
 
-    print(" "*50 , f"[1]{l.spanish}" , "\n")
-    print(" "*50 , f"[2]{l.english}" , "\n")
-    print(" "*50 , f"[3]{l.japanese}" , "\n")
+    print(" " * 50 , "[1]Español" , "\n")
+    print(" " * 50 , "[2]English" , "\n")
+    print(" " * 50 , "[3]Nihongo" , "\n")
+    print(" " * 50 , "[4]Portuguese" , "\n")
+    print(" " * 50 , "[5]Français" , "\n")
+    print(" " * 50 , "[6]Deutsch", "\n")
 
     msvcrt.getch()
     number_of_language = keyboard.read_key()
     if number_of_language == "1":
-        variable.main_language = "spanish"
+        traductor.main_language = "spanish"
         from languages import es as l
     elif number_of_language == "2":
-        variable.main_language = "english"
+        traductor.main_language = "english"
         from languages import en as l
     elif number_of_language == "3":
-        variable.main_language = "japanese"
+        traductor.main_language = "japanese"
         from languages import ja as l
+    elif number_of_language == "4":
+        traductor.main_language = "portuguese"
+        from languages import pt as l
+    elif number_of_language == "5":
+        traductor.main_language = "france"
+        from languages import fr as l
+    elif number_of_language == "6":
+        traductor.main_language = "germany"
+        from languages import de as l
     
     os.system("cls")
     main_menu()
@@ -88,8 +100,8 @@ def choice_for_credits():
     os.system("cls")
 
     print("\n"*10)
-    print(" "*45 , l.author)
-    print(" "*45 , l.traductor)
+    print(l.author.center(115))
+    print(l.traductor.center(115))
 
     msvcrt.getch()
     os.system("cls")
@@ -99,13 +111,13 @@ def choice_for_exit():
     os.system("cls")
     print("\n"*10)
 
-    print(" "*50 , l.exiting)
+    print(l.exiting.center(115))
 
     time.sleep(0.2)
     sys.exit()
 
 def error_no_choice():
-    print(" "*45 , l.invalid_key_error)
+    print(l.invalid_key_error.center(115))
     time.sleep(0.25)
     os.system("cls")
     main_menu()

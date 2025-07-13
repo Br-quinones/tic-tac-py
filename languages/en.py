@@ -1,19 +1,16 @@
 ############ Main menu ###########
-#Menu
+#Menu 
 play = "Play"
 languages = "Languages"
 credits = "Credits"
 exit = "Exit"
-#Idiomas
-choice_language = "Selec her language: "
-spanish = "Spanish"
-english = "English"
-japanese = "Japanese"
+#idiomas
+choice_language = "Choose your language: "
 #Creditos
-author = "Author: Brayan Quinones"
-traductor = "Traductor: Gemeni & Chat GPT"
+author = "Author: Brayan Quiñones"
+traductor = "Translator: Gemeni & Chat GPT"
 #Salir
-exiting = "Leaving..."
+exiting = "Exiting..."
 
 #Error no tecla
 invalid_key_error = "Invalid key error"
@@ -21,8 +18,8 @@ invalid_key_error = "Invalid key error"
 ############## Tic-Tac-Toe ##############
 #Procesos
 ending_game = "Ending game..."
-processing_game= "Processing game..."
-#Indicaciones para jugar
+processing_game = "Processing game..."
+#Idicaciones para jugar
 instructions_for_playing = "Use your keyboard to play"
 #Resultado para el ganador
 win_the = "The winner is the "
@@ -32,3 +29,4 @@ draw = "Draw"
 input_for_exit = "Press any key to exit"
 
 #Error tecla incorrecta
+invalid_number = "Invalid number"
