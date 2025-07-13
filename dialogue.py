@@ -3,10 +3,6 @@ import msvcrt; import art
 from colorama import Fore
 import os
 
-#Abrir .json para idiomas 
-with open("languages/spanish.json", "r", encoding="utf-8") as file:
-    languages = json.load(file)
-
 def deletreo(word):
     for letter in word:
         sys.stdout.write(letter)
@@ -36,15 +32,12 @@ class message:
         print(Fore.RED + "Director: " + Fore.RESET ,end="")
         deletreo(text)
 
+    def role(text):
+        art.role_ascci()
+        print(Fore.RED + "Roleo: " + Fore.RESET , end="")
+        deletreo(text)
+
 def chapter_01():
-    message.director("Jugador este juego solo funciona su teclado.")
-    message.director("Presione la tecla Espace para pasar en dialogo y dialogo y su teclas con numeros para jugar el 3 en raya")
-    message.director("Bueno despues de interrumpirlo siga con al historia.")
-    message.agatha("En los reinos de antaño, donde la niebla danzaba entre los robles...")
-    message.victoria("¿Agatha, qué fantasías recitas?")
-    message.agatha("Oh, solo me inspiro en un tomo antiguo que encontré.")
-    message.beatrice("¡Basta de poesía! ¡Tenemos que entrenar nuestras mentes! ¡A jugar, ya!")
-    message.agatha("Muy bien, Beatrice. Pero yo no se jugar esto")
-    message.victoria("Espera, Agatha, permíteme explicarte las mecánicas básicas de este juego...")
-    message.beatrice("¡Tonterías! ¡No hay tiempo para tutoriales! !A pura paliza aprenderas a jugar!")
-    message.agatha("Ehhh, pero explicame gano o pierdo...")
+    message.role("Observas que dentro de una salón una muchedumbre rodea algo.")
+    message.role("Ese algo no es más que una intensa partida del 3 en raya entre dos chicas")
+    message.victoria("")

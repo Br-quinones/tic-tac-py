@@ -87,3 +87,7 @@ Dia 29 --> v0.29
     -Se añadio el portugues, frances y aleman
     -Se termino de traducir el menu y el tictactoe al 100%
     -pequeñas refactorizacion para lo que se viene mañana
+Dia 30 --> v0.30
+    -Se mejoro el arte del menu principal con colorama
+    -Si funciona no lo toques, asi que desivi eliminar la refactorizacion para el menu
+    -Ahora que se termino las tictactoe, menu y traduciones. Se trabajara en la historia
