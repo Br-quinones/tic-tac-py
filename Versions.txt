@@ -83,3 +83,7 @@ Dia 28 --> v0.28
     -Desde ahora solo se actualizara el español y a finalez del juego se traducira todo.
     -Se cambia de japones nativo a japones romaji.
     -Se añadio el "esc" para el 3 en raya.
+Dia 29 --> v0.29
+    -Se añadio el portugues, frances y aleman
+    -Se termino de traducir el menu y el tictactoe al 100%
+    -pequeñas refactorizacion para lo que se viene mañana
