@@ -58,7 +58,7 @@ def main_menu():
 
 def choice_for_play():
     os.system("cls")
-    dialogue.ch()
+    tictactoe.the_game()
 
 def choice_for_language():
     global l 

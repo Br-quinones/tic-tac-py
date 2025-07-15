@@ -91,3 +91,5 @@ Dia 30 --> v0.30
     -Se mejoro el arte del menu principal con colorama
     -Si funciona no lo toques, asi que desivi eliminar la refactorizacion para el menu
     -Ahora que se termino las tictactoe, menu y traduciones. Se trabajara en la historia
+Dia 31 --> v0.31
+    -Uhhh crear una historia con las bases que cree es mas dificil de lo que espere.

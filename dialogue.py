@@ -34,10 +34,10 @@ class message:
 
     def role(text):
         art.role_ascci()
-        print(Fore.RED + "Roleo: " + Fore.RESET , end="")
+        print(Fore.CYAN + "Roleo: " + Fore.RESET , end="")
         deletreo(text)
 
 def chapter_01():
     message.role("Observas que dentro de una salón una muchedumbre rodea algo.")
     message.role("Ese algo no es más que una intensa partida del 3 en raya entre dos chicas")
-    message.victoria("")
+    message.victoria("Otra persona aplastada, siguiente tu!")
