@@ -93,3 +93,6 @@ Dia 30 --> v0.30
     -Ahora que se termino las tictactoe, menu y traduciones. Se trabajara en la historia
 Dia 31 --> v0.31
     -Uhhh crear una historia con las bases que cree es mas dificil de lo que espere.
+dIA 32 ..> V0.32
+    -Se implementa la "Primera parte de la historia" tan solo una prueba para ver los errores que causa
+    -Se añade los audios tipo "typing text" para el bucle en los sonidos de dialogo.

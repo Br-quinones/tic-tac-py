@@ -524,11 +524,11 @@ def machine_turn(difficulty):
         return machine_turn_expert()
     
 ########## El juego ##########
-def the_game():
+def the_game(difficulty):
     import traductor; global l
     l = traductor.traductor_of_the_game()
     while True:
         graphic_tictactoe()
         Human_turn()
         graphic_tictactoe()
-        machine_turn("expert")
+        machine_turn(difficulty)
