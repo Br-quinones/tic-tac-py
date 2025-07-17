@@ -1,6 +1,6 @@
 import msvcrt ; import keyboard ; import os ; import sys ; import time
 from colorama import Fore
-import dialogue ; import tictactoe
+import the_game
 
 ########## Idioma #############
 import traductor; global l
@@ -9,12 +9,12 @@ l = traductor.traductor_of_the_game()
 def main_menu():
     print(f"                                                                                      ".center(115))
     print(f"                                                                                      ".center(115))
-    print(f"                {Fore.BLUE}████████╗██╗ ██████╗            {Fore.RED}████████╗ █████╗  ██████╗            {Fore.GREEN}██████╗ ██╗   ██╗{Fore.RESET}")
-    print(f"                {Fore.BLUE}╚══██╔══╝██║██╔════╝            {Fore.RED}╚══██╔══╝██╔══██╗██╔════╝            {Fore.GREEN}██╔══██╗╚██╗ ██╔╝{Fore.RESET}")
-    print(f"                {Fore.BLUE}   ██║   ██║██║        █████╗   {Fore.RED}   ██║   ███████║██║        █████╗   {Fore.GREEN}██████╔╝ ╚████╔╝ {Fore.RESET}")
-    print(f"                {Fore.BLUE}   ██║   ██║██║        ╚════╝   {Fore.RED}   ██║   ██╔══██║██║        ╚════╝   {Fore.GREEN}██╔═══╝   ╚██╔╝  {Fore.RESET}")
-    print(f"                {Fore.BLUE}   ██║   ██║╚██████╗            {Fore.RED}   ██║   ██║  ██║╚██████╗            {Fore.GREEN}██║        ██║   {Fore.RESET}")
-    print(f"                {Fore.BLUE}   ╚═╝   ╚═╝ ╚═════╝            {Fore.RED}   ╚═╝   ╚═╝  ╚═╝ ╚═════╝            {Fore.GREEN}╚═╝        ╚═╝   {Fore.RESET}")
+    print(f"                {Fore.BLUE}████████╗██╗ ██████╗            {Fore.RED}████████╗ █████╗  ██████╗            {Fore.BLUE}██████╗ ██╗   ██╗{Fore.RESET}")
+    print(f"                {Fore.BLUE}╚══██╔══╝██║██╔════╝            {Fore.RED}╚══██╔══╝██╔══██╗██╔════╝            {Fore.BLUE}██╔══██╗╚██╗ ██╔╝{Fore.RESET}")
+    print(f"                {Fore.BLUE}   ██║   ██║██║        █████╗   {Fore.RED}   ██║   ███████║██║        █████╗   {Fore.BLUE}██████╔╝ ╚████╔╝ {Fore.RESET}")
+    print(f"                {Fore.BLUE}   ██║   ██║██║        ╚════╝   {Fore.RED}   ██║   ██╔══██║██║        ╚════╝   {Fore.BLUE}██╔═══╝   ╚██╔╝  {Fore.RESET}")
+    print(f"                {Fore.BLUE}   ██║   ██║╚██████╗            {Fore.RED}   ██║   ██║  ██║╚██████╗            {Fore.BLUE}██║        ██║   {Fore.RESET}")
+    print(f"                {Fore.BLUE}   ╚═╝   ╚═╝ ╚═════╝            {Fore.RED}   ╚═╝   ╚═╝  ╚═╝ ╚═════╝            {Fore.BLUE}╚═╝        ╚═╝   {Fore.RESET}")
     print(f"                                                                                      ".center(115))
     print(f"                                                                                      ".center(115))
     print(f"                {Fore.GREEN}[1]{Fore.RESET}{l.play}                {Fore.GREEN}[2]{Fore.RESET}{l.languages}                {Fore.GREEN}[3]{Fore.RESET}{l.credits}                {Fore.GREEN}[4]{Fore.RESET}{l.exit}                ")#Ajuste idiomatico
@@ -58,7 +58,7 @@ def main_menu():
 
 def choice_for_play():
     os.system("cls")
-    dialogue.chapter_01()
+    the_game.chapter_01()
 
 def choice_for_language():
     global l 
