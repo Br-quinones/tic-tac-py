@@ -524,7 +524,7 @@ def machine_turn(difficulty):
         return machine_turn_expert()
     
 ########## El juego ##########
-def the_game(difficulty):
+def star_round(difficulty):
     import traductor; global l
     l = traductor.traductor_of_the_game()
     while True:
