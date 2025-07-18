@@ -1,12 +1,10 @@
 import msvcrt ; import keyboard ; import os ; import sys ; import time
+import the_game; import traductor
 from colorama import Fore
-import the_game
-
-########## Idioma #############
-import traductor; global l
-l = traductor.traductor_of_the_game()
+global l
 
 def main_menu():
+    l = traductor.traductor_of_the_game()
     print(f"                                                                                      ".center(115))
     print(f"                                                                                      ".center(115))
     print(f"                {Fore.BLUE}████████╗██╗ ██████╗            {Fore.RED}████████╗ █████╗  ██████╗            {Fore.BLUE}██████╗ ██╗   ██╗{Fore.RESET}")

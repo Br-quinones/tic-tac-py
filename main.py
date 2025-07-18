@@ -8,14 +8,6 @@ if __name__ == '__main__':
         keyboard.press_and_release("ctrl+plus")
         time.sleep(0.01)
 
-    import menu
+    import menu; import sound
+    sound.star_sound()
     menu.main_menu()
-
-
-
-
-
-
-
-
-

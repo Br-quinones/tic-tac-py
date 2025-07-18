@@ -3,11 +3,12 @@ import os; import time
 from colorama import Fore, Style
 import msvcrt; import keyboard
 import random; import sys
+import sound
 
 ########## Colocar Brillo ##########
 print(Style.BRIGHT ,end="")
 
-############ Graficos ##################
+############ Graficos Constantes##################
 #Zero
 zero_1 = Fore.BLUE + "  ████  " + Fore.RESET
 zero_2 = Fore.BLUE + " ██  ██ " + Fore.RESET 
@@ -28,6 +29,8 @@ empty_06 = Fore.GREEN + "   06   " + Fore.RESET
 empty_07 = Fore.GREEN + "   07   " + Fore.RESET 
 empty_08 = Fore.GREEN + "   08   " + Fore.RESET 
 empty_09 = Fore.GREEN + "   09   " + Fore.RESET 
+#Numeros validos
+valid_numbers = ["1","2","3","4","5","6","7","8","9"]
 
 ########## Colocar vacio a todo ##########
 tic_1a = empty ; tic_1b = empty_01 ; tic_1c = empty
@@ -52,8 +55,6 @@ cell_8 = "none"
 cell_9 = "none"
 
 ########## Crear listas ########## 
-
-valid_numbers = ["1","2","3","4","5","6","7","8","9"]
 selected_numbers = []
 
 ########## Activar casillas X y O ##########
@@ -159,6 +160,9 @@ def Human_turn():
     while True:
         msvcrt.getch()
         key = keyboard.read_key()
+
+        sound.star_sound_efect("chess")
+
         if key in valid_numbers and key not in selected_numbers:
             active_cell(f"zero_{key}")
             break

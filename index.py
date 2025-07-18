@@ -109,3 +109,9 @@
 #
 #Autor
     #Br-Quiñones
+import sound 
+
+sound.star_sound()
+sound.star_sound_efect("chess")
+input()
+
