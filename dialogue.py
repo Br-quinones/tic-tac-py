@@ -2,12 +2,11 @@ import sys; import time; import os
 import msvcrt; import art
 from colorama import Fore
 from pygame import mixer 
+import sound
 
-mixer.init()
-def deletreo(word, bleep):
-    mixer.music.load(f"audio/{bleep}.ogg")
-    mixer.music.play(-1)
-    for letter in word:
+def deletreo(words, bleep):
+    sound.star_sound_loop(bleep)
+    for letter in words:
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.015)
@@ -40,4 +39,3 @@ class message:
         art.role_ascci()
         print(Fore.CYAN + "Roleo: " + Fore.RESET , end="")
         deletreo(text, "bleep003")
-

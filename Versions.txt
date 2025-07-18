@@ -1,9 +1,8 @@
-                                    Conteo de dias (1-???)
+                                        Conteo de dias (1-???)
 
 Aqui colocare mi día a día personal y el avanze del proyecto
 
 Dia 1 --> v0.01
-    #Se elimino algo de aquI, pero el creador recuerda
     -Se inicio el repositorio en GitHub; Se cre la ficha tecnica; Se programa lo basico.
 Dia 2 --> v0.02
     -El proyecto se ve prometedor logre solucionar el segundo problema principal 
@@ -14,7 +13,7 @@ Dia 3 --> v0.03.
 Dia 4 --> v0.04
     -Si ayer estaba mal entonces ahora estoy peor con este catarro del demonio
     -Empeze a leer 1984 de george orwell. Aquel "fragmento" aun queda en mi mente.
-    -Se parcheo para que en el turno no se pueda sobrecolocar fichas mas un poco de color.
+    -Se parcheo para que en el turno no se pueda sobrecolocar fichas, más un poco de color.
 Día 5 --> v0.05
     -Me estoy recuperando de aquella emfermedad que me esta azontado.
     -Se toma una finalmente la dirección para los graficos y se empieza a trabajar arduamente.
@@ -27,24 +26,23 @@ Dia 7 --> v0.07
     -Se agrego la I.A enemiga con exito en el aspecto grafico y empezando en el aspecto tecnico
     -Se empezo a refactorizar el codigo poco a poco y pequeñas mejoras en el aspecto grafico
 Dia 8 --> v0.08
-    -Jugando el nostalgico y hermoso age of history 2 multiplayer
+    -Jugando el nostalgico y hermoso age of history 2 multiplayer.
     -Se agrega la parte tecnica del juego del 3 en raya, esta version es el modo facil
     -Se termina la parte tecnica y empezamos con el arte
 Dia 9 --> v0.09 
     -Se empieza agregar el arte ASCII y la historia para los personajes 
 Dia 10 --> v0.10
-    -Dia normal con algo de mucho sueño
     -Solucion de bugs con el "comprobation()" y mejoras
     -Cambio de historia para definir su rumbo
 Dia 11 --> v0.11
-    -Dia matandome la cabeza con el juego "Age of history 2" 
+    -Dia matandome la cabeza con Age of history 2 
     -Cambios en los dialogos y nombre de las funciones
 Dia 12 --> v0.12
     -Sin cambios 
 Dia 13 --> v0.13
     -Sin cambios
 Dia 14 --> v0.14
-    -Se refactoriza el codigo bastante!
+    -Se refactoriza bastante codigo!
     -Se agrega el enemigo dificuldad media
     -Se agrego el empate
 Dia 15 --> v0.15
@@ -65,7 +63,7 @@ Dia 20 --> v0.20
 Dia 21 --> v0.21
     -Sin cambios
 Dia 22 --> v0.22
-    -Se añadio la beta del menu, ahora es funcional
+    -Se añadio una prueba para el menu, ahora es funcional
 Dia 23 --> v0.23
     -Un infierno total el tema de agregar idiomas, se empezo a intentar hoy
 Dia 24 --> v0.24
@@ -73,9 +71,9 @@ Dia 24 --> v0.24
 Dia 25 --> v0.25
     -Dios el infierno de agregar idiomas solo aumenta y aumenta
 Dia 26 ---> v0.26
-    -Se logra implemetar ingles y español al 98% y japones aun esta en beta
+    -Se logra implemetar ingles y español al 98% y japones aun esta en pruebas
 Dia 27 --> v0.27
-    -Se añade el idioma español, ingles y japones 100% al menu
+    -Se añade el idioma español, ingles y japones al 100% en el menu
     -Se comienza a trabajar en la traducción del tictactoe
     -Se planea terminar con la traducción hasta donde esta el juego y luego refactorizar para poder añadir mas cosas
 Dia 28 --> v0.28 
@@ -89,14 +87,18 @@ Dia 29 --> v0.29
     -pequeñas refactorizacion para lo que se viene mañana
 Dia 30 --> v0.30
     -Se mejoro el arte del menu principal con colorama
-    -Si funciona no lo toques, asi que desivi eliminar la refactorizacion para el menu
+    -Si funciona no lo toques, asi que elegi eliminar la refactorizacion para el menu
     -Ahora que se termino las tictactoe, menu y traduciones. Se trabajara en la historia
 Dia 31 --> v0.31
-    -Uhhh crear una historia con las bases que cree es mas dificil de lo que espere.
+    -Uhhh crear una historia con las bases que cree es mas dificil de lo que se esperaba.
 Dia 32 ..> V0.32
     -Se implementa la "Primera parte de la historia" tan solo una prueba para ver los errores que causa
     -Se añade los audios tipo "typing text" para el bucle en los sonidos de dialogo.
 Dia 33 --> v0.33
-    -Se añadio el sonido loop al hablar de los personajes con archivos optimizados (ogg)
+    -Se añadio el sonido loop al hablar de los personajes con archivos optimizados(.ogg)
     -Se creo la carpeta "the_game" para una mejor estructura
     -Pequeños arreglos en el menu
+Dia 34 --> v0.34
+    -Se intenta añadir efectos de sonido, pero los problemas y bugs lo estan complicadon
+        mixer.music.load(f"audio/{efect}.mp3")
+    mixer.music.play(1)
