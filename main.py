@@ -7,7 +7,9 @@ if __name__ == '__main__':
     for _ in range(8):
         keyboard.press_and_release("ctrl+plus")
         time.sleep(0.01)
+    
+    from pygame import mixer 
+    mixer.init()
 
-    import menu; import sound
-    sound.star_sound()
+    import menu
     menu.main_menu()

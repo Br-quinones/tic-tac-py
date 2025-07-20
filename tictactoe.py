@@ -3,7 +3,7 @@ import os; import time
 from colorama import Fore, Style
 import msvcrt; import keyboard
 import random; import sys
-import sound
+from pygame import mixer
 
 ########## Colocar Brillo ##########
 print(Style.BRIGHT ,end="")
@@ -53,6 +53,7 @@ cell_6 = "none"
 cell_7 = "none"
 cell_8 = "none"
 cell_9 = "none"
+
 
 ########## Crear listas ########## 
 selected_numbers = []
@@ -162,8 +163,8 @@ def Human_turn():
         key = keyboard.read_key()
 
         if key in valid_numbers and key not in selected_numbers:
+            mixer.Channel(1).play(mixer.Sound("audio/move_06.wav"))
             active_cell(f"zero_{key}")
-            sound.star_sound_efect("oe_[cut_0sec]")
             break
         elif key == "esc":
             os.system("cls")
@@ -516,6 +517,8 @@ def machine_turn(difficulty):
 
     print(Fore.GREEN +  "\n" + l.processing_game.center(115) + Fore.RESET)
     time.sleep(1)
+
+    mixer.Channel(1).play(mixer.Sound("audio/move_02.wav"))
 
     if difficulty == "easy":
         return machine_turn_easy()
