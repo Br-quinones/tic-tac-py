@@ -109,9 +109,25 @@
 #
 #Autor
     #Br-Quiñones
-import sound 
 
-sound.star_sound()
-sound.star_sound_efect("chess")
-input()
+
+from pygame import mixer
+import time
+mixer.init()
+mixer.set_num_channels(1)
+sonido = mixer.Sound("audio/move_3.wav")
+canal = mixer.Channel(0)
+def reproducir_sonido():
+    if canal.get_busy():
+        canal.stop()
+    canal.play(sonido)
+    print("▶ Sonido reproducido")
+while True:
+    input("Presiona ENTER para reproducir sonido…")
+    reproducir_sonido()
+    time.sleep(0.1)
+
+
+
+
 
