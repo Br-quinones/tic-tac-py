@@ -100,5 +100,8 @@ Dia 33 --> v0.33
     -Pequeños arreglos en el menu
 Dia 34 --> v0.34
     -Se intenta añadir efectos de sonido, pero los problemas y bugs lo estan complicadon
-        mixer.music.load(f"audio/{efect}.mp3")
-    mixer.music.play(1)
+Dia 35 --> v0.35
+    -Sin cambios
+Dia 36 --> v0.36
+    -Sin cambios
+    -Se siguie intentanto añadir efectos de sonido, una misión semi-imposible, por el tema de compresion de archivos
