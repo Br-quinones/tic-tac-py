@@ -8,5 +8,6 @@ def star_sound_loop(bleep):
     mixer.music.play(-1)
 
 def star_sound_efect(efect):
-    mixer.music.load(f"audio/{efect}.ogg")
+    mixer.init()
+    mixer.music.load(f"audio/{efect}.mp3")
     mixer.music.play()

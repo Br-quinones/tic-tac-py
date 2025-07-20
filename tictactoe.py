@@ -161,17 +161,16 @@ def Human_turn():
         msvcrt.getch()
         key = keyboard.read_key()
 
-        sound.star_sound_efect("chess")
-
         if key in valid_numbers and key not in selected_numbers:
             active_cell(f"zero_{key}")
+            sound.star_sound_efect("oe_[cut_0sec]")
             break
         elif key == "esc":
             os.system("cls")
             import menu 
             menu.main_menu()
         else:
-            print(Fore.RED + "\n" + l.invalid_number.center(115) +Fore.RESET)
+            print(Fore.RED + l.invalid_number.center(115) +Fore.RESET)
 
 ########## Enemigo nivel facil ##########
 def machine_turn_easy():
