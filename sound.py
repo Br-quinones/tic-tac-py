@@ -1,14 +1,17 @@
 from pygame import mixer 
 
-mixer.init()
+#Channel_0: Musica de fondo // .mp3
+#Channel_1: Efectos de sonido // .wav
+#Channel_2: Bucles de sonido // .ogg
 
-def star_sound_loop(bleep):
-    mixer.music.load(f"audio/loops/{bleep}.ogg")
-    mixer.music.play(-1)
+def star_sounds():
+    mixer.init()
 
-def star_sound_efect(file_the_of_audio):
-    mixer.music.load(file_the_of_audio)
-    mixer.music.play()
+def music_sound(music):
+    mixer.Channel(0).play(mixer.Sound(f"audio/musics/{music}"), 0)
 
-def star_sound_efect_channel(file_the_of_audio):
-    mixer.Channel(1).play(mixer.Sound(file_the_of_audio))
+def effect_sound(effect):
+    mixer.Channel(1).play(mixer.Sound(f"audio/effects/{effect}"), 0)
+
+def loop_sound(loop):
+    mixer.Channel(2).play(mixer.Sound(f"audio/loops/{loop}"), -1)

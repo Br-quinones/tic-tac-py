@@ -109,3 +109,6 @@ Dia 37 --> v0.37
     -Lo logre! lo logre. Malditos sonidos de miercoles, pero al fin los pude sodomizar. 
     -Se agregan sonidos al colocar fichas, tanto para el jugador como para el  enemigo.
     -Se mejoro el menu con un efecto de sonido y reparando un bug
+Dia 38 --> v0.38
+    -Se refactoriza el codigo de sonidos para tener un mejor codigo
+    -Se añade musica de fondo
