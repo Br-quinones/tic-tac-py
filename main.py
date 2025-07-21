@@ -8,8 +8,8 @@ if __name__ == '__main__':
         keyboard.press_and_release("ctrl+plus")
         time.sleep(0.01)
     
-    from pygame import mixer 
-    mixer.init()
-
-    import menu
+    import sound ; import menu
+    
+    sound.star_sounds()
+    sound.music_sound("the_last_of_us.mp3")
     menu.main_menu()

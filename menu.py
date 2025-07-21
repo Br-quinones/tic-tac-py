@@ -42,8 +42,10 @@ def main_menu():
         msvcrt.getch()
         choice = keyboard.read_key()
 
-        sound.star_sound_efect_channel("audio/effects/effect_01.wav")
+        sound.effect_sound("menu_01.wav")
 
+        time.sleep(0.3)
+        
         if choice == "1":
             choice_for_play()
             break
