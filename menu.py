@@ -2,6 +2,8 @@ import msvcrt ; import keyboard ; import os ; import sys ; import time
 import the_game; import traductor
 from colorama import Fore
 global l
+import sound
+from languages import spansih as l
 
 def main_menu():
     l = traductor.traductor_of_the_game()
@@ -39,6 +41,9 @@ def main_menu():
     while True:
         msvcrt.getch()
         choice = keyboard.read_key()
+
+        sound.star_sound_efect_channel("audio/effects/effect_01.wav")
+
         if choice == "1":
             choice_for_play()
             break
