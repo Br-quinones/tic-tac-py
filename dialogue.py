@@ -1,8 +1,6 @@
-import sys; import time; import os
-import msvcrt; import art
-from colorama import Fore
-from pygame import mixer 
-import sound
+import sys; import time; import os; import msvcrt #Librerias publicas
+from colorama import Fore; from pygame import mixer  #Modulos publicos
+import art; import sound #Libreria privadas
 
 def deletreo(words, loop):
     sound.loop_sound(loop)
@@ -28,14 +26,14 @@ class message:
     def victoria(text):
         art.victoria_ascci()
         print(Fore.YELLOW + "Victoria: " + Fore.RESET ,end="")
-        deletreo(text, "bleep005.ogg")
+        deletreo(text, "bleep003.ogg")
 
     def director(text):
         art.directo_ascci()
         print(Fore.RED + "Director: " + Fore.RESET ,end="")
         deletreo(text, "bleep004.ogg")
-
+        
     def role(text):
         art.role_ascci()
         print(Fore.CYAN + "Roleo: " + Fore.RESET , end="")
-        deletreo(text, "bleep003.ogg")
+        deletreo(text, "bleep005.ogg")
