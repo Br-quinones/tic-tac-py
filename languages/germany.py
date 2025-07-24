@@ -11,7 +11,7 @@ english = "Englisch"
 japanese = "Japanisch"
 #Creditos
 author = "Autor: Brayan Quiñones"
-traductor = "Übersetzer: Gemeni & Chat GPT"
+traductor = "Übersetzer: Gemini & Chat GPT"
 #Salir
 exiting = "Beenden..."
 

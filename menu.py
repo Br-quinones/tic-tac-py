@@ -72,6 +72,9 @@ def choice_for_language():
 
     print("\n"*5)
 
+    print("Seleccione su idioma".center(115))
+    print("\n")
+
     print("[1]Español   ".center(115))
     print("[2]English   ".center(115))
     print("[3]Nihongo   ".center(115))

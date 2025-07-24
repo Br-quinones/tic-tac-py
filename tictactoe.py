@@ -54,7 +54,6 @@ cell_7 = "none"
 cell_8 = "none"
 cell_9 = "none"
 
-
 ########## Crear listas ########## 
 selected_numbers = []
 
@@ -168,7 +167,7 @@ def Human_turn():
             break
         elif key == "esc":
             os.system("cls")
-            import menu 
+            import menu
             menu.main_menu()
         else:
             print(Fore.RED + l.invalid_number.center(115) +Fore.RESET)
@@ -452,12 +451,15 @@ def comprobation():
         print("\n"*12)
 
         if winner == "jugador":
+            # sound.effect_sound("")
             print(f"{l.win_the}{l.player}".center(115))
         elif winner == "enemigo":
+            # sound.effect_sound("")
             print(f"{l.win_the}{l.enemy}".center(115))
         elif winner == "empate":
+            # sound.effect_sound("")
             print(f"{l.win_the}{l.draw}".center(115))
-
+        
         print("\n"+l.input_for_exit.center(115))
         time.sleep(1)
         msvcrt.getch()

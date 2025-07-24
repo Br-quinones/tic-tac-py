@@ -8,7 +8,7 @@ exit = "Exit"
 choice_language = "Choose your language: "
 #Creditos
 author = "Author: Brayan Quiñones"
-traductor = "Translator: Gemeni & Chat GPT"
+traductor = "Translator: Gemini & Chat GPT"
 #Salir
 exiting = "Exiting..."
 
