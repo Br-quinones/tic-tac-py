@@ -11,7 +11,7 @@ english = "Eigo"
 japanese = "Nihongo"
 #Creditos
 author = "Sakusha: Brayan Quiñones"
-traductor = "Honyaku: Gemeni & Chat GPT"
+traductor = "Honyaku: Gemini & Chat GPT"
 #Salir
 exiting = "Shuryo-chu..."
 

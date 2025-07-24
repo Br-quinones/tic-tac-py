@@ -149,3 +149,5 @@ Dia 39 --> v0.39
     -Se edito el archivo de versiones para una mejor organización.
     -refactorización del menu.
     -Se añade sonido de error.
+Dia 40 --> v0.40
+    -Cambios minusculos
