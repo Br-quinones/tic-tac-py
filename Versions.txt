@@ -149,5 +149,11 @@ Dia 39 --> v0.39
     -Se edito el archivo de versiones para una mejor organización.
     -refactorización del menu.
     -Se añade sonido de error.
+
 Dia 40 --> v0.40
-    -Cambios minusculos
+    -Cambios menores(Correciones ortotipograficas, aumento de comentarios, organización de codigo, etc).
+
+Dia 41 --> v0.41
+    -Mejoras al ganar, perder y empatar en el 3 en raya. Con implementaciones de sonido y color.
+    -Cambios de variables en para mejor lectura
+    -'Ta buena la historia creada por gemini, asi se queda de momento, con pequeñas modificaciones.

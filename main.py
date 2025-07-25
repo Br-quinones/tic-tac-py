@@ -1,7 +1,7 @@
 #Pantalla completa y zoom
 if __name__ == "__main__":
     import keyboard 
-    keyboard.press_and_release("f11")
+    keyboard.press_and_release("alt+enter")
 
     import time
     for _ in range(8):

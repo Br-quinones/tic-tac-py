@@ -9,6 +9,7 @@ def deletreo(words, loop):
         sys.stdout.flush()
         time.sleep(0.015)
     mixer.Channel(2).stop()
+    time.sleep(0.2)
     msvcrt.getch()
     os.system("cls")
 

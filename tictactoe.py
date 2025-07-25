@@ -153,7 +153,7 @@ def graphic_tictactoe():
     print("█  █  █   █ ███ █   █ ███ █   █   █ █   █ ███ █   █ ███ █   █  █  █   █ ███ █   █   █ █".center(115))
     print("███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████".center(115))
 
-########## Elección del Jugador ##########
+########## Elección del jugador ##########
 def Human_turn():
     comprobation()
 
@@ -172,7 +172,7 @@ def Human_turn():
         else:
             print(Fore.RED + l.invalid_number.center(115) +Fore.RESET)
 
-########## Enemigo nivel facil ##########
+########## enemigo nivel facil ##########
 def machine_turn_easy():
     while True:
         random_number = str(random.randint(1,9))
@@ -180,7 +180,7 @@ def machine_turn_easy():
             active_cell(f"equis_{random_number}")
             break
 
-########## Enemigo nivel medio ########## 
+########## enemigo nivel medio ########## 
 def machine_turn_medium():
     #Defensa izquierda
     if cell_1 == "zero" and cell_2 == "zero" and "3" not in selected_numbers:
@@ -241,7 +241,7 @@ def machine_turn_medium():
     else:
         machine_turn_easy()
 
-########## Enemigo nivel dificil ##########
+########## enemigo nivel dificil ##########
 def machine_turn_hard():
     #Ataque izquierdo
     if cell_1 == "equis" and cell_2 == "equis" and "3" not in selected_numbers:
@@ -302,7 +302,7 @@ def machine_turn_hard():
     else:
         machine_turn_medium()
 
-########## Enemigo nivel super dificil ##########
+########## enemigo nivel super dificil ##########
 def machine_turn_expert():
     #Ataque izquierdo
     if cell_1 == "equis" and cell_2 == "equis" and "3" not in selected_numbers:
@@ -450,15 +450,15 @@ def comprobation():
         os.system("cls")
         print("\n"*12)
 
-        if winner == "jugador":
-            # sound.effect_sound("")
-            print(f"{l.win_the}{l.player}".center(115))
-        elif winner == "enemigo":
-            # sound.effect_sound("")
-            print(f"{l.win_the}{l.enemy}".center(115))
-        elif winner == "empate":
-            # sound.effect_sound("")
-            print(f"{l.win_the}{l.draw}".center(115))
+        if winner == "player":
+            sound.effect_sound("three_in_a_row/win.wav")
+            print(f"{l.win_the}{Fore.GREEN}{l.player}{Fore.RESET}".center(125))
+        elif winner == "enemy":
+            sound.effect_sound("three_in_a_row/lose.wav")
+            print(f"{l.win_the}{Fore.RED}{l.enemy}{Fore.RESET}".center(125))
+        elif winner == "draw":
+            sound.effect_sound("three_in_a_row/draw.wav")
+            print(f"{l.win_the}{Fore.YELLOW}{l.draw}{Fore.RESET}".center(125))
         
         print("\n"+l.input_for_exit.center(115))
         time.sleep(1)
@@ -467,46 +467,46 @@ def comprobation():
 
     #Horizontal X
     if cell_1 == "equis" and cell_2 == "equis" and cell_3 == "equis":
-        end_game("enemigo")
+        end_game("enemy")
     elif cell_4 == "equis" and cell_5 == "equis" and cell_6 == "equis":
-        end_game("enemigo")
+        end_game("enemy")
     elif cell_7 == "equis" and cell_8 == "equis" and cell_9 == "equis":
-        end_game("enemigo")
+        end_game("enemy")
     #Vertical X
     elif cell_1 == "equis" and cell_4 == "equis" and cell_7 == "equis":
-        end_game("enemigo")
+        end_game("enemy")
     elif cell_2 == "equis" and cell_5 == "equis" and cell_8 == "equis":
-        end_game("enemigo")
+        end_game("enemy")
     elif cell_3 == "equis" and cell_6 == "equis" and cell_9 == "equis":
-        end_game("enemigo")
+        end_game("enemy")
     #Diagonal X
     elif cell_1 == "equis" and cell_5 == "equis" and cell_9 == "equis":
-        end_game("enemigo")
+        end_game("enemy")
     elif cell_3 == "equis" and cell_5 == "equis" and cell_7 == "equis":
-        end_game("enemigo")
+        end_game("enemy")
     
     #Horizontal O
     elif cell_1 == "zero" and cell_2 == "zero" and cell_3 == "zero":
-        end_game("jugador")
+        end_game("player")
     elif cell_4 == "zero" and cell_5 == "zero" and cell_6 == "zero":
-        end_game("jugador")
+        end_game("player")
     elif cell_7 == "zero" and cell_8 == "zero" and cell_9 == "zero":
-        end_game("jugador")
+        end_game("player")
     #Vertical O
     elif cell_1 == "zero" and cell_4 == "zero" and cell_7 == "zero":
-        end_game("jugador")
+        end_game("player")
     elif cell_2 == "zero" and cell_5 == "zero" and cell_8 == "zero":
-        end_game("jugador")
+        end_game("player")
     elif cell_3 == "zero" and cell_6 == "zero" and cell_9 == "zero":
-        end_game("jugador")
+        end_game("player")
     #Diagonal O
     elif cell_1 == "zero" and cell_5 == "zero" and cell_9 == "zero":
-        end_game("jugador")
+        end_game("player")
     elif cell_3 == "zero" and cell_5 == "zero" and cell_7 == "zero":
-        end_game("jugador")
+        end_game("player")
     #Tablero lleno
     elif set(valid_numbers) == set(selected_numbers):
-        end_game("empate")
+        end_game("draw")
 
 ########## Dificuldad del enemigo ##########
 def machine_turn(difficulty):
