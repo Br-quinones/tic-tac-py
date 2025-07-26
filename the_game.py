@@ -11,4 +11,10 @@ def chapter_01():
     dialogue.message.agatha("Victoria, no seas así. Quizás solo miraba.")
     dialogue.message.victoria("Tonterías. La mirada de alguien que quiere jugar es inconfundible. ¿Qué dices, te atreves contra la mi?")
 
-    tictactoe.star_round("expert")  ##Podria ser que cree una version imposible para que esto desemboque en que tengas que ir practicando con pesonajes de menor rango, y cuando se vuelva a competir con Victoria, ahora si este en experto. Oh magnifico, soy to' un genio.
+    tictactoe.star_round("impossible")  ##Podria ser que cree una version imposible para que esto desemboque en que tengas que ir practicando con pesonajes de menor rango, y cuando se vuelva a competir con Victoria, ahora si este en experto. Oh magnifico, soy to' un genio.
+
+    # dialogue.message.victoria("Un completo novato que no duro ni un minuto.")
+    # dialogue.message.victoria("Si quieres la revamcna. Derrota antes a mi equipo, puedes empezar con otro principiante.") 
+    # dialogue.message.agatha("Yo... yo, soy esa principiante tambien.")
+
+    # tictactoe.star_round("easy") ## No deve funciar bajo ningun concepto

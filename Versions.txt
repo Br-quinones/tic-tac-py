@@ -157,3 +157,7 @@ Dia 41 --> v0.41
     -Mejoras al ganar, perder y empatar en el 3 en raya. Con implementaciones de sonido y color.
     -Cambios de variables en para mejor lectura
     -'Ta buena la historia creada por gemini, asi se queda de momento, con pequeñas modificaciones.
+
+Dia 42 --> v0.42
+    -Se agrega el enemigo version imposible(agregado por dirrección de la historia)
+    -Insepección de varios bugs, se viene semana de refactorizacion y debugeo
