@@ -8,8 +8,8 @@ if __name__ == "__main__":
         keyboard.press_and_release("ctrl+plus")
         time.sleep(0.01)
     
-    import sound
-    sound.music_sound("the_last_of_us.mp3")
+    import loading
+    loading.init_game()
 
     import menu
     menu.main_menu()
