@@ -161,3 +161,5 @@ Dia 41 --> v0.41
 Dia 42 --> v0.42
     -Se agrega el enemigo version imposible(agregado por dirrección de la historia)
     -Insepección de varios bugs, se viene semana de refactorizacion y debugeo
+Dia 43 --> v0.43
+    -Se agrego una funcion de reinicio de variables al 3 en raya. aun en beta

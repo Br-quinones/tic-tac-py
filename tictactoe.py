@@ -1,12 +1,9 @@
 ########## Instalar librerias ##########
-import os; import time
-from colorama import Fore, Style
-import msvcrt; import keyboard
-import random; import sys
-import sound
+import os; import time; import random; import msvcrt; import keyboard #Librerias publicas
+from colorama import Fore #Modulos publicos
+import sound; import traductor #librerias privadas
 
-########## Colocar Brillo ##########
-print(Style.BRIGHT ,end="")
+round_01 = True
 
 ############ Graficos Constantes##################
 #Zero
@@ -32,30 +29,47 @@ empty_09 = Fore.GREEN + "   09   " + Fore.RESET
 #Numeros validos
 valid_numbers = ["1","2","3","4","5","6","7","8","9"]
 
-########## Colocar vacio a todo ##########
-tic_1a = empty ; tic_1b = empty_01 ; tic_1c = empty
-tic_2a = empty ; tic_2b = empty_02 ; tic_2c = empty
-tic_3a = empty ; tic_3b = empty_03 ; tic_3c = empty
-tic_4a = empty ; tic_4b = empty_04 ; tic_4c = empty
-tic_5a = empty ; tic_5b = empty_05 ; tic_5c = empty
-tic_6a = empty ; tic_6b = empty_06 ; tic_6c = empty
-tic_7a = empty ; tic_7b = empty_07 ; tic_7c = empty
-tic_8a = empty ; tic_8b = empty_08 ; tic_8c = empty
-tic_9a = empty ; tic_9b = empty_09 ; tic_9c = empty
+def init_and_reset_variables():
+    global tic_1a; global tic_1b; global tic_1c
+    global tic_2a; global tic_2b; global tic_2c
+    global tic_3a; global tic_3b; global tic_3c
+    global tic_4a; global tic_4b; global tic_4c
+    global tic_5a; global tic_5b; global tic_5c
+    global tic_6a; global tic_6b; global tic_6c
+    global tic_7a; global tic_7b; global tic_7c
+    global tic_8a; global tic_8b; global tic_8c
+    global tic_9a; global tic_9b; global tic_9c
 
-########## Crear celdas ##########
-cell_1 = "none"
-cell_2 = "none"
-cell_3 = "none"
-cell_4 = "none"
-cell_5 = "none"
-cell_6 = "none"
-cell_7 = "none"
-cell_8 = "none"
-cell_9 = "none"
+    global cell_1; global cell_2; global cell_3
+    global cell_4; global cell_5; global cell_6
+    global cell_7; global cell_8; global cell_9
 
-########## Crear listas ########## 
-selected_numbers = []
+    global selected_numbers
+    
+    ########## Colocar vacio a todo ##########
+    tic_1a = empty ; tic_1b = empty_01 ; tic_1c = empty
+    tic_2a = empty ; tic_2b = empty_02 ; tic_2c = empty
+    tic_3a = empty ; tic_3b = empty_03 ; tic_3c = empty
+    tic_4a = empty ; tic_4b = empty_04 ; tic_4c = empty
+    tic_5a = empty ; tic_5b = empty_05 ; tic_5c = empty
+    tic_6a = empty ; tic_6b = empty_06 ; tic_6c = empty
+    tic_7a = empty ; tic_7b = empty_07 ; tic_7c = empty
+    tic_8a = empty ; tic_8b = empty_08 ; tic_8c = empty
+    tic_9a = empty ; tic_9b = empty_09 ; tic_9c = empty
+
+    ########## Crear celdas ##########
+    cell_1 = "none"
+    cell_2 = "none"
+    cell_3 = "none"
+    cell_4 = "none"
+    cell_5 = "none"
+    cell_6 = "none"
+    cell_7 = "none"
+    cell_8 = "none"
+    cell_9 = "none"
+
+    ########## Crear listas ########## 
+    selected_numbers = []
 
 ########## Activar casillas X y O ##########
 def active_cell(argumento):
@@ -302,7 +316,7 @@ def machine_turn_hard():
     else:
         machine_turn_medium()
 
-########## enemigo nivel super dificil ##########
+########## enemigo nivel experto ##########
 def machine_turn_expert():
     #Ataque izquierdo
     if cell_1 == "equis" and cell_2 == "equis" and "3" not in selected_numbers:
@@ -442,6 +456,7 @@ def machine_turn_expert():
     else:
         machine_turn_easy()
 
+########## enemigo nivel imposible ##########
 def machien_turn_impossible():
     #Ataque izquierdo
     if cell_1 == "equis" and cell_2 == "equis" and "3" not in selected_numbers:
@@ -593,21 +608,51 @@ def machien_turn_impossible():
     else:
         machine_turn_easy()
 
+########## Dificuldad del enemigo ##########
+def machine_turn(difficulty):
+    global machine_turn_easy
+    global machine_turn_medium
+    global machine_turn_hard
+    global machine_turn_expert
+    global machien_turn_impossible
+
+    comprobation()
+
+    print(Fore.GREEN +  "\n" + l.processing_game.center(115) + Fore.RESET)
+    time.sleep(1)
+
+    sound.effect_sound("move_02.wav")
+
+    if difficulty == "easy":
+        return machine_turn_easy()
+    elif difficulty == "medium":
+        return machine_turn_medium()
+    elif difficulty == "hard":
+        return machine_turn_hard()
+    elif difficulty == "expert":
+        return machine_turn_expert()
+    elif difficulty == "impossible":
+        return machien_turn_impossible()
+    
 ########## Comprobacion de victoria ##########
 def comprobation():
     def end_game(winner):
+        global round_01
         print(Fore.GREEN +  "\n" + l.ending_game.center(115) + Fore.RESET)
         time.sleep(1.5)
         os.system("cls")
         print("\n"*12)
 
         if winner == "player":
+            round_01 = False
             sound.effect_sound("three_in_a_row/win.wav")
             print(f"{l.win_the}{Fore.GREEN}{l.player}{Fore.RESET}".center(125))
         elif winner == "enemy":
+            round_01 = False
             sound.effect_sound("three_in_a_row/lose.wav")
             print(f"{l.win_the}{Fore.RED}{l.enemy}{Fore.RESET}".center(125))
         elif winner == "draw":
+            round_01 = False
             sound.effect_sound("three_in_a_row/draw.wav")
             print(f"{l.win_the}{Fore.YELLOW}{l.draw}{Fore.RESET}".center(125))
         
@@ -659,37 +704,11 @@ def comprobation():
     elif set(valid_numbers) == set(selected_numbers):
         end_game("draw")
 
-########## Dificuldad del enemigo ##########
-def machine_turn(difficulty):
-    global machine_turn_easy
-    global machine_turn_medium
-    global machine_turn_hard
-    global machine_turn_expert
-    global machien_turn_impossible
-
-    comprobation()
-
-    print(Fore.GREEN +  "\n" + l.processing_game.center(115) + Fore.RESET)
-    time.sleep(1)
-
-    sound.effect_sound("move_02.wav")
-
-    if difficulty == "easy":
-        return machine_turn_easy()
-    elif difficulty == "medium":
-        return machine_turn_medium()
-    elif difficulty == "hard":
-        return machine_turn_hard()
-    elif difficulty == "expert":
-        return machine_turn_expert()
-    elif difficulty == "impossible":
-        return machien_turn_impossible()
-    
 ########## El juego ##########
 def star_round(difficulty):
-    import traductor; global l
-    l = traductor.traductor_of_the_game()
-    while True:
+    global l; l = traductor.traductor_of_the_game()
+    init_and_reset_variables()
+    while round_01 == True:
         graphic_tictactoe()
         Human_turn()
         graphic_tictactoe()
