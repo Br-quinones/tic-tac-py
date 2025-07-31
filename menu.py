@@ -59,7 +59,10 @@ def choice_for_play():
     sound.effect_sound("menu_01.wav")
     time.sleep(0.3)
     os.system("cls")
-    the_game.chapter_01()
+    if the_game.current_chapter == "chapter_01":
+        the_game.chapter_01() 
+    elif the_game.current_chapter == "chapter_02":
+        the_game.chapter_02()
 
 def choice_for_language():
     global l 

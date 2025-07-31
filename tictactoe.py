@@ -1,9 +1,7 @@
 ########## Instalar librerias ##########
 import os; import time; import random; import msvcrt; import keyboard #Librerias publicas
 from colorama import Fore #Modulos publicos
-import sound; import traductor #librerias privadas
-
-round_01 = True
+import sound; import traductor; import the_game #librerias privadas
 
 ############ Graficos Constantes##################
 #Zero
@@ -70,6 +68,13 @@ def init_and_reset_variables():
 
     ########## Crear listas ########## 
     selected_numbers = []
+
+########## Compracion para capitulos #########
+def ejecute_next_chapter():
+    global the_game
+    if the_game.current_chapter == "chapter_01":
+        the_game.current_chapter = "chapter_02"
+        the_game.chapter_02()
 
 ########## Activar casillas X y O ##########
 def active_cell(argumento):
@@ -637,29 +642,26 @@ def machine_turn(difficulty):
 ########## Comprobacion de victoria ##########
 def comprobation():
     def end_game(winner):
-        global round_01
         print(Fore.GREEN +  "\n" + l.ending_game.center(115) + Fore.RESET)
         time.sleep(1.5)
         os.system("cls")
         print("\n"*12)
 
         if winner == "player":
-            round_01 = False
             sound.effect_sound("three_in_a_row/win.wav")
             print(f"{l.win_the}{Fore.GREEN}{l.player}{Fore.RESET}".center(125))
         elif winner == "enemy":
-            round_01 = False
             sound.effect_sound("three_in_a_row/lose.wav")
             print(f"{l.win_the}{Fore.RED}{l.enemy}{Fore.RESET}".center(125))
         elif winner == "draw":
-            round_01 = False
             sound.effect_sound("three_in_a_row/draw.wav")
             print(f"{l.win_the}{Fore.YELLOW}{l.draw}{Fore.RESET}".center(125))
         
-        print("\n"+l.input_for_exit.center(115))
+        print("\n" + l.input_for_exit.center(115))
         time.sleep(1)
         msvcrt.getch()
         os.system("cls")
+        ejecute_next_chapter()
 
     #Horizontal X
     if cell_1 == "equis" and cell_2 == "equis" and cell_3 == "equis":
@@ -708,7 +710,7 @@ def comprobation():
 def star_round(difficulty):
     global l; l = traductor.traductor_of_the_game()
     init_and_reset_variables()
-    while round_01 == True:
+    while True:
         graphic_tictactoe()
         Human_turn()
         graphic_tictactoe()
