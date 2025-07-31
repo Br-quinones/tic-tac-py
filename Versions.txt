@@ -15,7 +15,8 @@ Dia 3 --> v0.03.
     -Se agrego la función de colocar fichas en el tablero.
 
 Dia 4 --> v0.04
-    -Se parcheo para que en el turno no se pueda sobrecolocar fichas, más un poco de color en el ASCII.
+    -Se parcheo para que en el turno no se pueda sobrecolocar fichas
+    -un poco de color en el ASCII.
 
 Día 5 --> v0.05
     -Se implementa el estilo ASCII que llevara el juego.
@@ -161,5 +162,17 @@ Dia 41 --> v0.41
 Dia 42 --> v0.42
     -Se agrega el enemigo version imposible(agregado por dirrección de la historia)
     -Insepección de varios bugs, se viene semana de refactorizacion y debugeo
+
 Dia 43 --> v0.43
     -Se agrego una funcion de reinicio de variables al 3 en raya. aun en beta
+
+Dia 44 --> v0.44
+    -Sin cambios
+    
+Dia 45 --> v0.45
+    -Se agrego el bug de no iniciar el proximo capitulo
+    -Se termina de agregar la funcion de reinicio de variable
+
+Dia 46 --> v0.46
+    -se implementa que cuando estas en el capitulo_# se devuelva a ese capitulo y no al capitulo_1
+    -Se removio la carpeta art.py para integrala con dialogue.py

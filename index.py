@@ -1,4 +1,4 @@
-#                                              Tic-Tac-Py
+#                                                           Tic-Tac-Py
 #
 # Una novela visual sobre el un enfrentaminto de varios jovenes en el 3 en raya. 
 #
@@ -109,7 +109,6 @@
 #
 #Autor
     #Br-Quiñones
-
 
 
 
