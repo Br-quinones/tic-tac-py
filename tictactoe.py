@@ -2,7 +2,6 @@
 import os; import time; import random; import msvcrt; import keyboard #Librerias publicas
 from colorama import Fore #Modulos publicos
 import sound; import traductor; import the_game #librerias privadas
-
 ############ Graficos Constantes##################
 #Zero
 zero_1 = Fore.BLUE + "  ████  " + Fore.RESET
@@ -27,6 +26,7 @@ empty_09 = Fore.GREEN + "   09   " + Fore.RESET
 #Numeros validos
 valid_numbers = ["1","2","3","4","5","6","7","8","9"]
 
+########## Reiniciar variables ##########
 def init_and_reset_variables():
     global tic_1a; global tic_1b; global tic_1c
     global tic_2a; global tic_2b; global tic_2c
@@ -75,6 +75,18 @@ def ejecute_next_chapter():
     if the_game.current_chapter == "chapter_01":
         the_game.current_chapter = "chapter_02"
         the_game.chapter_02()
+    elif the_game.current_chapter == "chapter_02":
+        the_game.current_chapter = "chapter_03"
+        the_game.chapter_03()
+    elif the_game.current_chapter == "chapter_03":
+        the_game.current_chapter = "chapter_04"
+        the_game.chapter_04()
+    elif the_game.current_chapter == "chapter_04":
+        the_game.current_chapter = "chapter_05"
+        the_game.chapter_05()
+    elif the_game.current_chapter == "chapter_05":
+        the_game.current_chapter = "chapter_06"
+        the_game.chapter_06()
 
 ########## Activar casillas X y O ##########
 def active_cell(argumento):
