@@ -168,7 +168,7 @@ Dia 43 --> v0.43
 
 Dia 44 --> v0.44
     -Sin cambios
-    
+
 Dia 45 --> v0.45
     -Se agrego el bug de no iniciar el proximo capitulo
     -Se termina de agregar la funcion de reinicio de variable
@@ -176,3 +176,17 @@ Dia 45 --> v0.45
 Dia 46 --> v0.46
     -se implementa que cuando estas en el capitulo_# se devuelva a ese capitulo y no al capitulo_1
     -Se removio la carpeta art.py para integrala con dialogue.py
+
+Dia 47 --> v0.47 
+    -Sin cambios
+
+Dia 48 --> v.48
+    -Sin cambios
+
+Dia 49 --> v0.49
+    Sin cambios
+
+Dia 50 --> v0.50
+    -Se agrega la historia completa con ayuda de la I.a
+    -Se implementan la secuencia de capitulo 1 -> 2 -> 3 -> 4 -> 5 
+     

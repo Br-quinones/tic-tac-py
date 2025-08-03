@@ -63,6 +63,15 @@ def choice_for_play():
         the_game.chapter_01() 
     elif the_game.current_chapter == "chapter_02":
         the_game.chapter_02()
+    elif the_game.current_chapter == "chapter_03":
+        the_game.chapter_03()
+    elif the_game.current_chapter == "chapter_04":
+        the_game.chapter_04()
+    elif the_game.current_chapter == "chapter_05":
+        the_game.chapter_05()
+    elif the_game.current_chapter == "chapter_06":
+        the_game.chapter_06()
+    
 
 def choice_for_language():
     global l 
