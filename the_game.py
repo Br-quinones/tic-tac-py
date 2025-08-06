@@ -15,7 +15,7 @@ def chapter_01():
 def chapter_02():
     dialogue.message.agatha("Uh, me has ganastes, veo que ya conoces este juego...")
     dialogue.message.beatrice("Ja, una victoria contra ella no prueba absolutamente nada.")
-    dialogue.message.role("Una chica de con gafas te mira con desdén. Es beatrice.")
+    dialogue.message.role("Una chica, de pelo largo, te mira con desdén. Es beatrice.")
     dialogue.message.beatrice("Cualquiera puede ganar a esta novata")
     dialogue.message.beatrice("Permíteme darte una lección sobre estrategia real. A ver si así aprendes algo.")
 
@@ -24,7 +24,7 @@ def chapter_02():
 def chapter_03():
     dialogue.message.beatrice("¿Qué? ¡Imposible! Mi estrategia... fue superada")
     dialogue.message.victoria("Vaya vaya es acaso un contricante digno lo que veo.")
-    dialogue.message.role("Una chica rubia de mirada desafiante se acerca a la mesa, riéndose a carcajadas.")
+    dialogue.message.role("Una chica con flequillo asimetrico de mirada desafiante se acerca a la mesa, riéndose a carcajadas.")
     dialogue.message.victoria("Ya me cansé de verte ganar con ese nivel de habilidad tan bajo")
     dialogue.message.victoria("Te voy a enseñar lo que es una verdadera partida mediante la paliza.")
 

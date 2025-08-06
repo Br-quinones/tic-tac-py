@@ -5,7 +5,7 @@ from pygame import mixer #Modulos publicos
 #Channel_2: Bucles de sonido // .ogg
 
 def music_sound(music):
-    mixer.Channel(0).play(mixer.Sound(f"audio/musics/{music}"), 0)
+    mixer.Channel(0).play(mixer.Sound(f"audio/musics/{music}"), -1)
 
 def effect_sound(effect):
     mixer.Channel(1).play(mixer.Sound(f"audio/effects/{effect}"), 0)
