@@ -15,7 +15,8 @@ def deletreo(words, loop):
 
 class message:
     def agatha(text):
-        print(Fore.GREEN)
+        print(Fore.GREEN + "[ESC]" + Fore.RESET)
+        print(Fore.GREEN, end="")
         print("██████████████".center(115))
         print("███        ███".center(115))
         print("██  █    █  ██".center(115))
@@ -36,17 +37,18 @@ class message:
         deletreo(text, "bleep001.ogg")
 
     def beatrice(text):
-        print(Fore.MAGENTA)
+        print(Fore.GREEN + "[ESC]" + Fore.RESET)
+        print(Fore.MAGENTA, end="")
         print("██████████████".center(115))
         print("███        ███".center(115))
         print("██  █    █  ██".center(115))
         print("██          ██".center(115))
         print("██    ██    ██".center(115))
         print("████      ████".center(115))
-        print("  ███    ███  ".center(115))
-        print("   █      █   ".center(115))
-        print("  █        █  ".center(115))
-        print(" █          █ ".center(115))
+        print("█████    █████".center(115))
+        print("████      ████".center(115))
+        print("███        ███".center(115))
+        print("██          ██".center(115))
         print("█            █".center(115))
         print("█            █".center(115))
         print("█            █".center(115))
@@ -57,14 +59,15 @@ class message:
         deletreo(text, "bleep002.ogg")
 
     def victoria(text):
-        print(Fore.YELLOW)
+        print(Fore.GREEN + "[ESC]" + Fore.RESET)
+        print(Fore.YELLOW, end="")
         print("██████████████".center(115))
-        print("███        ███".center(115))
-        print("██  █    █  ██".center(115))
-        print("██          ██".center(115))
-        print("██    ██    ██".center(115))
-        print("████      ████".center(115))
-        print("  ███    ███  ".center(115))
+        print("███████     ██".center(115))
+        print("██████   █  ██".center(115))
+        print("████        ██".center(115))
+        print("████  ██    ██".center(115))
+        print("█████     ████".center(115))
+        print("  ████   ███  ".center(115))
         print("   █      █   ".center(115))
         print("  █        █  ".center(115))
         print(" █          █ ".center(115))
@@ -78,7 +81,8 @@ class message:
         deletreo(text, "bleep003.ogg")
 
     def director(text):
-        print(Fore.RED)
+        print(Fore.GREEN + "[ESC]" + Fore.RESET)
+        print(Fore.RED, end="")
         print(" ████████████ ".center(115))
         print(" ██        ██ ".center(115))
         print(" █  █    █  █ ".center(115))
@@ -99,7 +103,8 @@ class message:
         deletreo(text, "bleep004.ogg")
         
     def role(text):
-        print(Fore.CYAN)
+        print(Fore.GREEN + "[ESC]" + Fore.RESET)
+        print(Fore.CYAN, end="")
         print("       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ".center(115))
         print("       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ".center(115))
         print("       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       ".center(115))
