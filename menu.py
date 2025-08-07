@@ -1,7 +1,7 @@
 import msvcrt ; import keyboard ; import os ; import sys ; import time #Librerias publicas
 from colorama import Fore #Modulos publicos
 import the_game; import traductor; import sound #Librerias privadas
-from languages import spansih as l #Modulos privados
+from languages import spanish as l #Modulos privados
 
 def main_menu():
     global l

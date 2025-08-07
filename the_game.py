@@ -7,10 +7,14 @@ def chapter_01():
     dialogue.message.role("En un rincón, una chica te mira y apartando su vista rápidamente.")
     dialogue.message.role("Te acercas y ella se sobresalta un poco.")
     dialogue.message.agatha("H-hola... ¿También vienes a jugar? Yo soy Agatha.")
-    dialogue.message.agatha("P-podemos jugar unas partida, pero aunque, recien acabo de conocer este juego.")
+    dialogue.message.agatha("P-podemos jugar unas partida, asi aprendemos las reglas de este juego juntos.")
     dialogue.message.role("Agatha te ofrece el asiento con una sonrisa nerviosa.")
 
     tictactoe.star_round("easy")
+
+def chapter_01_lose():
+    dialogue.message.agatha("¡Oh! H-he ganado. ¡No me lo puedo creer!")
+    dialogue.message.agatha("Ha sido una partida muy divertida. Vamos por la revancha.")
 
 def chapter_02():
     dialogue.message.agatha("Uh, me has ganastes, veo que ya conoces este juego...")
@@ -35,7 +39,7 @@ def chapter_04():
     dialogue.message.role("Victoria golpea la mesa y se va furiosa. Agatha y beatrice te miran con asombro.")
     dialogue.message.director("Vaya, vaya. Has alborotado bastante el gallinero.")
     dialogue.message.role("Un hombre mayor, vestido con un traje rojo, emerge de una oficina.")
-    dialogue.message.director("Carne fresca, erase yo el rey indiscutible en esto hasta que un día me acusaron de 'infringir las reglas'.")
+    dialogue.message.director("Heh erase yo el rey indiscutible en esto hasta que un día me acusaron de 'infringir las reglas'.")
     dialogue.message.director("Un participante como tú, con tanto potencial, debe aprender a perder antes que se te suban los humos.")
 
     tictactoe.star_round("impossible")

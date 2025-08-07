@@ -187,7 +187,7 @@ Dia 49 --> v0.49
     Sin cambios
 
 Dia 50 --> v0.50
-    -Se agrega la historia completa con ayuda de la I.a
+    -Se agrega la historia completa con ayuda de la A.I
     -Se implementan la secuencia de capitulo 1 -> 2 -> 3 -> 4 -> 5 
     -Solucion de bugs de musica no infinita
 
@@ -196,3 +196,6 @@ Dia 51 --> v0.51
 
 Dia 52 --> v0.52
     -Se modifico el arte en los dialogos
+
+Dia 53 --> v0.53
+    -camios minusculos
