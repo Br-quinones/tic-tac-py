@@ -2,7 +2,7 @@ main_language = "spanish"
 
 def traductor_of_the_game():
     if main_language == "spanish":
-        import languages.spansih as l
+        import languages.spanish as l
     elif main_language == "english":
         import languages.english as l
     elif main_language == "japanese":
@@ -14,6 +14,6 @@ def traductor_of_the_game():
     elif main_language == "germany":
         import languages.germany as l
     else:
-        import languages.spansih as l
+        import languages.spanish as l
     
     return l

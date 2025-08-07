@@ -658,7 +658,7 @@ def comprobation():
         time.sleep(1.5)
         os.system("cls")
         print("\n"*12)
-
+        
         if winner == "player":
             sound.effect_sound("three_in_a_row/win.wav")
             print(f"{l.win_the}{Fore.GREEN}{l.player}{Fore.RESET}".center(125))

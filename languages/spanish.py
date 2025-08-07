@@ -26,7 +26,7 @@ win_the = "El ganador es el "
 player = "Jugador"
 enemy = "Enemigo"
 draw = "Empate"
-input_for_exit = "Presione cualquier tecla para salir"
+input_for_exit = "Presione cualquier tecla para continuar"
 
 #Error tecla incorrecta
 invalid_number = "Número invalido"
