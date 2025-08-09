@@ -14,17 +14,17 @@
     #Estas en un instituto, pasando logras observas que dos chicas se enfrentan en el 3 en raya de manera intensa. Te acercas y ahora es cuando te reta a ti. Las primeras partidas seran las tipicas partidas pero mientras se avance las la jugabilidad cambiara, ejemplo si antes eran 3 en raya ahora en esta ronda sera del 4 en raya. Una vez que ganes o pierdas obtendras el final bueno o malo.
 #
 #Personajes
-    #Roleo --> Cian
+    #Roleo --> [Cian]
         #Este no es un persnaje, pero se utilizara para representar acciones en tercera persona osea el narrador.
-    #Jugador --> Azul
+    #Jugador --> [Azul]
         #Solo es el nombre base de cada jugador, que el jugador podra cambiar cuando la historia le requiera.
-    #Agatha --> Verde
+    #Agatha --> [Verde]
         #Jugadora de bajo nivel que te introducera en el juego con personalidad: timida y reservada.
-    #Beatriz --> Magenta
+    #Beatriz --> [Magenta]
         #Jugadora con nivel medio que introducera nuevas mecanicas al 3 en raya con personalidad: intelectual y elitista.
-    #Victoria --> Amarillo
+    #Victoria --> [Amarillo]
         #Jugadora de alto nivel que te dara un duro desafio con personalidad: agresiva, burlona y grosera.
-    #Director --> Rojo
+    #Director --> R[ojo]
         #Ex-jugador retirado por infracciones en las reglas que vuelve para darte una paliza personalidad: tramposo y malvado.
 #
 #Jugabilidad

@@ -4,8 +4,8 @@ import the_game; import traductor; import sound #Librerias privadas
 from languages import spanish as l #Modulos privados
 
 def main_menu():
-    global l
-    l = traductor.traductor_of_the_game()
+    global l; l = traductor.traductor_of_the_game()
+    os.system("cls")
     art_manu()
 
     while True:
@@ -60,19 +60,18 @@ def choice_for_play():
     time.sleep(0.3)
     os.system("cls")
     if the_game.current_chapter == "chapter_01":
-        the_game.chapter_01() 
+        the_game.chapter_01.history() 
     elif the_game.current_chapter == "chapter_02":
-        the_game.chapter_02()
+        the_game.chapter_02.history()
     elif the_game.current_chapter == "chapter_03":
-        the_game.chapter_03()
+        the_game.chapter_03.history()
     elif the_game.current_chapter == "chapter_04":
-        the_game.chapter_04()
+        the_game.chapter_04.history()
     elif the_game.current_chapter == "chapter_05":
-        the_game.chapter_05()
+        the_game.chapter_05.history()
     elif the_game.current_chapter == "chapter_06":
-        the_game.chapter_06()
+        the_game.chapter_06.history()
     
-
 def choice_for_language():
     global l 
     global traductor
