@@ -1,7 +1,7 @@
 ########## Instalar librerias ##########
 import os; import time; import random; import msvcrt; import keyboard #Librerias publicas
 from colorama import Fore #Modulos publicos
-import sound; import traductor; import the_game #librerias privadas
+import sound; import traductor; import the_game; import menu #librerias privadas
 ############ Graficos Constantes##################
 #Zero
 zero_1 = Fore.BLUE + "  ████  " + Fore.RESET
@@ -74,19 +74,27 @@ def ejecute_next_chapter():
     global the_game
     if the_game.current_chapter == "chapter_01":
         the_game.current_chapter = "chapter_02"
-        the_game.chapter_02()
+        the_game.chapter_02.history()
+
     elif the_game.current_chapter == "chapter_02":
         the_game.current_chapter = "chapter_03"
-        the_game.chapter_03()
+        the_game.chapter_03.history()
+
     elif the_game.current_chapter == "chapter_03":
         the_game.current_chapter = "chapter_04"
-        the_game.chapter_04()
+        the_game.chapter_04.history()
+        
     elif the_game.current_chapter == "chapter_04":
         the_game.current_chapter = "chapter_05"
-        the_game.chapter_05()
+        the_game.chapter_05.history()
+
     elif the_game.current_chapter == "chapter_05":
         the_game.current_chapter = "chapter_06"
-        the_game.chapter_06()
+        the_game.chapter_06.history()
+
+    elif the_game.current_chapter == "chapter_06":
+        the_game.current_chapter = "chapter_01"
+        menu.main_menu()
 
 ########## Activar casillas X y O ##########
 def active_cell(argumento):
@@ -531,7 +539,7 @@ def machien_turn_impossible():
         active_cell("equis_7")
     elif cell_1 == "equis" and cell_5 == "equis" and "9" not in selected_numbers:
         active_cell("equis_9")
-        #Defensa izquierda
+    #Defensa izquierda
     elif cell_1 == "zero" and cell_2 == "zero" and "3" not in selected_numbers:
         active_cell("equis_3")
     elif cell_4 == "zero" and cell_5 == "zero" and "6" not in selected_numbers:
@@ -653,6 +661,42 @@ def machine_turn(difficulty):
     
 ########## Comprobacion de victoria ##########
 def comprobation():
+    def ending_for_chapters(winner):
+        if the_game.current_chapter == "chapter_01" and winner == "player":
+            the_game.chapter_01.player_win_01()
+        elif the_game.current_chapter == "chapter_01" and winner == "enemy":
+            the_game.chapter_01.player_lose_01()
+        elif the_game.current_chapter == "chapter_01" and winner == "draw":
+            the_game.chapter_01.player_draw_01()
+    
+        elif the_game.current_chapter == "chapter_02" and winner == "player":
+            the_game.chapter_02.player_win_02()
+        elif the_game.current_chapter == "chapter_02" and winner == "enemy":
+            the_game.chapter_02.player_lose_02()
+        elif the_game.current_chapter == "chapter_02" and winner == "draw":
+            the_game.chapter_02.player_draw_02()
+
+        elif the_game.current_chapter == "chapter_03" and winner == "player":
+            the_game.chapter_03.player_win_03()
+        elif the_game.current_chapter == "chapter_03" and winner == "enemy":
+            the_game.chapter_03.player_lose_03()
+        elif the_game.current_chapter == "chapter_03" and winner == "draw":
+            the_game.chapter_03.player_draw_03()
+
+        elif the_game.current_chapter == "chapter_04" and winner == "player":
+            the_game.chapter_04.player_win_04()
+        elif the_game.current_chapter == "chapter_04" and winner == "enemy":
+            the_game.chapter_04.player_lose_04()
+        elif the_game.current_chapter == "chapter_04" and winner == "draw":
+            the_game.chapter_04.player_draw_04()
+
+        elif the_game.current_chapter == "chapter_05" and winner == "player":
+            the_game.chapter_05.win_05()
+        elif the_game.current_chapter == "chapter_05" and winner == "enemy":
+            the_game.chapter_05.lose_05()
+        elif the_game.current_chapter == "chapter_05" and winner == "draw":
+            the_game.chapter_05.draw_05()
+        
     def end_game(winner):
         print(Fore.GREEN +  "\n" + l.ending_game.center(115) + Fore.RESET)
         time.sleep(1.5)
@@ -673,6 +717,14 @@ def comprobation():
         time.sleep(1)
         msvcrt.getch()
         os.system("cls")
+
+        if winner == "player":
+            ending_for_chapters("player")
+        elif winner == "enemy":
+            ending_for_chapters("enemy")
+        elif winner == "draw":
+            ending_for_chapters("draw")
+        
         ejecute_next_chapter()
 
     #Horizontal X

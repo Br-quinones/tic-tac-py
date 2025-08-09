@@ -2,66 +2,105 @@ import tictactoe; import dialogue #Librerias privadas
 
 current_chapter = "chapter_01"
 
-def chapter_01():
-    dialogue.message.role("Entras en una sala bulliciosa, llena de mesas con tableros de tres en raya.")
-    dialogue.message.role("En un rincón, una chica te mira y apartando su vista rápidamente.")
-    dialogue.message.role("Te acercas y ella se sobresalta un poco.")
-    dialogue.message.agatha("H-hola... ¿También vienes a jugar? Yo soy Agatha.")
-    dialogue.message.agatha("P-podemos jugar unas partida, asi aprendemos las reglas de este juego juntos.")
-    dialogue.message.role("Agatha te ofrece el asiento con una sonrisa nerviosa.")
+class chapter_01():
+    def history():
+        dialogue.message.role("Entras en una sala bulliciosa, repleta de mesas con tableros de tres en raya.")
+        dialogue.message.role("En un rincón, una chica te observa y aparta la vista con timidez.")
+        dialogue.message.role("Te acercas y ella se sobresalta un poco.")
+        dialogue.message.agatha("—H-hola... ¿También vienes a jugar? Yo soy Agatha.")
+        dialogue.message.agatha("Puedo enseñarte las reglas si quieres. Así practicamos.")
+        dialogue.message.role("Agatha te ofrece el asiento con una sonrisa nerviosa.")
 
-    tictactoe.star_round("easy")
+        tictactoe.star_round("medium")
+        
+    def player_lose_01():
+        dialogue.message.agatha("¡Oh! H-he ganado... No me lo esperaba.")
+        dialogue.message.agatha("Ha sido una partida entretenida.")
 
-def chapter_01_lose():
-    dialogue.message.agatha("¡Oh! H-he ganado. ¡No me lo puedo creer!")
-    dialogue.message.agatha("Ha sido una partida muy divertida. Vamos por la revancha.")
+    def player_win_01():
+        dialogue.message.agatha("Vaya... me has ganado. Veo que ya tienes experiencia en esto.")
+        dialogue.message.agatha("Bueno, igual gracias por jugar conmigo.")
 
-def chapter_02():
-    dialogue.message.agatha("Uh, me has ganastes, veo que ya conoces este juego...")
-    dialogue.message.beatrice("Ja, una victoria contra ella no prueba absolutamente nada.")
-    dialogue.message.role("Una chica, de pelo largo, te mira con desdén. Es beatrice.")
-    dialogue.message.beatrice("Cualquiera puede ganar a esta novata")
-    dialogue.message.beatrice("Permíteme darte una lección sobre estrategia real. A ver si así aprendes algo.")
+    def player_draw_01():
+        dialogue.message.agatha("Vaya Empate... Fue una partida algo sosa.")
+        dialogue.message.agatha("Vamos por otra para desempatar.")
 
-    tictactoe.star_round("medium")
-    
-def chapter_02_lose():
-    dialogue.message.beatrice("Ja, tan facil, como quitarle un caramelo a un niño.")
-    dialogue.message.beatrice("Consedeme el placer de volverte a ganar en un nuevo round.")
 
-def chapter_03():
-    dialogue.message.beatrice("¿Qué? ¡Imposible! Mi estrategia... fue superada.")
-    dialogue.message.victoria("Vaya vaya es acaso un contricante digno lo que veo.")
-    dialogue.message.role("Una chica con flequillo asimetrico de mirada desafiante se acerca a la mesa, riéndose a carcajadas.")
-    dialogue.message.victoria("Ya me cansé de verte ganar con ese nivel de habilidad tan bajo")
-    dialogue.message.victoria("Te voy a enseñar lo que es una verdadera partida mediante la paliza.")
+class chapter_02():
+    def history():
+        dialogue.message.beatrice("Ja. Una victoria contra una novata no demuestra nada.")
+        dialogue.message.role("Una chica de pelo largo y gesto altivo te observa con desdén. Es Beatrice.")
+        dialogue.message.beatrice("Cualquiera puede vencer a la gente que ni conoce las reglas del juego.")
+        dialogue.message.beatrice("Déjame mostrarte lo que puedo hacer yo. Tal vez aprendas algo útil.")
 
-    tictactoe.star_round("hard")
+        tictactoe.star_round("hard")
 
-def chapter_03_lose():
-    dialogue.message.victoria("JAJAJAJA; JAJAJAJA, sin duda la partida más facil de mi existencia.")
-    dialogue.message.victoria("Te ves molesto. Acaso quieres recuper tu dignitad, ¡INTENTALO...!")
+    def player_lose_02():
+        dialogue.message.beatrice("Ja, tan fácil como quitar un caramelo a un niño.")
+        dialogue.message.beatrice("Vamos, concédeme el gusto de derrotarte otra vez.")
 
-def chapter_04():
-    dialogue.message.victoria("Tú... maldita seas... ¡Me ganaste!")
-    dialogue.message.role("Victoria golpea la mesa y se va furiosa. Agatha y beatrice te miran con asombro.")
-    dialogue.message.director("¡Carajo! ¿Qué está pasando aquí? ¿A qué se debe tanta algarabía?")
-    dialogue.message.role("Un hombre mayor, vestido con un traje rojo, emerge de una oficina.")
-    dialogue.message.director("Heh erase yo el rey indiscutible en esto hasta que un día me acusaron de 'infringir las reglas'.")
-    dialogue.message.director("Un participante como tú, con tanto potencial, debe aprender a perder antes que se te suban los humos.")
+    def player_win_02():
+        dialogue.message.beatrice("¿Qué? ¡Imposible! Mi estrategia ha sido superada.")
+        dialogue.message.beatrice("¡Como es que lograstes pulverizar mi defensa!")
 
-    tictactoe.star_round("impossible")
+    def player_draw_02():
+        dialogue.message.beatrice("Hmph. Un empate. No me satisface.")
+        dialogue.message.beatrice("Perfeccionare mí tactica para un round más.")
 
-def chapter_04_lose():
-    dialogue.message.director("No te frustes, ni te enojes, puesto que la victoria siempre recaera en mi.")
-    dialogue.message.director("Pero ahora estas atrapado en mi conquista del triunfo constantes.")
 
-def chapter_05():
-    dialogue.message.role("Las rondas llegaban y se marchaban, hasta que algo rompio la puerta.")
-    dialogue.message.role("Era la policia, tuvieron que arrestar al director por el bien de la trama")
-    dialogue.message.director("¿Que? Noooo maldito guión ¡Volvere, volvere y te muy fuerte de aplastare!")
-    dialogue.message.agatha("¿¡Que eso es legal!?")
-    dialogue.message.beatrice("¿Acaso... acaban de arrestar al director por una partida del 3 en raya?")
-    dialogue.message.beatrice("¡Nada tiene sentido en este lugar!")
-    dialogue.message.victoria("¡Y además, qué demonios con esa voz que habla todo en tercera persona! ¡Nada tiene sentido!")
-    dialogue.message.role("Con la derrota del director y de todos tus contrincantes ¡obtuviste la victoria absoluta!")
+class chapter_03():
+    def history():
+        dialogue.message.victoria("Vaya, vaya... parece que hay un rival interesante aquí.")
+        dialogue.message.role("Una chica con flequillo asimétrico y mirada desafiante se acerca riéndose en voz baja.")
+        dialogue.message.victoria("Me canse de ver partidas mediocres. Te daré una lección que recordarás.")
+        dialogue.message.victoria("Prepárate que en mi no existe piedad, solo habilidad.")
+
+        tictactoe.star_round("expert")
+
+    def player_lose_03():
+        dialogue.message.victoria("¡JAJA! Sin duda, la victoria más sencilla de mi vida.")
+        dialogue.message.victoria("¿Quieres recuperar tu orgullo? Ven e inténtalo de nuevo...")
+
+    def player_win_03():
+        dialogue.message.victoria("Tú... maldita seas... ¡me ganaste!")
+        dialogue.message.victoria("Tan solo es tu... tu... agh.")
+
+    def player_draw_03():
+        dialogue.message.victoria("¡Empate! Esto ha sido... inesperado.")
+        dialogue.message.victoria("Pero no te confies que la victoria es siempre mía.")
+
+        
+class chapter_04():
+    def history():
+        dialogue.message.director("¿Qué está pasando aquí? A qué se debe esta algarabía.")
+        dialogue.message.role("Un hombre mayor, vestido con un traje rojo, emerge de una oficina. Es el Director.")
+        dialogue.message.director("Antes fui el rey de estas partidas... hasta que me acusaron de 'infringir las reglas'.")
+        dialogue.message.director("Un participante con tanto potencial como tú debe aprender que es la derrota.")
+        dialogue.message.role("El Director te mira con una sonrisa fría; sus ojos brillan con imposición y reto.")
+
+        tictactoe.star_round("impossible")
+
+    def player_lose_04():
+        dialogue.message.director("No te frustres. La victoria siempre recaerá en mí.")
+        dialogue.message.director("Yo estoy para enseñarte lo que es perder.")
+
+    def player_win_04():
+        dialogue.message.director("...¿Cómo es posible? ¿Me has vencido?")
+        dialogue.message.director("Interesante. Tendré que revisar mis 'métodos'. Esto no ha terminado.")
+
+    def player_draw_04():
+        dialogue.message.director("Empate. Eso sera a lo maximo que puedes aspirar.")
+        dialogue.message.director("Vamos por unas más hasta que logre mi victoria.")
+
+
+class chapter_05():
+    def history():
+        dialogue.message.role("Las rondas pasaban y la luz del atardecer aparecia... hasta que la puerta se abrió un golpe.")
+        dialogue.message.role("La policía irrumpió y se llevó al Director por delitos contra el guión.")
+        dialogue.message.director("¿Qué? ¡Nooooo! Maldito guión... ¡Yo volveré y aplastaré a todos!")
+        dialogue.message.agatha("¿¡Que acaso eso es legal!?")
+        dialogue.message.beatrice("¿De verdad acaban de arrestar al Director por unas partidas del 3 en raya?")
+        dialogue.message.victoria("¡Nada tiene sentido en este lugar! Además, que demonios con esa voz que habla en tercera persona.")
+        dialogue.message.role("Con la caída del Director, obtienes la victoria en la sala.")
+
+        print("xd")
