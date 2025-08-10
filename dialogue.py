@@ -123,3 +123,17 @@ class message:
         print(Fore.RESET)
         print(Fore.CYAN + "Roleo: " + Fore.RESET , end="")
         deletreo(text, "bleep005.ogg")
+
+def decorador(func):
+    def nueva_funcion():
+        print("Antes")
+        func()
+        print("Después")
+    return nueva_funcion
+
+@decorador
+def mi_funcion():
+    print("Ejecutando la función original")
+
+mi_funcion()
+

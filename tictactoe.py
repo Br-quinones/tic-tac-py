@@ -194,6 +194,8 @@ def graphic_tictactoe():
 
 ########## Elección del jugador ##########
 def Human_turn():
+    graphic_tictactoe()
+
     comprobation()
 
     while True:
@@ -641,6 +643,8 @@ def machine_turn(difficulty):
     global machine_turn_expert
     global machien_turn_impossible
 
+    graphic_tictactoe()
+
     comprobation()
 
     print(Fore.GREEN +  "\n" + l.processing_game.center(115) + Fore.RESET)
@@ -661,6 +665,11 @@ def machine_turn(difficulty):
     
 ########## Comprobacion de victoria ##########
 def comprobation():
+    def input_for_continue():
+        print("\n" + l.input_for_exit.center(115))
+        time.sleep(1)
+        msvcrt.getch()
+
     def ending_for_chapters(winner):
         if the_game.current_chapter == "chapter_01" and winner == "player":
             the_game.chapter_01.player_win_01()
@@ -696,36 +705,37 @@ def comprobation():
             the_game.chapter_05.lose_05()
         elif the_game.current_chapter == "chapter_05" and winner == "draw":
             the_game.chapter_05.draw_05()
-        
+
     def end_game(winner):
         print(Fore.GREEN +  "\n" + l.ending_game.center(115) + Fore.RESET)
         time.sleep(1.5)
         os.system("cls")
         print("\n"*12)
+
+        init_and_reset_variables()
         
         if winner == "player":
             sound.effect_sound("three_in_a_row/win.wav")
             print(f"{l.win_the}{Fore.GREEN}{l.player}{Fore.RESET}".center(125))
-        elif winner == "enemy":
+            input_for_continue()
+
+            global the_game ; the_game.winner_chapter_01 = False
+            ending_for_chapters("player")
+            ejecute_next_chapter()
+
+        elif winner == "enemy": 
             sound.effect_sound("three_in_a_row/lose.wav")
             print(f"{l.win_the}{Fore.RED}{l.enemy}{Fore.RESET}".center(125))
+            input_for_continue()
+
+            ending_for_chapters("enemy")
+
         elif winner == "draw":
             sound.effect_sound("three_in_a_row/draw.wav")
             print(f"{l.win_the}{Fore.YELLOW}{l.draw}{Fore.RESET}".center(125))
-        
-        print("\n" + l.input_for_exit.center(115))
-        time.sleep(1)
-        msvcrt.getch()
-        os.system("cls")
+            input_for_continue()
 
-        if winner == "player":
-            ending_for_chapters("player")
-        elif winner == "enemy":
-            ending_for_chapters("enemy")
-        elif winner == "draw":
             ending_for_chapters("draw")
-        
-        ejecute_next_chapter()
 
     #Horizontal X
     if cell_1 == "equis" and cell_2 == "equis" and cell_3 == "equis":
@@ -775,7 +785,5 @@ def star_round(difficulty):
     global l; l = traductor.traductor_of_the_game()
     init_and_reset_variables()
     while True:
-        graphic_tictactoe()
         Human_turn()
-        graphic_tictactoe()
         machine_turn(difficulty)

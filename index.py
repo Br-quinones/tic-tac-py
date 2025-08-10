@@ -109,11 +109,3 @@
 #
 #Autor
     #Br-Quiñones
-
-
-                                                    #titulo
-        #Subtitulo
-        #
-            #Sub-Subtitulo
-                #Sub-Sub-Subtitulo 
-                #Un str es una cadena de texto 
