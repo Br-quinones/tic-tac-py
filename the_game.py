@@ -1,6 +1,10 @@
-import tictactoe; import dialogue #Librerias privadas
+import tictactoe; import dialogue ; import menu #Librerias privadas
 
 current_chapter = "chapter_01"
+winner_chapter_01 = True
+winner_chapter_04 = True
+winner_chapter_02 = True
+winner_chapter_03 = True
 
 class chapter_01():
     def history():
@@ -11,7 +15,8 @@ class chapter_01():
         dialogue.message.agatha("Puedo enseñarte las reglas si quieres. Así practicamos.")
         dialogue.message.role("Agatha te ofrece el asiento con una sonrisa nerviosa.")
 
-        tictactoe.star_round("medium")
+        while winner_chapter_01:
+            tictactoe.star_round("medium")
         
     def player_lose_01():
         dialogue.message.agatha("¡Oh! H-he ganado... No me lo esperaba.")
@@ -30,7 +35,7 @@ class chapter_02():
     def history():
         dialogue.message.beatrice("Ja. Una victoria contra una novata no demuestra nada.")
         dialogue.message.role("Una chica de pelo largo y gesto altivo te observa con desdén. Es Beatrice.")
-        dialogue.message.beatrice("Cualquiera puede vencer a la gente que ni conoce las reglas del juego.")
+        dialogue.message.beatrice("Cualquiera puede vencer a gente que ni conoce las reglas del juego.")
         dialogue.message.beatrice("Déjame mostrarte lo que puedo hacer yo. Tal vez aprendas algo útil.")
 
         tictactoe.star_round("hard")
@@ -102,5 +107,6 @@ class chapter_05():
         dialogue.message.beatrice("¿De verdad acaban de arrestar al Director por unas partidas del 3 en raya?")
         dialogue.message.victoria("¡Nada tiene sentido en este lugar! Además, que demonios con esa voz que habla en tercera persona.")
         dialogue.message.role("Con la caída del Director, obtienes la victoria en la sala.")
-
-        print("xd")
+        dialogue.message.role("Y colorin colorado esta historia se ha acabado.")
+        
+        menu.main_menu()

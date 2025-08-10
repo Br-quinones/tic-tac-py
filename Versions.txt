@@ -200,12 +200,15 @@ Dia 52 --> v0.52
 Dia 53 --> v0.53
     -cambios minusculos(Correciones ortotipograficas, cambios minusculos en el arte, algunas lineas mejora para la lectura)
 
-Dia 54 --> v0.54 (28.49 minutos)
+Dia 54 --> v0.54 (28:49 minutos)
     -Se agregaron los bad_ending cuando es derrotado en una ronda.
 
-Dia 55 --> v0.55 (00.00 minutos)
+Dia 55 --> v0.55 (00:00 minutos)
     -Sin cambios 
 
-Dia 56 --> v0.56 (01.43.26 minutos)
+Dia 56 --> v0.56 (01:43:26 minutos)
     -Se agrego una buena historia con todas los finales tanto si pierdes como si ganas. 
     -se mejoro la estructura de la historia.
+
+Dia 57 --> v0.57 (59:32 minutos)
+    -El codigo de tictactoe es insostenible, se elige por refactorizar todo
