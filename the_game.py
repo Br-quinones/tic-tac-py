@@ -1,10 +1,6 @@
 import tictactoe; import dialogue ; import menu #Librerias privadas
 
 current_chapter = "chapter_01"
-winner_chapter_01 = True
-winner_chapter_04 = True
-winner_chapter_02 = True
-winner_chapter_03 = True
 
 class chapter_01():
     def history():
@@ -15,8 +11,7 @@ class chapter_01():
         dialogue.message.agatha("Puedo enseñarte las reglas si quieres. Así practicamos.")
         dialogue.message.role("Agatha te ofrece el asiento con una sonrisa nerviosa.")
 
-        while winner_chapter_01:
-            tictactoe.star_round("medium")
+        tictactoe.star_round("easy")
         
     def player_lose_01():
         dialogue.message.agatha("¡Oh! H-he ganado... No me lo esperaba.")
@@ -38,7 +33,7 @@ class chapter_02():
         dialogue.message.beatrice("Cualquiera puede vencer a gente que ni conoce las reglas del juego.")
         dialogue.message.beatrice("Déjame mostrarte lo que puedo hacer yo. Tal vez aprendas algo útil.")
 
-        tictactoe.star_round("hard")
+        tictactoe.star_round("medium")
 
     def player_lose_02():
         dialogue.message.beatrice("Ja, tan fácil como quitar un caramelo a un niño.")
@@ -60,7 +55,7 @@ class chapter_03():
         dialogue.message.victoria("Me canse de ver partidas mediocres. Te daré una lección que recordarás.")
         dialogue.message.victoria("Prepárate que en mi no existe piedad, solo habilidad.")
 
-        tictactoe.star_round("expert")
+        tictactoe.star_round("hard")
 
     def player_lose_03():
         dialogue.message.victoria("¡JAJA! Sin duda, la victoria más sencilla de mi vida.")
@@ -83,7 +78,7 @@ class chapter_04():
         dialogue.message.director("Un participante con tanto potencial como tú debe aprender que es la derrota.")
         dialogue.message.role("El Director te mira con una sonrisa fría; sus ojos brillan con imposición y reto.")
 
-        tictactoe.star_round("impossible")
+        tictactoe.star_round("expert")
 
     def player_lose_04():
         dialogue.message.director("No te frustres. La victoria siempre recaerá en mí.")
@@ -110,3 +105,8 @@ class chapter_05():
         dialogue.message.role("Y colorin colorado esta historia se ha acabado.")
         
         menu.main_menu()
+
+    
+def chapter_error():
+    dialogue.message.role("Ehhh si estas viendo estos es que el desarrolador cometio un error jajaja")
+    menu.main_menu()

@@ -1,6 +1,6 @@
-import sys; import time; import os; import msvcrt #Librerias publicas
+import sys; import time; import os; import msvcrt ; import keyboard #Librerias publicas
 from colorama import Fore; from pygame import mixer  #Modulos publicos
-import sound #Libreria privadas
+import sound; import menu #Libreria privadas
 
 def deletreo(words, loop):
     sound.loop_sound(loop)
@@ -11,6 +11,11 @@ def deletreo(words, loop):
     mixer.Channel(2).stop()
     time.sleep(0.2)
     msvcrt.getch()
+    key = keyboard.read_key()
+
+    if key == "esc":
+        menu.main_menu()
+    
     os.system("cls")
 
 class message:
@@ -123,17 +128,3 @@ class message:
         print(Fore.RESET)
         print(Fore.CYAN + "Roleo: " + Fore.RESET , end="")
         deletreo(text, "bleep005.ogg")
-
-def decorador(func):
-    def nueva_funcion():
-        print("Antes")
-        func()
-        print("Después")
-    return nueva_funcion
-
-@decorador
-def mi_funcion():
-    print("Ejecutando la función original")
-
-mi_funcion()
-

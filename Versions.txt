@@ -212,3 +212,14 @@ Dia 56 --> v0.56 (01:43:26 minutos)
 
 Dia 57 --> v0.57 (59:32 minutos)
     -El codigo de tictactoe es insostenible, se elige por refactorizar todo
+
+Dia 58 --> v0.58 (00:00 minutos)
+    -Sin cambios
+
+Dia 59 --> v0.59 (00:00 minutos)
+    -Sin cambios
+
+Dia 60 --> v0.60 (26:58 minutos..)
+    -Se eliminar el modo imposible del tictactoe
+    -Se modifica un poco la historia
+    -Mejoras para el usuario.
