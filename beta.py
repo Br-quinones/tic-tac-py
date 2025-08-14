@@ -186,7 +186,7 @@ def Human_turn():
             active_cell(f"zero_{key}")
             break
         else:
-            print(Fore.RED + "Tecla no valida".center(115) +Fore.RESET)
+            print(Fore.RED + "\n" + "Tecla no valida".center(115) +Fore.RESET)
 
 ########## Acciones ##########
 class actions():
@@ -195,7 +195,7 @@ class actions():
             random_number = str(random.randint(1,9))
             if random_number not in selected_numbers:
                 active_cell(f"equis_{random_number}")
-                break
+            return True
     
     def defense_action():
         #Defensa izquierda
@@ -254,6 +254,7 @@ class actions():
             active_cell("equis_7")
         elif cell_1 == "zero" and cell_5 == "zero" and "9" not in selected_numbers:
             active_cell("equis_9")
+        return True
     
     def stroke_action():
         #Ataque izquierdo
@@ -312,6 +313,7 @@ class actions():
             active_cell("equis_7")
         elif cell_1 == "equis" and cell_5 == "equis" and "9" not in selected_numbers:
             active_cell("equis_9")
+        return True
 
     def center_action_01():
         #Ganar centro
@@ -337,6 +339,7 @@ class actions():
                 elif random_number in ["1","3","7","9"] and random_number not in selected_numbers:
                     active_cell(f"equis_{random_number}")
                     break
+        return True
     
     def center_action_02():
         #Ganar centro
@@ -374,6 +377,7 @@ class actions():
                 elif random_number in ["1","3","7","9"] and random_number not in selected_numbers:
                     active_cell(f"equis_{random_number}")
                     break
+        return True
 
 ########## enemigo nivel facil ##########
 def machine_turn_easy():
@@ -399,10 +403,14 @@ def machine_turn_expert():
 
 ########## enemigo nivel imposible ##########
 def machine_turn_impossible():
-    actions.stroke_action()
-    actions.defense_action()
-    actions.center_action_01()
-    actions.random_action()
+    if actions.stroke_action():
+        return
+    elif actions.defense_action():
+        return
+    elif actions.center_action_02():
+        return
+    elif actions.random_action():
+        return
 
 init_and_reset_variables()
 while True:
