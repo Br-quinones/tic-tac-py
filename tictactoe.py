@@ -1,7 +1,7 @@
 ########## Instalar librerias ##########
 import os; import time; import random; import msvcrt; import keyboard #Librerias publicas
 from colorama import Fore #Modulos publicos
-import sound; import traductor; import the_game; import menu #librerias privadas
+import sound; import traductor; import the_game; import menu#librerias privadas
 ############ Graficos Constantes##################
 #Zero
 zero_1 = Fore.BLUE + "  ████  " + Fore.RESET
@@ -69,7 +69,7 @@ def init_and_reset_variables():
     ########## Crear listas ########## 
     selected_numbers = []
 
-########## Compracion para capitulos #########
+########## Comparacion para capitulos #########
 def ejecute_next_chapter():
     global the_game
     if the_game.current_chapter == "chapter_01":
@@ -95,6 +95,39 @@ def ejecute_next_chapter():
     elif the_game.current_chapter == "chapter_06":
         the_game.current_chapter = "chapter_01"
         menu.main_menu()
+
+########## Empate y reseteo de partida ##########
+def ejecute_again_round():
+    os.system("cls")
+    print("\n"*10)
+    print(Fore.GREEN + "Un momento, se estan ordendo el tablero...".center(115) + Fore.GREEN)
+    time.sleep(1.5)
+
+def ejecute_rematch_round():
+    while True:
+        print("\n"*10)
+
+        print(f"      {Fore.GREEN}[1]{Fore.RESET}Pedir honorificamente revancha      {Fore.GREEN}[2]{Fore.RESET}Rendirse con dignidad      {Fore.GREEN}[3]{Fore.RESET}Meterse en el fango y recibir ayuda")
+
+        print(Fore.GREEN + "\n" + "Utilice su teclado para elegir".center(115) + Fore.RESET)
+
+        msvcrt.getch()
+        key_01 = keyboard.read_key()
+        
+        if key_01 == "1":
+            print("Preparando tablero para la revancha...")
+            #Funcion para humillacion por parte del enemigo
+            break
+        elif key_01 == "2":
+            print("Preparando menu para la derrota...")
+            #Agregar funcion para salir humillado de la sala
+            menu.main_menu()
+        elif key_01 == "3":
+            print("Preparando fango y la ayuda...")
+            #Funcion para recibir ayuda segun sea el currect_chapter
+            break
+        else:
+            os.system("cls")
 
 ########## Activar casillas X y O ##########
 def active_cell(argumento):
@@ -581,6 +614,7 @@ def comprobation():
             input_for_continue()
 
             ending_for_chapters("enemy")
+            ejecute_rematch_round()
 
         elif winner == "draw":
             sound.effect_sound("three_in_a_row/draw.wav")
@@ -588,6 +622,7 @@ def comprobation():
             input_for_continue()
 
             ending_for_chapters("draw")
+            ejecute_again_round()
 
     #Horizontal X
     if cell_1 == "equis" and cell_2 == "equis" and cell_3 == "equis":
