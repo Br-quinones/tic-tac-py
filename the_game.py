@@ -7,11 +7,11 @@ class chapter_01():
         dialogue.message.role("Entras en una sala bulliciosa, repleta de mesas con tableros de tres en raya.")
         dialogue.message.role("En un rincón, una chica te observa y aparta la vista con timidez.")
         dialogue.message.role("Te acercas y ella se sobresalta un poco.")
-        dialogue.message.agatha("—H-hola... ¿También vienes a jugar? Yo soy Agatha.")
-        dialogue.message.agatha("Puedo enseñarte las reglas si quieres. Así practicamos.")
-        dialogue.message.role("Agatha te ofrece el asiento con una sonrisa nerviosa.")
+        # dialogue.message.agatha("—H-hola... ¿También vienes a jugar? Yo soy Agatha.")
+        # dialogue.message.agatha("Puedo enseñarte las reglas si quieres. Así practicamos.")
+        # dialogue.message.role("Agatha te ofrece el asiento con una sonrisa nerviosa.")
 
-        tictactoe.star_round("easy")
+        tictactoe.star_round("expert")
         
     def player_lose_01():
         dialogue.message.agatha("¡Oh! H-he ganado... No me lo esperaba.")
