@@ -235,4 +235,6 @@ Dia 63 --> v0.63 (01:40:12 minutos)
     -Se añadio las 3 opciones al perder
     -Se mejora la historia
 
-Dia 64 --> v0.64 (minutos)
+Dia 64 --> v0.64 (01:22:21 minutos)
+    -Se traduce todo el juego a los 6 idiomas
+    -Se agregan pequeñas mejoras en la jugabilidad
