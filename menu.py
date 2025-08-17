@@ -83,7 +83,7 @@ def choice_for_language():
 
     print("\n"*5)
 
-    print("Seleccione su idioma".center(115))
+    print(f"{l.choice_language}".center(115))
     print("\n")
 
     print("[1]Español   ".center(115))
@@ -95,6 +95,10 @@ def choice_for_language():
 
     msvcrt.getch()
     number_of_language = keyboard.read_key()
+
+    print(Fore.GREEN + "...".center(115) + Fore.RESET)
+    time.sleep(1)
+
     if number_of_language == "1":
         traductor.main_language = "spanish"
     elif number_of_language == "2":
@@ -107,6 +111,7 @@ def choice_for_language():
         traductor.main_language = "france"
     elif number_of_language == "6":
         traductor.main_language = "germany"
+    
     
     os.system("cls")
     main_menu()

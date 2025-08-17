@@ -70,7 +70,7 @@ def init_and_reset_variables():
     selected_numbers = []
 
 ########## Comparacion para capitulos #########
-def ejecute_next_chapter():
+def execute_next_chapter():
     global the_game
     if the_game.current_chapter == "chapter_01":
         the_game.current_chapter = "chapter_02"
@@ -95,10 +95,6 @@ def ejecute_next_chapter():
     elif the_game.current_chapter == "chapter_06":
         the_game.current_chapter = "chapter_01"
         menu.main_menu()
-
-########## Empate y reseteo de partida ##########
-def ejecute_again_round():
-    graphic_tictactoe()
 
 ########## siguiente_round ##########
 def ejecute_rematch_round():
@@ -137,9 +133,11 @@ def ejecute_rematch_round():
     while True:
         print("\n"*10)
 
-        print(f"      {Fore.GREEN}[1]{Fore.RESET}Pedir honorificamente revancha      {Fore.GREEN}[2]{Fore.RESET}Rendirse sin dignidad      {Fore.GREEN}[3]{Fore.RESET}Meterse en el fango y recibir ayuda")
+        print(" "*40 , f"{Fore.GREEN}[1]{Fore.RESET}{l.ask_for_revenge}")
+        print(" "*40 , f"{Fore.GREEN}[2]{Fore.RESET}{l.surrender}")
+        print(" "*40 , f"{Fore.GREEN}[3]{Fore.RESET}{l.grovel_for_help}")
 
-        print(Fore.GREEN + "\n" + "Utilice su teclado para elegir".center(115) + Fore.RESET)
+        print(Fore.GREEN + "\n" + f"{l.instructions_for_choice}".center(115) + Fore.RESET)
 
         msvcrt.getch()
         key = keyboard.read_key()
@@ -156,11 +154,16 @@ def ejecute_rematch_round():
         elif key == "3":
             help()
             break
+
         else:
+            print("")
+            print(Fore.RED + f"{l.invalid_number}".center(115) + Fore.RESET)
+            sound.effect_sound("error.wav")
+            time.sleep(1)
             os.system("cls")
 
 ########## Activar casillas X y O ##########
-def active_cell(argumento):
+def active_cell(argument):
     global tic_1a , tic_1b , tic_1c
     global tic_2a , tic_2b , tic_2c
     global tic_3a , tic_3b , tic_3c
@@ -178,48 +181,48 @@ def active_cell(argumento):
     global selected_numbers
 
     #Para los zeros
-    if argumento == "zero_1":
+    if argument == "zero_1":
         tic_1a = zero_1 ; tic_1b = zero_2 ; tic_1c = zero_3 ; cell_1 = "zero" ; selected_numbers.append("1")
-    elif argumento == "zero_2":
+    elif argument == "zero_2":
         tic_2a = zero_1 ; tic_2b = zero_2 ; tic_2c = zero_3 ; cell_2 = "zero" ; selected_numbers.append("2")
-    elif argumento == "zero_3":
+    elif argument == "zero_3":
         tic_3a = zero_1 ; tic_3b = zero_2 ; tic_3c = zero_3 ; cell_3 = "zero" ; selected_numbers.append("3")
-    elif argumento == "zero_4":
+    elif argument == "zero_4":
         tic_4a = zero_1 ; tic_4b = zero_2 ; tic_4c = zero_3 ; cell_4 = "zero" ; selected_numbers.append("4")
-    elif argumento == "zero_5":
+    elif argument == "zero_5":
         tic_5a = zero_1 ; tic_5b = zero_2 ; tic_5c = zero_3 ; cell_5 = "zero" ; selected_numbers.append("5")
-    elif argumento == "zero_6":
+    elif argument == "zero_6":
         tic_6a = zero_1 ; tic_6b = zero_2 ; tic_6c = zero_3 ; cell_6 = "zero" ; selected_numbers.append("6")
-    elif argumento == "zero_7":
+    elif argument == "zero_7":
         tic_7a = zero_1 ; tic_7b = zero_2 ; tic_7c = zero_3 ; cell_7 = "zero" ; selected_numbers.append("7")
-    elif argumento == "zero_8":
+    elif argument == "zero_8":
         tic_8a = zero_1 ; tic_8b = zero_2 ; tic_8c = zero_3 ; cell_8 = "zero" ; selected_numbers.append("8")
-    elif argumento == "zero_9":
+    elif argument == "zero_9":
         tic_9a = zero_1 ; tic_9b = zero_2 ; tic_9c = zero_3 ; cell_9 = "zero" ; selected_numbers.append("9")
 
     #Para los equis
-    elif argumento == "equis_1":
+    elif argument == "equis_1":
         tic_1a = equis_1 ; tic_1b = equis_2 ; tic_1c = equis_3 ; cell_1 = "equis" ; selected_numbers.append("1")
-    elif argumento == "equis_2":
+    elif argument == "equis_2":
         tic_2a = equis_1 ; tic_2b = equis_2 ; tic_2c = equis_3 ; cell_2 = "equis" ; selected_numbers.append("2")
-    elif argumento == "equis_3":
+    elif argument == "equis_3":
         tic_3a = equis_1 ; tic_3b = equis_2 ; tic_3c = equis_3 ; cell_3 = "equis" ; selected_numbers.append("3") 
-    elif argumento == "equis_4":
+    elif argument == "equis_4":
         tic_4a = equis_1 ; tic_4b = equis_2 ; tic_4c = equis_3 ; cell_4 = "equis" ; selected_numbers.append("4")
-    elif argumento == "equis_5":
+    elif argument == "equis_5":
         tic_5a = equis_1 ; tic_5b = equis_2 ; tic_5c = equis_3 ; cell_5 = "equis" ; selected_numbers.append("5")
-    elif argumento == "equis_6":
+    elif argument == "equis_6":
         tic_6a = equis_1 ; tic_6b = equis_2 ; tic_6c = equis_3 ; cell_6 = "equis" ; selected_numbers.append("6")
-    elif argumento == "equis_7":
+    elif argument == "equis_7":
         tic_7a = equis_1 ; tic_7b = equis_2 ; tic_7c = equis_3 ; cell_7 = "equis" ; selected_numbers.append("7")
-    elif argumento == "equis_8":
+    elif argument == "equis_8":
         tic_8a = equis_1 ; tic_8b = equis_2 ; tic_8c = equis_3 ; cell_8 = "equis" ; selected_numbers.append("8")
-    elif argumento == "equis_9":
+    elif argument == "equis_9":
         tic_9a = equis_1 ; tic_9b = equis_2 ; tic_9c = equis_3 ; cell_9 = "equis" ; selected_numbers.append("9")
 
     #Encaso de error 
     else:
-        print("Error al colocar el argumento")
+        the_game.event.chapter_error()
 
 ########## Creacion de graficos ##########
 def graphic_tictactoe():
@@ -256,7 +259,7 @@ def graphic_tictactoe():
     print("███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████   ███████".center(115))
 
 ########## Elección del jugador ##########
-def Human_turn():
+def human_turn():
     graphic_tictactoe()
 
     comprobation()
@@ -581,7 +584,7 @@ def machine_turn(difficulty):
 ########## Comprobacion de victoria ##########
 def comprobation():
     def input_for_continue():
-        print("\n" + l.input_for_exit.center(115))
+        print("\n" + l.input_for_continue.center(115))
         time.sleep(1)
         msvcrt.getch()
         os.system("cls")
@@ -636,7 +639,7 @@ def comprobation():
             input_for_continue()
 
             ending_for_chapters("player")
-            ejecute_next_chapter()
+            execute_next_chapter()
 
         elif winner == "enemy": 
             sound.effect_sound("three_in_a_row/lose.wav")
@@ -652,7 +655,7 @@ def comprobation():
             input_for_continue()
 
             ending_for_chapters("draw")
-            ejecute_again_round()
+            graphic_tictactoe()
 
     #Horizontal X
     if cell_1 == "equis" and cell_2 == "equis" and cell_3 == "equis":
@@ -702,5 +705,5 @@ def star_round(difficulty):
     global l; l = traductor.traductor_of_the_game()
     init_and_reset_variables()
     while True:
-        Human_turn()
+        human_turn()
         machine_turn(difficulty)
