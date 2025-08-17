@@ -228,4 +228,11 @@ Dia 61 --> v0.61 (00:00 minutos)
     -Sin cambios 
 
 Dia 62 --> v0.62 (52:40 minutos)
-    -Se agregaron los finales segun se pierda, gane o empate en el tictactoe
+    -Se agregaron los finales segun se pierda, gane o empate en el tictactoe.
+    -Se elimina la refactorizacion, a este punto del proyecto no es viable.
+
+Dia 63 --> v0.63 (01:40:12 minutos)
+    -Se añadio las 3 opciones al perder
+    -Se mejora la historia
+
+Dia 64 --> v0.64 (minutos)
