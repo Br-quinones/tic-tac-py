@@ -98,33 +98,63 @@ def ejecute_next_chapter():
 
 ########## Empate y reseteo de partida ##########
 def ejecute_again_round():
-    os.system("cls")
-    print("\n"*10)
-    print(Fore.GREEN + "Un momento, se estan ordendo el tablero...".center(115) + Fore.GREEN)
-    time.sleep(1.5)
+    graphic_tictactoe()
 
+########## siguiente_round ##########
 def ejecute_rematch_round():
+    def humiliation():
+        os.system("cls")
+
+        if the_game.current_chapter == "chapter_01":
+            the_game.event.humiliation_agatha()
+        elif the_game.current_chapter == "chapter_02":
+            the_game.event.humiliation_beatrice()
+        elif the_game.current_chapter == "chapter_03":
+            the_game.event.humiliation_victoria()
+        elif the_game.current_chapter == "chapter_04":
+            the_game.event.humiliation_director()
+        else:
+            the_game.event.chapter_error()
+
+        graphic_tictactoe()
+
+    def help():
+        os.system("cls")
+        
+        if the_game.current_chapter == "chapter_01":
+            the_game.event.help_agatha()
+        elif the_game.current_chapter == "chapter_02":
+            the_game.event.help_beatrice()
+        elif the_game.current_chapter == "chapter_03":
+            the_game.event.help_victoria()
+        elif the_game.current_chapter == "chapter_04":
+            the_game.event.help_director()
+        else:
+            the_game.event.chapter_error()
+
+        graphic_tictactoe()
+        
     while True:
         print("\n"*10)
 
-        print(f"      {Fore.GREEN}[1]{Fore.RESET}Pedir honorificamente revancha      {Fore.GREEN}[2]{Fore.RESET}Rendirse con dignidad      {Fore.GREEN}[3]{Fore.RESET}Meterse en el fango y recibir ayuda")
+        print(f"      {Fore.GREEN}[1]{Fore.RESET}Pedir honorificamente revancha      {Fore.GREEN}[2]{Fore.RESET}Rendirse sin dignidad      {Fore.GREEN}[3]{Fore.RESET}Meterse en el fango y recibir ayuda")
 
         print(Fore.GREEN + "\n" + "Utilice su teclado para elegir".center(115) + Fore.RESET)
 
         msvcrt.getch()
-        key_01 = keyboard.read_key()
+        key = keyboard.read_key()
         
-        if key_01 == "1":
-            print("Preparando tablero para la revancha...")
-            #Funcion para humillacion por parte del enemigo
+        if key == "1":
+            humiliation()
             break
-        elif key_01 == "2":
-            print("Preparando menu para la derrota...")
-            #Agregar funcion para salir humillado de la sala
+
+        elif key == "2":
+            os.system("cls")
+            the_game.event.surrender()
             menu.main_menu()
-        elif key_01 == "3":
-            print("Preparando fango y la ayuda...")
-            #Funcion para recibir ayuda segun sea el currect_chapter
+            
+        elif key == "3":
+            help()
             break
         else:
             os.system("cls")
@@ -586,11 +616,11 @@ def comprobation():
             the_game.chapter_04.player_draw_04()
 
         elif the_game.current_chapter == "chapter_05" and winner == "player":
-            the_game.chapter_error()
+            the_game.event.chapter_error()
         elif the_game.current_chapter == "chapter_05" and winner == "enemy":
-            the_game.chapter_error()
+            the_game.event.chapter_error()
         elif the_game.current_chapter == "chapter_05" and winner == "draw":
-            the_game.chapter_error()
+            the_game.event.chapter_error()
 
     def end_game(winner):
         init_and_reset_variables()
