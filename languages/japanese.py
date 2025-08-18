@@ -53,7 +53,7 @@ chapter_01_player_draw_01_agatha_02 = "Ketchaku o tsukeru tameni mō ikkai yarō
 
 #Chapter 02
 chapter_02_history_beatrice_01 = "Fu. Shoshinsha相手 no isshō nante nanno shōmei nimo naranai wa."
-chapter_02_history_message_01 = "Nagai kami o shita, takabisha na hyōjō no onnanoko ga anata o keibetsu no me de miteimasu. Kanojo wa Beatorisu."
+chapter_02_history_message_01 = "Nagai kami o shita, takabisha na hyōjō no onnanoko ga anata o keibetsu no me de miteimasu."
 chapter_02_history_beatrice_02 = "Rūru mo shiranai yōna aite ni wa dare demo kateru wa."
 chapter_02_history_beatrice_03 = "Watashi no jitsuryoku o misete ageru. Nani ka yaku ni tatsu koto o manaberu kamo shirenai wa."
 

@@ -4,6 +4,9 @@ from pygame import mixer #Modulos publicos
 #Channel_1: Efectos de sonido // .wav
 #Channel_2: Bucles de sonido // .ogg
 
+def innit_sound():
+    mixer.init()
+    
 def music_sound(music):
     mixer.Channel(0).play(mixer.Sound(f"audio/musics/{music}"), -1)
 

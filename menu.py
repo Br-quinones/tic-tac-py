@@ -3,7 +3,7 @@ from colorama import Fore #Modulos publicos
 import the_game; import traductor; import sound #Librerias privadas
 from languages import spanish as l #Modulos privados
 
-def main_menu():
+def main_menu(): 
     global l; l = traductor.traductor_of_the_game()
     os.system("cls")
     art_manu()
@@ -13,13 +13,17 @@ def main_menu():
         choice = keyboard.read_key()
         
         if choice == "1":
-            choice_for_play() ; break
+            choice_for_play()
+            break
         elif choice == "2":
-            choice_for_language() ; break
+            choice_for_language()
+            break
         elif choice == "3":
-            choice_for_credits() ; break
+            choice_for_credits()
+            break
         elif choice == "4":
-            choice_for_exit() ; break
+            choice_for_exit()
+            break
         else:
             error_no_choice()
 
@@ -58,6 +62,7 @@ def art_manu():
 def choice_for_play():
     sound.effect_sound("menu_01.wav")
     time.sleep(0.3)
+
     os.system("cls")
     if the_game.current_chapter == "chapter_01":
         the_game.chapter_01.history() 
@@ -69,12 +74,11 @@ def choice_for_play():
         the_game.chapter_04.history()
     elif the_game.current_chapter == "chapter_05":
         the_game.chapter_05.history()
-    elif the_game.current_chapter == "chapter_06":
-        the_game.chapter_06.history()
+    else: 
+        the_game.event.chapter_error()
     
 def choice_for_language():
-    global l 
-    global traductor
+    global l; global traductor
 
     sound.effect_sound("menu_01.wav")
     time.sleep(0.3)
@@ -94,23 +98,28 @@ def choice_for_language():
     print("[6]Deutsch   ".center(115))
 
     msvcrt.getch()
-    number_of_language = keyboard.read_key()
+    key = keyboard.read_key()
+
+    if key == "1":
+        traductor.main_language = "spanish"
+
+    elif key == "2":
+        traductor.main_language = "english"
+
+    elif key == "3":
+        traductor.main_language = "japanese"
+
+    elif key == "4":
+        traductor.main_language = "portuguese"
+
+    elif key == "5":
+        traductor.main_language = "france"
+        
+    elif key == "6":
+        traductor.main_language = "germany"
 
     print(Fore.GREEN + "...".center(115) + Fore.RESET)
     time.sleep(1)
-
-    if number_of_language == "1":
-        traductor.main_language = "spanish"
-    elif number_of_language == "2":
-        traductor.main_language = "english"
-    elif number_of_language == "3":
-        traductor.main_language = "japanese"
-    elif number_of_language == "4":
-        traductor.main_language = "portuguese"
-    elif number_of_language == "5":
-        traductor.main_language = "france"
-    elif number_of_language == "6":
-        traductor.main_language = "germany"
     
     
     os.system("cls")
@@ -126,6 +135,7 @@ def choice_for_credits():
     print(l.author.center(115))
     print(l.traductor.center(115))
 
+    time.sleep(1)
     msvcrt.getch()
 
     os.system("cls")
@@ -135,14 +145,14 @@ def choice_for_exit():
     sound.effect_sound("menu_01.wav")
     time.sleep(0.3)
     
-    print(l.exiting.center(115))
+    print(Fore.GREEN + l.exiting.center(115) + Fore.RESET)
 
-    time.sleep(0.2)
+    time.sleep(1)
     sys.exit()
 
 def error_no_choice():
     sound.effect_sound("error.wav")
     print(Fore.RED + l.invalid_key_error.center(115) + Fore.RESET)
-    time.sleep(0.25)
+    time.sleep(0.3)
     os.system("cls")
     main_menu()
