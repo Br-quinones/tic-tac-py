@@ -89,12 +89,11 @@ def execute_next_chapter():
         the_game.chapter_05.history()
 
     elif the_game.current_chapter == "chapter_05":
-        the_game.current_chapter = "chapter_06"
-        the_game.chapter_06.history()
-
-    elif the_game.current_chapter == "chapter_06":
         the_game.current_chapter = "chapter_01"
-        menu.main_menu()
+        the_game.menu()
+
+    else: 
+        the_game.event.chapter_error()
 
 ########## siguiente_round ##########
 def ejecute_rematch_round():
@@ -276,6 +275,7 @@ def human_turn():
             menu.main_menu()
         else:
             print(Fore.RED + "\n" + l.invalid_number.center(115) + Fore.RESET)
+            sound.effect_sound("error.wav")
             time.sleep(0.2)
             graphic_tictactoe()
 

@@ -53,7 +53,7 @@ chapter_01_player_draw_01_agatha_02 = "Lass uns noch eine spielen, um den Gleich
 
 #Chapter 02
 chapter_02_history_beatrice_01 = "Ha. Ein Sieg gegen eine Anfängerin beweist gar nichts."
-chapter_02_history_message_01 = "Ein Mädchen mit langen Haaren und einem hochmütigen Gesichtsausdruck beobachtet dich verächtlich. Es ist Beatrice."
+chapter_02_history_message_01 = "Ein Mädchen mit langen Haaren und einem hochmütigen Gesichtsausdruck beobachtet dich verächtlich."
 chapter_02_history_beatrice_02 = "Jeder kann Leute besiegen, die nicht einmal die Regeln kennen."
 chapter_02_history_beatrice_03 = "Lass mich dir zeigen, was ich kann. Vielleicht lernst du etwas Nützliches."
 

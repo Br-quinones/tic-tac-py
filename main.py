@@ -8,8 +8,17 @@ if __name__ == "__main__":
         keyboard.press_and_release("ctrl+plus")
         time.sleep(0.01)
     
-    import loading
-    loading.init_game()
+    print("Loanding...".center(115))
+
+    from colorama import Style
+    print(Style.BRIGHT)
+
+    import os
+    os.system("cls")
+
+    import sound
+    sound.innit_sound()
+    sound.music_sound("the_last_of_us.mp3")
 
     import menu
     menu.main_menu()
