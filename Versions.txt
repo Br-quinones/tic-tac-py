@@ -246,4 +246,3 @@ Dia 65 --> v0.65 (36:23 minutos)
     #Recordar saltos de linea [No se al final es otro idioma]
     #Recordar thanks [DEVES!]
     #Recodar modifica la potencia de sonido [Obligatorio] 
-    #Agregar 2 jugadores [Y esto pa' que?]
