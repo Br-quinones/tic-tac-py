@@ -2,6 +2,7 @@ import sys; import time; import os; import msvcrt ; import keyboard #Librerias p
 from colorama import Fore; from pygame import mixer  #Modulos publicos
 import sound; import menu #Libreria privadas
 
+#Cortar entre palabras
 def deletreo(words, loop):
     sound.loop_sound(loop)
     for letter in words:

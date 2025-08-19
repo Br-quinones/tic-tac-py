@@ -6,14 +6,14 @@ class chapter_01():
 
     def history():
         l = traductor.traductor_of_the_game()
-        dialogue.message.role(l.chapter_01_history_message_01)
-        dialogue.message.role(l.chapter_01_history_message_02)
-        dialogue.message.role(l.chapter_01_history_message_03)
-        dialogue.message.agatha(l.chapter_01_history_agatha_01)
-        dialogue.message.agatha(l.chapter_01_history_agatha_02)
-        dialogue.message.role(l.chapter_01_history_message_04)
+        # dialogue.message.role(l.chapter_01_history_message_01)
+        # dialogue.message.role(l.chapter_01_history_message_02)
+        # dialogue.message.role(l.chapter_01_history_message_03)
+        # dialogue.message.agatha(l.chapter_01_history_agatha_01)
+        # dialogue.message.agatha(l.chapter_01_history_agatha_02)
+        # dialogue.message.role(l.chapter_01_history_message_04)
 
-        tictactoe.star_round("easy")
+        tictactoe.star_round("hard")
         
     def player_lose_01():
         l = traductor.traductor_of_the_game()
